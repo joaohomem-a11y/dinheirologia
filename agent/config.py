@@ -64,30 +64,7 @@ class Settings(BaseSettings):
 # ---------------------------------------------------------------------------
 
 RSS_FEEDS: Final[list[dict[str, str]]] = [
-    {
-        "name": "Reuters Business",
-        "url": "https://feeds.reuters.com/reuters/businessNews",
-        "language": "en",
-        "category": "mercados",
-    },
-    {
-        "name": "Reuters Markets",
-        "url": "https://feeds.reuters.com/reuters/marketsNews",
-        "language": "en",
-        "category": "mercados",
-    },
-    {
-        "name": "MarketWatch Top Stories",
-        "url": "https://feeds.marketwatch.com/marketwatch/topstories/",
-        "language": "en",
-        "category": "mercados",
-    },
-    {
-        "name": "MarketWatch Real Time",
-        "url": "https://feeds.marketwatch.com/marketwatch/realtimeheadlines/",
-        "language": "en",
-        "category": "trading",
-    },
+    # --- Working feeds (tested 2026-02-25) ---
     {
         "name": "Yahoo Finance",
         "url": "https://finance.yahoo.com/rss/",
@@ -107,16 +84,22 @@ RSS_FEEDS: Final[list[dict[str, str]]] = [
         "category": "investimentos",
     },
     {
-        "name": "Investing.com News",
-        "url": "https://www.investing.com/rss/news.rss",
+        "name": "CNBC Business",
+        "url": "https://www.cnbc.com/id/10001147/device/rss/rss.html",
         "language": "en",
-        "category": "mercados",
+        "category": "negocios",
     },
     {
-        "name": "Investing.com Analysis",
-        "url": "https://www.investing.com/rss/analysis.rss",
+        "name": "Google News Business",
+        "url": "https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx6TVdZU0FtVnVHZ0pWVXlnQVAB",
         "language": "en",
-        "category": "opiniao",
+        "category": "negocios",
+    },
+    {
+        "name": "Google News Economy",
+        "url": "https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGRqTVhZU0FtVnVHZ0pWVXlnQVAB",
+        "language": "en",
+        "category": "mercados",
     },
 ]
 

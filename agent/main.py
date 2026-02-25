@@ -96,7 +96,10 @@ def _process_rss_article(
         # Step 4: Publish
         if dry_run:
             console.log(f"[dim][dry-run] Would publish: {rewritten.title_pt[:60]}[/dim]")
-            return None
+            # Return a sentinel so dry-run isn't counted as an error
+            return PublishResult(
+                slug="dry-run", title_pt=rewritten.title_pt, paths={}
+            )
 
         result = publisher.publish(
             article=rewritten,
@@ -173,7 +176,9 @@ def _process_manual_article(
             console.log(
                 f"[dim][dry-run] Would publish manual article: {manual.title[:60]}[/dim]"
             )
-            return None
+            return PublishResult(
+                slug="dry-run", title_pt=manual.title, paths={}
+            )
 
         result = publisher.publish(
             article=rewritten,
