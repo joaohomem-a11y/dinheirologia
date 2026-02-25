@@ -10,6 +10,8 @@ image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200"
 imageCaption: "A toca do coelho é mais funda do que parece"
 excerpt: "Ok, lá vem o João com um título de conteúdo completamente sem sentido. E pior, começando o texto com um ok. Porém, o sentido das e nas coisas depende mais de nossa percepção do que de nossa interpretação..."
 featured: true
+contentType: artigo
+lang: pt
 ---
 
 Ok, lá vem o João com um título de conteúdo completamente sem sentido. E pior, começando o texto com um ok, sendo a primeira frase algo que talvez estaria em minha mente, e não na dele.

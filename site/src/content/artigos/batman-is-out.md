@@ -10,6 +10,8 @@ image: "https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=1200"
 imageCaption: "Às vezes é preciso saber a hora de parar"
 excerpt: "Eu nunca fui bonzinho e nem sequer tentei em algum momento da minha vida, parecer bonzinho. Meu interesse em criar um grupo de traders foi inteiramente egoísta..."
 featured: false
+contentType: artigo
+lang: pt
 ---
 
 > Não fale como um deles. Você não é! Mesmo que quisesse ser. Para eles, você é só um louco, que nem eu! Eles precisam de você agora, mas quando não precisarem mais, vão te jogar fora que nem um leproso! Entenda... a moral deles, a honra, é uma piada ruim. - Coringa

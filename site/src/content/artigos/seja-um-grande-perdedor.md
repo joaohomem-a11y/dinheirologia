@@ -10,6 +10,8 @@ image: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=1200"
 imageCaption: "CUT YOUR LOSSES!"
 excerpt: "Não é fácil ser um grande perdedor. Desde a infância somos doutrinados a focar nas vitórias. No trading, o segredo para superar a média é se programar para perder e ficar muito bom nisso..."
 featured: false
+contentType: artigo
+lang: pt
 ---
 
 Não é fácil ser um grande perdedor.

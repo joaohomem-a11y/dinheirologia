@@ -10,6 +10,8 @@ image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1200"
 imageCaption: "O inferno é lá embaixo, mas todo mundo corre pra lá"
 excerpt: "Um magnata do petróleo chega à porta do céu e ouve a perturbadora notícia: O Conjunto Residencial destinado aos homens que trabalham com petróleo está lotado! Benjamin Graham contava essa história..."
 featured: false
+contentType: artigo
+lang: pt
 ---
 
 Um magnata do petróleo chega à porta do céu e ouve a perturbadora notícia:

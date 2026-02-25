@@ -10,6 +10,8 @@ image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200"
 imageCaption: "Seu maior inimigo está lendo isso junto com você"
 excerpt: "Como a maioria dos investidores, tenho em mim mesmo meu maior inimigo. Outros investidores não são nem sombra da ameaça que represento para mim mesmo..."
 featured: false
+contentType: artigo
+lang: pt
 ---
 
 > Os mercados são vastos. Como a maioria dos investidores, tenho em mim mesmo meu maior inimigo. Outros investidores não são nem sombra da ameaça que represento para mim mesmo. - Ralph Vince

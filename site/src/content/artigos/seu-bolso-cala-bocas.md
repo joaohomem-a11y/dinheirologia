@@ -10,6 +10,8 @@ image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200"
 imageCaption: "No mercado financeiro, o bolso cala bocas"
 excerpt: "Não existe debate defendendo uma escola e atacando a outra entre os verdadeiros fazedores. No mercado financeiro o bolso cala bocas..."
 featured: false
+contentType: artigo
+lang: pt
 ---
 
 A entrevista começa com Florian Bartunek assumindo que começou no mercado fazendo daytrade por telefone!

@@ -10,6 +10,8 @@ image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200"
 imageCaption: "O primeiro milhão é o mais difícil"
 excerpt: "Queria aprender com Buffett enquanto ele ainda construía seus blocos de milhões. As pessoas se inspiram e tentam aprender com o quadro exposto na galeria..."
 featured: false
+contentType: artigo
+lang: pt
 ---
 
 Certa vez, li em algum lugar que o mais difícil era ganhar o primeiro milhão, pois depois disso os outros milhões surgiam de forma mais suave. Não sei o que estou fazendo de errado pra isso não acontecer comigo, mas tenho que lutar por cada centavo do mesmo jeito.

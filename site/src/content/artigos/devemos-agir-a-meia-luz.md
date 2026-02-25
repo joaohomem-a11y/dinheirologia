@@ -10,6 +10,8 @@ image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200"
 imageCaption: "Decisões no escuro é o que fazemos de melhor"
 excerpt: "Sempre que ouvimos alguém no Mercado dizer que algo estava tão claro, poderá observar que o verbo sempre estará conjugado no passado. Nada no Mercado é tão claro assim no presente..."
 featured: false
+contentType: artigo
+lang: pt
 ---
 
 Sempre que ouvimos alguém no Mercado dizer que algo "estava tão claro", ou qualquer coisa parecida, poderá observar que o verbo sempre estará conjugado no passado.

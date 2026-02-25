@@ -10,6 +10,8 @@ image: "https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?w=1200"
 imageCaption: "TER é mais importante que GANHAR"
 excerpt: "Para gerar riqueza você precisa ganhar sim, porém se não estiver pensando em ter enquanto estiver ganhando, não acumulará riqueza como deveria..."
 featured: false
+contentType: artigo
+lang: pt
 ---
 
 Na semana passada, estava eu na SST TOWER com meus textos impressos na mão, todo encolhido na cadeira e com duas câmeras miradas pra mim. Fui ali para gravar minhas primeiras aulas pro SST.

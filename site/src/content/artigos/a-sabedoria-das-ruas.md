@@ -10,6 +10,8 @@ image: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=1200"
 imageCaption: "A sabedoria que só vem apanhando"
 excerpt: "Não tem como você ser bom nos investimentos ou no trading, sem passar pelo longo processo de se provar nas ruas. Você precisa sentir aquele medo, precisa sentir o chute no estômago..."
 featured: false
+contentType: artigo
+lang: pt
 ---
 
 Desde bem pequeno eu era louco por artes marciais. No quarto em que eu dormia, havia vários pôsteres do Bruce Lee e do Van Damme.

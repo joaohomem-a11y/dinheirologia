@@ -10,6 +10,8 @@ image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200"
 imageCaption: "O monstro precisa ser despertado"
 excerpt: "Se retirarmos todas as firulas, discursos politicamente corretos e balões, é isso que sobra. Todos no Mercado Financeiro querem ficar cada vez mais ricos! Uns ainda apenas pelo dinheiro, outros pelo game..."
 featured: true
+contentType: artigo
+lang: pt
 ---
 
 Se retirarmos todas as firulas, discursos politicamente corretos e balões, é isso que sobra. Todos no Mercado Financeiro querem ficar cada vez mais ricos! Uns ainda apenas pelo dinheiro, outros pelo "game".

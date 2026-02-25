@@ -10,6 +10,8 @@ image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200"
 imageCaption: "Compre quando houver sangue nas ruas"
 excerpt: "Todos em Wall Street buscavam explicações sobre como Buffett previra este movimento. A resposta era apenas uma: Atitude! As informações estavam escancaradas para todos..."
 featured: true
+contentType: artigo
+lang: pt
 ---
 
 Lembro até hoje de um primo meu conversando com meu pai sobre o emprego que havia conseguido na Vale do Rio Doce. Ele falava sobre a empresa com os olhos cheios de orgulho e alegria.

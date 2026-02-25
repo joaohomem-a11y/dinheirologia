@@ -10,6 +10,8 @@ image: "https://images.unsplash.com/photo-1535320903710-d993d3d77d29?w=1200"
 imageCaption: "O mercado não perdoa"
 excerpt: "Saiba de uma coisa: Não há como ganhar dinheiro no mercado ao longo do tempo sem perder dinheiro! Todos perdem! Seja lá qual for seu horizonte de prazo operacional..."
 featured: false
+contentType: artigo
+lang: pt
 ---
 
 Prezados futuros gestores de mercearia, infelizmente não cumprirei minha promessa da última semana. Este texto não terá nada light.

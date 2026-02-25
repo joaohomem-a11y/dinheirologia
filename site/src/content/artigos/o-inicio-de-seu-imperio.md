@@ -10,6 +10,8 @@ image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200"
 imageCaption: "Todo império começa com o primeiro tijolo"
 excerpt: "A MAN11 CAPITAL iniciou seu portfolio em março de 2018 com R$31.020,00. Decidi olhar pra ele não como uma carteira de ações comum e sim como o início de um império..."
 featured: false
+contentType: artigo
+lang: pt
 ---
 
 A MAN11 CAPITAL iniciou seu portfolio em março de 2018 com R$31.020,00.

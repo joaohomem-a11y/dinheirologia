@@ -10,6 +10,8 @@ image: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200"
 imageCaption: "Cuidado com as perguntas erradas"
 excerpt: "Sempre fui um cara que pensa mais nas perguntas do que em respostas. Alguns professores me odiavam por isso, já outros me adoravam justamente por isso..."
 featured: false
+contentType: artigo
+lang: pt
 ---
 
 > Certa vez, um sujeito recém-chegado a uma cidade pequena queria conhecer o pessoal de lá e foi até a pracinha, onde viu um velho que parecia ser morador antigo, ao lado de um pastor alemão com cara de mau. Ao se aproximar, o sujeito olhou para o pastor alemão, meio assustado, e perguntou, "O seu cachorro morde?" Ao que o velho morador respondeu: "Não". Então ele se abaixou para acariciar o cachorro, que o atacou, quase lhe arrancando o braço. Furioso, e com a manga do paletó em tiras, ele se virou para o velho e reclamou: "Pensei que tivesse dito que o seu cachorro não mordia". O velho respondeu: "Não é o meu cachorro."

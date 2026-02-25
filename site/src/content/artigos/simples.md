@@ -10,6 +10,8 @@ image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200"
 imageCaption: "SMOOTH"
 excerpt: "Simplicidade é complexidade resolvida. Não existe magia! O que existe são olhos cansados das leituras, cara queimada de tela e fome de evolução..."
 featured: false
+contentType: artigo
+lang: pt
 ---
 
 *Simplicidade é complexidade resolvida. - Constantin Brancusi*
