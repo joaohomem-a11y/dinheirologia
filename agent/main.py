@@ -103,6 +103,7 @@ def _process_rss_article(
             translations=translations,
             image=image,
             featured=False,
+            content_type="noticia",
         )
         return result
 
@@ -179,6 +180,7 @@ def _process_manual_article(
             translations=translations,
             image=image,
             featured=manual.featured,
+            content_type="artigo",
         )
 
         # Mark as processed so it won't run again

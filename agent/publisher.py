@@ -53,6 +53,7 @@ def _build_frontmatter(
     published_date: str,
     featured: bool = False,
     lang: str = "pt",
+    content_type: str = "noticia",
 ) -> dict[str, Any]:
     """
     Build the frontmatter dictionary for a markdown article.
@@ -85,6 +86,7 @@ def _build_frontmatter(
         "image": image.display_url,
         "imageCaption": image.caption,
         "excerpt": excerpt,
+        "contentType": content_type,
         "featured": featured,
         "lang": lang,
     }
@@ -186,6 +188,7 @@ class ArticlePublisher:
         translations: dict[str, TranslatedContent],
         image: ArticleImage,
         featured: bool = False,
+        content_type: str = "noticia",
     ) -> PublishResult:
         """
         Write all language versions of an article to disk.
@@ -214,6 +217,7 @@ class ArticlePublisher:
             published_date=article.published_at,
             featured=featured,
             lang="pt",
+            content_type=content_type,
         )
         pt_path = self._write(slug, "pt", pt_fm, article.body_pt)
         paths["pt"] = pt_path
@@ -232,6 +236,7 @@ class ArticlePublisher:
                 published_date=article.published_at,
                 featured=featured,
                 lang="en",
+                content_type=content_type,
             )
             en_path = self._write(slug, "en", en_fm, en.body)
             paths["en"] = en_path
@@ -250,6 +255,7 @@ class ArticlePublisher:
                 published_date=article.published_at,
                 featured=featured,
                 lang="es",
+                content_type=content_type,
             )
             es_path = self._write(slug, "es", es_fm, es.body)
             paths["es"] = es_path

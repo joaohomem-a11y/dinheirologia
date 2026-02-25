@@ -92,6 +92,26 @@ EXIT_CODE="${PIPESTATUS[0]}"
 log "Agent finished with exit code ${EXIT_CODE}."
 
 # ---------------------------------------------------------------------------
+# Git commit and push (triggers Vercel auto-deploy)
+# ---------------------------------------------------------------------------
+if [[ "${EXIT_CODE}" -eq 0 ]]; then
+    REPO_DIR="$(dirname "${AGENT_DIR}")"
+    cd "${REPO_DIR}"
+
+    # Check if there are new/changed article files
+    CHANGED=$(git status --porcelain -- site/src/content/artigos/ 2>/dev/null | wc -l | tr -d ' ')
+    if [[ "${CHANGED}" -gt 0 ]]; then
+        log "Found ${CHANGED} new/changed article files. Committing and pushing..."
+        git add site/src/content/artigos/
+        git commit -m "content: agent published ${CHANGED} article(s) $(date +%Y-%m-%d_%H:%M)"
+        git push origin main
+        log "Push complete. Vercel will auto-deploy."
+    else
+        log "No new articles to commit."
+    fi
+fi
+
+# ---------------------------------------------------------------------------
 # Log rotation: keep only the last 30 log files
 # ---------------------------------------------------------------------------
 ls -t "${LOG_DIR}"/agent_*.log 2>/dev/null | tail -n +31 | xargs rm -f 2>/dev/null || true
