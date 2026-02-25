@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "title": "Dinheirologia - No-BS Financial Markets",
+    "description": "Financial news portal covering markets, trading, investments and business. Deep insight with acid humor and skin in the game."
+  },
+  "nav": {
+    "home": "Home",
+    "markets": "Markets",
+    "trading": "Trading",
+    "investments": "Investments",
+    "business": "Business",
+    "calendar": "Economic Calendar",
+    "about": "About",
+    "search": "Search",
+    "language": "Language"
+  },
+  "home": {
+    "featured": "Featured",
+    "latest": "Latest News",
+    "trending": "Trending",
+    "opinion": "Opinion",
+    "readMore": "Read More",
+    "minRead": "min read",
+    "by": "by",
+    "publishedAt": "Published on"
+  },
+  "calendar": {
+    "title": "Economic Calendar",
+    "subtitle": "The indicators that make the market shake (or not)",
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "thisWeek": "This Week",
+    "impact": "Impact",
+    "previous": "Previous",
+    "forecast": "Forecast",
+    "actual": "Actual",
+    "time": "Time",
+    "event": "Event",
+    "country": "Country",
+    "noEvents": "No events today. The market rested (you should too).",
+    "impactHigh": "Hold your horses",
+    "impactMedium": "Worth watching",
+    "impactLow": "Don't sweat it"
+  },
+  "article": {
+    "shareArticle": "Share",
+    "relatedArticles": "Related Articles",
+    "authorBio": "About the Author",
+    "tags": "Tags",
+    "disclaimer": "Opinions expressed in this article are the author's own and do not constitute investment advice."
+  },
+  "about": {
+    "title": "About Dinheirologia",
+    "description": "A financial news portal that doesn't treat you like an idiot."
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "disclaimer": "This portal does not provide investment recommendations. Information and opinion, with skin in the game.",
+    "tagline": "No-BS Financial Markets"
+  }
+}

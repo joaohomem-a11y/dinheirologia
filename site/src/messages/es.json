@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "title": "Dinheirologia - Mercados Financieros Sin Rodeos",
+    "description": "Portal de noticias sobre mercados financieros, trading, inversiones y negocios. Información profunda con humor ácido y piel en el juego."
+  },
+  "nav": {
+    "home": "Inicio",
+    "markets": "Mercados",
+    "trading": "Trading",
+    "investments": "Inversiones",
+    "business": "Negocios",
+    "calendar": "Calendario Económico",
+    "about": "Acerca de",
+    "search": "Buscar",
+    "language": "Idioma"
+  },
+  "home": {
+    "featured": "Destacado",
+    "latest": "Últimas Noticias",
+    "trending": "Tendencias",
+    "opinion": "Opinión",
+    "readMore": "Leer Más",
+    "minRead": "min de lectura",
+    "by": "por",
+    "publishedAt": "Publicado el"
+  },
+  "calendar": {
+    "title": "Calendario Económico",
+    "subtitle": "Los indicadores que hacen temblar al mercado (o no)",
+    "today": "Hoy",
+    "tomorrow": "Mañana",
+    "thisWeek": "Esta Semana",
+    "impact": "Impacto",
+    "previous": "Anterior",
+    "forecast": "Pronóstico",
+    "actual": "Real",
+    "time": "Hora",
+    "event": "Evento",
+    "country": "País",
+    "noEvents": "Sin eventos hoy. El mercado descansó (tú también deberías).",
+    "impactHigh": "Va a temblar todo",
+    "impactMedium": "Algo se mueve",
+    "impactLow": "Ni te preocupes"
+  },
+  "article": {
+    "shareArticle": "Compartir",
+    "relatedArticles": "Artículos Relacionados",
+    "authorBio": "Sobre el Autor",
+    "tags": "Etiquetas",
+    "disclaimer": "Las opiniones expresadas en este artículo son del autor y no constituyen recomendación de inversión."
+  },
+  "about": {
+    "title": "Sobre Dinheirologia",
+    "description": "Un portal de noticias financieras que no te trata como idiota."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados",
+    "disclaimer": "Este portal no ofrece recomendaciones de inversión. Información y opinión, con piel en el juego.",
+    "tagline": "Mercados Financieros Sin Rodeos"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "title": "Dinheirologia - Mercado Financeiro Sem Frescura",
+    "description": "Portal de notícias sobre mercado financeiro, trading, investimentos e negócios. Informação com profundidade, humor ácido e pele em jogo."
+  },
+  "nav": {
+    "home": "Início",
+    "markets": "Mercados",
+    "trading": "Trading",
+    "investments": "Investimentos",
+    "business": "Negócios",
+    "calendar": "Calendário Econômico",
+    "about": "Sobre",
+    "search": "Buscar",
+    "language": "Idioma"
+  },
+  "home": {
+    "featured": "Destaque",
+    "latest": "Últimas Notícias",
+    "trending": "Em Alta",
+    "opinion": "Opinião",
+    "readMore": "Leia Mais",
+    "minRead": "min de leitura",
+    "by": "por",
+    "publishedAt": "Publicado em"
+  },
+  "calendar": {
+    "title": "Calendário Econômico",
+    "subtitle": "Os indicadores que fazem o mercado tremer (ou não)",
+    "today": "Hoje",
+    "tomorrow": "Amanhã",
+    "thisWeek": "Esta Semana",
+    "impact": "Impacto",
+    "previous": "Anterior",
+    "forecast": "Previsão",
+    "actual": "Real",
+    "time": "Horário",
+    "event": "Evento",
+    "country": "País",
+    "noEvents": "Nenhum evento hoje. O mercado descansou (você deveria fazer o mesmo).",
+    "impactHigh": "Vai tremer tudo",
+    "impactMedium": "Dá uma mexida",
+    "impactLow": "Nem esquenta"
+  },
+  "article": {
+    "shareArticle": "Compartilhar",
+    "relatedArticles": "Artigos Relacionados",
+    "authorBio": "Sobre o Autor",
+    "tags": "Tags",
+    "disclaimer": "As opiniões expressas neste artigo são do autor e não constituem recomendação de investimento."
+  },
+  "about": {
+    "title": "Sobre o Dinheirologia",
+    "description": "Um portal de notícias financeiras que não te trata como idiota."
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados",
+    "disclaimer": "Este portal não oferece recomendações de investimento. Informação e opinião, com a pele em jogo.",
+    "tagline": "Mercado Financeiro Sem Frescura"
+  }
+}

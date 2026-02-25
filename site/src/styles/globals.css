@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-paper-white text-navy-900 font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+
+  /* Newspaper-style horizontal rules */
+  hr {
+    @apply border-rule-gray;
+  }
+
+  /* Article body styling */
+  .article-body p {
+    @apply text-body-lg leading-relaxed mb-6 text-navy-800;
+  }
+
+  .article-body blockquote {
+    @apply border-l-3 border-gold pl-6 my-8 italic text-navy-600;
+  }
+
+  .article-body h2 {
+    @apply text-headline-md mt-10 mb-4 text-navy-900;
+  }
+
+  .article-body h3 {
+    @apply text-headline-sm mt-8 mb-3 text-navy-800;
+  }
+
+  .article-body a {
+    @apply text-navy-600 underline decoration-salmon-400 underline-offset-2 hover:text-salmon-600 transition-colors;
+  }
+
+  .article-body ul, .article-body ol {
+    @apply ml-6 mb-6 space-y-2;
+  }
+
+  .article-body li {
+    @apply text-body-lg text-navy-800;
+  }
+
+  .article-body img {
+    @apply rounded-sm my-8 w-full;
+  }
+
+  /* Newspaper column divider */
+  .column-divider {
+    @apply border-r border-rule-gray;
+  }
+}
+
+@layer components {
+  /* Breaking news banner */
+  .breaking-news {
+    @apply bg-navy-900 text-cream-50 py-2 px-4 text-body-sm font-sans uppercase tracking-wider;
+  }
+
+  /* Section header with lines */
+  .section-header {
+    @apply flex items-center gap-4 mb-6;
+  }
+
+  .section-header::before,
+  .section-header::after {
+    content: '';
+    @apply flex-1 h-px bg-rule-gray;
+  }
+
+  .section-header h2 {
+    @apply text-headline-sm font-serif uppercase tracking-wider text-navy-700 whitespace-nowrap;
+  }
+
+  /* Article card hover effect */
+  .article-card {
+    @apply transition-all duration-200 hover:bg-cream-50;
+  }
+
+  /* Tag pill */
+  .tag-pill {
+    @apply inline-block px-3 py-1 text-caption font-sans uppercase tracking-wider border border-navy-200 text-navy-600 hover:bg-navy-900 hover:text-cream-50 transition-colors;
+  }
+
+  /* Impact emoji badges for calendar */
+  .impact-high {
+    @apply text-2xl;
+  }
+
+  .impact-medium {
+    @apply text-2xl;
+  }
+
+  .impact-low {
+    @apply text-2xl;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-cream-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-navy-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-navy-400;
+}
+
+/* Print styles for a newspaper feel */
+@media print {
+  body {
+    @apply text-black bg-white;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}

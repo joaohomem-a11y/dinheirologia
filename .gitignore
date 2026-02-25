@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+site/node_modules/
+
+# Next.js
+site/.next/
+site/out/
+
+# Build
+site/.vercel
+
+# Environment
+.env
+.env.local
+agent/.env
+
+# Agent state
+agent/agent_state.json
+agent/logs/
+agent/__pycache__/
+agent/.venv/
+agent/venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# OMC state
+.omc/
+.claude/
