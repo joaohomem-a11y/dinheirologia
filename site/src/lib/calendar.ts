@@ -529,6 +529,61 @@ const EVENTS: EventTemplate[] = [
     previous: (s) => vary(0.2, 0.1, s) + '%', forecast: (s) => vary(0.2, 0.08, s + 1) + '%' },
 
   // ════════════════════════════════════════════════════════════════
+  // EUROPEAN & UK EVENTS (spread across the month)
+  // ════════════════════════════════════════════════════════════════
+
+  // ── Week 2 ─────────────────────────────────────────────────────
+  { event: 'ZEW Economic Sentiment', countryCode: 'EU', time: '07:00', impact: 'medium',
+    matches: (d, bd) => d.getDay() === 2 && bd >= 7 && bd <= 9,
+    previous: (s) => vary(17.0, 5.0, s), forecast: (s) => vary(18.5, 4.0, s + 1) },
+  { event: 'ZEW Economic Sentiment', countryCode: 'DE', time: '07:00', impact: 'medium',
+    matches: (d, bd) => d.getDay() === 2 && bd >= 7 && bd <= 9,
+    previous: (s) => vary(15.0, 6.0, s), forecast: (s) => vary(16.0, 5.0, s + 1) },
+  { event: 'UK Employment Change', countryCode: 'GB', time: '05:00', impact: 'medium',
+    matches: (d, bd) => d.getDay() === 2 && bd >= 8 && bd <= 10,
+    previous: (s) => vary(48, 20, s, 0) + 'K', forecast: (s) => vary(45, 15, s + 1, 0) + 'K' },
+  { event: 'UK Unemployment Rate', countryCode: 'GB', time: '05:00', impact: 'medium',
+    matches: (d, bd) => d.getDay() === 2 && bd >= 8 && bd <= 10,
+    previous: () => '4.4%', forecast: () => '4.4%' },
+
+  // ── Week 3 ─────────────────────────────────────────────────────
+  { event: 'EU Trade Balance', countryCode: 'EU', time: '08:00', impact: 'low',
+    matches: (d, bd) => d.getDay() === 3 && bd >= 11 && bd <= 13,
+    previous: (s) => vary(15.5, 4.0, s) + 'B', forecast: (s) => vary(16.0, 3.5, s + 1) + 'B' },
+  { event: 'UK GDP (MoM)', countryCode: 'GB', time: '05:00', impact: 'high',
+    matches: (d, bd) => d.getDay() === 4 && bd >= 10 && bd <= 12,
+    previous: (s) => vary(0.1, 0.2, s) + '%', forecast: (s) => vary(0.2, 0.15, s + 1) + '%' },
+  { event: 'UK Retail Sales (MoM)', countryCode: 'GB', time: '05:00', impact: 'medium',
+    matches: (d, bd) => d.getDay() === 5 && bd >= 13 && bd <= 15,
+    previous: (s) => vary(-0.3, 1.0, s) + '%', forecast: (s) => vary(0.2, 0.8, s + 1) + '%' },
+
+  // ── Week 4 ─────────────────────────────────────────────────────
+  { event: 'S&P Global Manufacturing PMI (Flash)', countryCode: 'EU', time: '06:00', impact: 'medium',
+    matches: (d, bd) => d.getDay() === 1 && bd >= 16 && bd <= 18,
+    previous: (s) => vary(46.8, 0.8, s), forecast: (s) => vary(47.0, 0.6, s + 1) },
+  { event: 'S&P Global Services PMI (Flash)', countryCode: 'EU', time: '06:00', impact: 'medium',
+    matches: (d, bd) => d.getDay() === 1 && bd >= 16 && bd <= 18,
+    previous: (s) => vary(51.5, 0.8, s), forecast: (s) => vary(51.3, 0.6, s + 1) },
+  { event: 'S&P Global Manufacturing PMI (Flash)', countryCode: 'GB', time: '06:30', impact: 'medium',
+    matches: (d, bd) => d.getDay() === 1 && bd >= 16 && bd <= 18,
+    previous: (s) => vary(48.5, 0.8, s), forecast: (s) => vary(48.8, 0.6, s + 1) },
+  { event: 'Ifo Business Climate', countryCode: 'DE', time: '07:00', impact: 'high',
+    matches: (d, bd) => d.getDay() === 1 && bd >= 16 && bd <= 18,
+    previous: (s) => vary(86.5, 1.5, s), forecast: (s) => vary(87.0, 1.2, s + 1) },
+  { event: 'EU Consumer Confidence (Flash)', countryCode: 'EU', time: '13:00', impact: 'medium',
+    matches: (d, bd) => d.getDay() === 4 && bd >= 16 && bd <= 19,
+    previous: (s) => vary(-14.5, 1.5, s), forecast: (s) => vary(-14.0, 1.2, s + 1) },
+  { event: 'GfK Consumer Confidence', countryCode: 'DE', time: '05:00', impact: 'low',
+    matches: (d, bd) => d.getDay() === 3 && bd >= 18 && bd <= 20,
+    previous: (s) => vary(-22.0, 2.0, s), forecast: (s) => vary(-21.5, 1.5, s + 1) },
+  { event: 'ECB Meeting Minutes', countryCode: 'EU', time: '10:30', impact: 'medium',
+    matches: (d, bd) => d.getDay() === 4 && bd >= 18 && bd <= 20,
+    previous: () => '—', forecast: () => '—' },
+  { event: 'UK GfK Consumer Confidence', countryCode: 'GB', time: '02:01', impact: 'low',
+    matches: (d, bd) => d.getDay() === 5 && bd >= 18 && bd <= 21,
+    previous: (s) => vary(-20, 3, s, 0), forecast: (s) => vary(-19, 2.5, s + 1, 0) },
+
+  // ════════════════════════════════════════════════════════════════
   // TREASURY AUCTIONS (weekly, various days)
   // ════════════════════════════════════════════════════════════════
 
