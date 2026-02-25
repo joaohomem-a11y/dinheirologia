@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+
 import { getAllSlugs } from '@/lib/articles';
 
 export default function sitemap(): MetadataRoute.Sitemap {
