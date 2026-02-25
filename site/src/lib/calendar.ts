@@ -39,9 +39,17 @@ const HUMOR_NOTES: Record<string, Record<string, string>> = {
   },
 };
 
-export function getImpactEmoji(impact: 'high' | 'medium' | 'low'): string {
+export function getImpactEmoji(impact: 'high' | 'medium' | 'low', seed?: string): string {
   const emojis = IMPACT_EMOJIS[impact];
-  return emojis[Math.floor(Math.random() * emojis.length)];
+  if (seed) {
+    let hash = 0;
+    for (let i = 0; i < seed.length; i++) {
+      hash = ((hash << 5) - hash) + seed.charCodeAt(i);
+      hash |= 0;
+    }
+    return emojis[Math.abs(hash) % emojis.length];
+  }
+  return emojis[0];
 }
 
 export function getHumorNote(eventName: string, locale: string): string | undefined {

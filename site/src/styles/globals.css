@@ -10,6 +10,7 @@
 
   body {
     @apply bg-paper-white text-navy-900 font-body;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -61,12 +62,20 @@
 }
 
 @layer components {
-  /* Breaking news banner */
+  /* ===== NEWSPAPER PORTAL STYLES ===== */
+
+  /* Breaking news ticker */
   .breaking-news {
     @apply bg-navy-900 text-cream-50 py-2 px-4 text-body-sm font-sans uppercase tracking-wider;
   }
 
-  /* Section header with lines */
+  /* Newspaper double-rule top border */
+  .newspaper-rule-top {
+    border-top: 3px double #151E39;
+    padding-top: 1rem;
+  }
+
+  /* Section header with newspaper-style lines */
   .section-header {
     @apply flex items-center gap-4 mb-6;
   }
@@ -74,16 +83,21 @@
   .section-header::before,
   .section-header::after {
     content: '';
-    @apply flex-1 h-px bg-rule-gray;
+    @apply flex-1 h-px bg-navy-900;
   }
 
   .section-header h2 {
-    @apply text-headline-sm font-serif uppercase tracking-wider text-navy-700 whitespace-nowrap;
+    @apply text-headline-sm font-serif uppercase tracking-wider text-navy-900 whitespace-nowrap;
+  }
+
+  /* Newspaper section label (like "MERCADOS", "OPINIÃO") */
+  .section-label {
+    @apply font-sans text-caption uppercase tracking-[0.2em] font-bold text-salmon-600 border-b-2 border-salmon-500 pb-1 inline-block mb-4;
   }
 
   /* Article card hover effect */
   .article-card {
-    @apply transition-all duration-200 hover:bg-cream-50;
+    @apply transition-all duration-200 hover:bg-newsprint/50;
   }
 
   /* Tag pill */
@@ -102,6 +116,57 @@
 
   .impact-low {
     @apply text-2xl;
+  }
+
+  /* Newspaper-style column layout */
+  .newspaper-grid {
+    display: grid;
+    gap: 0;
+  }
+
+  .newspaper-grid > * {
+    @apply border-b border-rule-gray pb-6 mb-6;
+  }
+
+  .newspaper-grid > *:last-child {
+    @apply border-b-0 pb-0 mb-0;
+  }
+
+  /* Vertical divider between columns */
+  .col-divider {
+    @apply relative;
+  }
+
+  .col-divider::after {
+    content: '';
+    @apply absolute top-0 right-0 h-full border-r border-rule-gray;
+  }
+
+  /* Headline sizes for portal hierarchy */
+  .headline-hero {
+    @apply font-serif text-headline-xl text-navy-900 leading-[1.05] tracking-tight;
+  }
+
+  .headline-secondary {
+    @apply font-serif text-headline-lg text-navy-900 leading-tight;
+  }
+
+  .headline-tertiary {
+    @apply font-serif text-headline-md text-navy-900 leading-snug;
+  }
+
+  /* Byline */
+  .byline {
+    @apply flex items-center gap-2 text-caption font-sans text-navy-400;
+  }
+
+  .byline .author {
+    @apply font-semibold text-navy-600;
+  }
+
+  /* Edition date bar */
+  .edition-bar {
+    @apply text-center py-1 font-sans text-caption text-navy-400 border-b border-rule-gray;
   }
 }
 

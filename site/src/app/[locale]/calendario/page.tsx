@@ -114,7 +114,7 @@ export default async function CalendarioPage({ params }: Props) {
           <tbody>
             {events.map((event) => {
               const humorNote = getHumorNote(event.event, locale);
-              const impactEmoji = getImpactEmoji(event.impact);
+              const impactEmoji = getImpactEmoji(event.impact, event.id);
               const flag = FLAG_MAP[event.countryCode] || '🌍';
 
               return (

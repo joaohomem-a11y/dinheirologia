@@ -6,7 +6,7 @@ author: "Como Dirigir Uma Mercearia e Umas Coisinhas Que Aprendi Sobre Pescaria"
 authorSlug: "joao-homem"
 category: "trading"
 tags: ["psicologia", "ralph vince", "gestão de risco", "disciplina", "inimigo interno"]
-image: "https://images.unsplash.com/photo-1494972688394-4cc796f9e4c4?w=1200"
+image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200"
 imageCaption: "Seu maior inimigo está lendo isso junto com você"
 excerpt: "Como a maioria dos investidores, tenho em mim mesmo meu maior inimigo. Outros investidores não são nem sombra da ameaça que represento para mim mesmo..."
 featured: false

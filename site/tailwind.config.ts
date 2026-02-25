@@ -45,8 +45,9 @@ const config: Config = {
         // Accent colors
         gold: '#C9A84C',
         'ink-black': '#1A1A1A',
-        'paper-white': '#FAFAF5',
-        'rule-gray': '#D4D4D0',
+        'paper-white': '#F4EDDB',
+        'newsprint': '#EDE5D0',
+        'rule-gray': '#C8C0AD',
       },
       fontFamily: {
         serif: ['var(--font-playfair)', 'Playfair Display', 'Georgia', 'serif'],

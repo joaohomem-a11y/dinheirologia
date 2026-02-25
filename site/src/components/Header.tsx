@@ -33,17 +33,17 @@ export default function Header() {
   });
 
   return (
-    <header className="bg-paper-white border-b-3 border-navy-900">
-      {/* Top bar */}
-      <div className="max-w-content mx-auto px-4 py-2 flex items-center justify-between text-caption font-sans text-navy-500">
-        <time className="capitalize">{today}</time>
-        <div className="flex items-center gap-3">
+    <header className="bg-paper-white">
+      {/* Top utility bar */}
+      <div className="max-w-content mx-auto px-4 py-2 flex items-center justify-between">
+        <time className="font-sans text-caption text-navy-400 capitalize">{today}</time>
+        <div className="flex items-center gap-2">
           {LOCALES.map((loc) => (
             <Link
               key={loc.code}
               href={pathname}
               locale={loc.code}
-              className={`px-2 py-0.5 transition-colors ${
+              className={`px-2 py-0.5 text-caption font-sans transition-colors ${
                 locale === loc.code
                   ? 'bg-navy-900 text-cream-50'
                   : 'hover:bg-cream-100 text-navy-500'
@@ -55,63 +55,87 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Masthead */}
-      <div className="max-w-content mx-auto px-4 py-6 text-center border-t border-b border-rule-gray">
-        <Link href="/" className="inline-block">
-          <h1 className="font-serif text-headline-xl text-navy-900 tracking-tight">
-            DINHEIROLOGIA
-          </h1>
-          <p className="font-sans text-caption uppercase tracking-[0.3em] text-navy-500 mt-1">
-            {locale === 'pt' ? 'Mercado Financeiro Sem Frescura' :
-             locale === 'en' ? 'No-BS Financial Markets' :
-             'Mercados Financieros Sin Rodeos'}
+      {/* Newspaper masthead */}
+      <div className="border-t-3 border-b-3 border-navy-900">
+        <div className="max-w-content mx-auto px-4 py-5 text-center">
+          {/* Double rule effect */}
+          <div className="border-b border-navy-900 mb-4 pb-4">
+            <Link href="/" className="inline-block">
+              <h1 className="font-serif tracking-[0.08em] text-navy-900" style={{ fontSize: '3.8rem', lineHeight: '1' }}>
+                DINHEIROLOGIA
+              </h1>
+            </Link>
+          </div>
+          <p className="font-body text-body-sm italic text-navy-500">
+            {locale === 'pt' ? 'Sua leitura sobre dinheiro, sem frescuras' :
+             locale === 'en' ? 'Your money read, no BS attached' :
+             'Tu lectura sobre dinero, sin rodeos'}
           </p>
-        </Link>
+        </div>
       </div>
 
-      {/* Navigation */}
-      <nav className="max-w-content mx-auto px-4">
-        {/* Desktop nav */}
-        <ul className="hidden md:flex items-center justify-center gap-0 border-b border-rule-gray">
-          {NAV_ITEMS.map((item) => (
-            <li key={item.key}>
+      {/* Navigation bar */}
+      <nav className="bg-navy-900">
+        <div className="max-w-content mx-auto px-4">
+          {/* Desktop nav */}
+          <ul className="hidden md:flex items-center justify-center gap-0">
+            <li>
               <Link
-                href={item.href}
-                className="block px-5 py-3 font-sans text-body-sm uppercase tracking-wider text-navy-700 hover:bg-cream-50 hover:text-navy-900 transition-colors border-b-2 border-transparent hover:border-salmon-500"
+                href="/"
+                className="block px-5 py-3 font-sans text-body-sm uppercase tracking-[0.15em] text-cream-200 hover:text-cream-50 hover:bg-navy-800 transition-colors"
               >
-                {t(item.key)}
+                {t('home')}
               </Link>
             </li>
-          ))}
-        </ul>
-
-        {/* Mobile hamburger */}
-        <div className="md:hidden flex justify-center py-2 border-b border-rule-gray">
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="font-sans text-body-sm uppercase tracking-wider text-navy-700 px-4 py-2"
-            aria-label="Menu"
-          >
-            {mobileOpen ? '✕ Fechar' : '☰ Menu'}
-          </button>
-        </div>
-
-        {/* Mobile menu */}
-        {mobileOpen && (
-          <ul className="md:hidden border-b border-rule-gray">
             {NAV_ITEMS.map((item) => (
-              <li key={item.key} className="border-b border-cream-200 last:border-0">
+              <li key={item.key}>
                 <Link
                   href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="block px-5 py-3 font-sans text-body-sm uppercase tracking-wider text-navy-700 hover:bg-cream-50"
+                  className="block px-5 py-3 font-sans text-body-sm uppercase tracking-[0.15em] text-cream-200 hover:text-cream-50 hover:bg-navy-800 transition-colors"
                 >
                   {t(item.key)}
                 </Link>
               </li>
             ))}
           </ul>
-        )}
+
+          {/* Mobile hamburger */}
+          <div className="md:hidden flex justify-center py-2">
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="font-sans text-body-sm uppercase tracking-wider text-cream-200 px-4 py-2"
+              aria-label="Menu"
+            >
+              {mobileOpen ? '✕ Fechar' : '☰ Menu'}
+            </button>
+          </div>
+
+          {/* Mobile menu */}
+          {mobileOpen && (
+            <ul className="md:hidden border-t border-navy-700">
+              <li>
+                <Link
+                  href="/"
+                  onClick={() => setMobileOpen(false)}
+                  className="block px-5 py-3 font-sans text-body-sm uppercase tracking-wider text-cream-200 hover:bg-navy-800 border-b border-navy-700"
+                >
+                  {t('home')}
+                </Link>
+              </li>
+              {NAV_ITEMS.map((item) => (
+                <li key={item.key}>
+                  <Link
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="block px-5 py-3 font-sans text-body-sm uppercase tracking-wider text-cream-200 hover:bg-navy-800 border-b border-navy-700 last:border-0"
+                  >
+                    {t(item.key)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       </nav>
     </header>
   );
