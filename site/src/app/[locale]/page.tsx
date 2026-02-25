@@ -201,13 +201,22 @@ export default async function HomePage({ params, searchParams }: Props) {
           <ol className="numbered-list">
             {mostRead.map((article) => (
               <li key={article.slug}>
-                <Link href={`/artigo/${article.slug}`} className="block group">
-                  <h4 className="font-serif text-headline-sm text-navy-900 group-hover:text-dollar-700 leading-snug transition-colors">
-                    {article.title}
-                  </h4>
-                  <span className="font-sans text-body-sm text-navy-400 mt-1 block">
-                    {article.author}
-                  </span>
+                <Link href={`/artigo/${article.slug}`} className="flex gap-3 items-start group">
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-serif text-headline-sm text-navy-900 group-hover:text-dollar-700 leading-snug transition-colors">
+                      {article.title}
+                    </h4>
+                    <span className="font-sans text-body-sm text-navy-400 mt-1 block">
+                      {article.author}
+                    </span>
+                  </div>
+                  {article.image && (
+                    <img
+                      src={article.image}
+                      alt=""
+                      className="w-14 h-14 object-cover flex-shrink-0 grayscale-[30%] group-hover:grayscale-0 transition-all duration-300"
+                    />
+                  )}
                 </Link>
               </li>
             ))}

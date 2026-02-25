@@ -22,16 +22,25 @@ export default function ArticleCard({ article, variant = 'standard' }: ArticleCa
   if (variant === 'headline') {
     return (
       <article className="py-3 border-b border-rule-gray">
-        <Link href={`/artigo/${article.slug}`} className="block group">
-          <span className="font-sans text-caption uppercase tracking-wider text-dollar-600">
-            {categoryLabel}
-          </span>
-          <h3 className="font-serif text-headline-sm text-navy-900 group-hover:text-dollar-700 mt-1 leading-snug transition-colors">
-            {article.title}
-          </h3>
-          <time className="font-sans text-body-sm text-navy-400 mt-1 block">
-            {formattedDate}
-          </time>
+        <Link href={`/artigo/${article.slug}`} className="flex gap-3 items-start group">
+          <div className="flex-1 min-w-0">
+            <span className="font-sans text-caption uppercase tracking-wider text-dollar-600">
+              {categoryLabel}
+            </span>
+            <h3 className="font-serif text-headline-sm text-navy-900 group-hover:text-dollar-700 mt-1 leading-snug transition-colors">
+              {article.title}
+            </h3>
+            <time className="font-sans text-body-sm text-navy-400 mt-1 block">
+              {formattedDate}
+            </time>
+          </div>
+          {article.image && (
+            <img
+              src={article.image}
+              alt=""
+              className="w-16 h-16 object-cover flex-shrink-0 grayscale-[30%] group-hover:grayscale-0 transition-all duration-300"
+            />
+          )}
         </Link>
       </article>
     );
