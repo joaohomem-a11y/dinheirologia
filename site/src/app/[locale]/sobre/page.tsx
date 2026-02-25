@@ -127,7 +127,7 @@ export default async function SobrePage({ params }: Props) {
         {content.title}
       </h1>
 
-      <div className="border-t-3 border-navy-900 mb-10" />
+      <div className="border-t-3 border-dollar-800 mb-10" />
 
       {content.blocks.map((block, i) => (
         <section key={i} className="mb-10">
