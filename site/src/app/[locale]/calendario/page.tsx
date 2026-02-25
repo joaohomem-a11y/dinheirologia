@@ -49,9 +49,23 @@ export default async function CalendarioPage({ params }: Props) {
         <h1 className="font-serif text-headline-xl text-navy-900 mb-3">
           {t('title')}
         </h1>
-        <p className="font-body text-body-lg text-navy-500 italic">
+        <p className="font-body text-body-lg text-navy-500 italic mb-4">
           {t('subtitle')}
         </p>
+        <div className="flex items-center justify-center gap-3 font-sans text-body-sm text-navy-400">
+          <span className="font-medium text-navy-600">
+            {new Date().toLocaleDateString(
+              locale === 'pt' ? 'pt-BR' : locale === 'es' ? 'es-ES' : 'en-US',
+              { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }
+            )}
+          </span>
+          <span className="text-navy-300">|</span>
+          <span>
+            {locale === 'pt' ? 'Horários em ET (Nova York) · GMT-5' :
+             locale === 'es' ? 'Horarios en ET (Nueva York) · GMT-5' :
+             'Times in ET (New York) · GMT-5'}
+          </span>
+        </div>
       </div>
 
       {/* Impact Legend */}
