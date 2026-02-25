@@ -64,7 +64,7 @@ export default function Header() {
         <div className="max-w-content mx-auto px-4 py-5 text-center">
           <div className="border-b border-navy-300 mb-3 pb-3">
             <Link href="/" className="inline-block">
-              <h1 className="font-serif tracking-[0.06em] text-navy-900" style={{ fontSize: '3.8rem', lineHeight: '1' }}>
+              <h1 className="font-serif tracking-[0.06em] text-navy-900 text-[2rem] sm:text-[2.8rem] lg:text-[3.8rem] leading-none">
                 DINHEIROLOGIA
               </h1>
             </Link>

@@ -69,9 +69,9 @@ export default async function HomePage({ params, searchParams }: Props) {
   const mostRead: typeof articles = [];
   const noticiasPool = [...noticias];
   const artigosPool = [...artigos];
-  while (mostRead.length < 5 && (noticiasPool.length > 0 || artigosPool.length > 0)) {
+  while (mostRead.length < 7 && (noticiasPool.length > 0 || artigosPool.length > 0)) {
     if (noticiasPool.length > 0) mostRead.push(noticiasPool.shift()!);
-    if (mostRead.length < 5 && artigosPool.length > 0) mostRead.push(artigosPool.shift()!);
+    if (mostRead.length < 7 && artigosPool.length > 0) mostRead.push(artigosPool.shift()!);
   }
 
   // Opinion & Analysis section
