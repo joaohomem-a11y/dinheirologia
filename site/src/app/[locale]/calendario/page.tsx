@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { getSampleCalendarEvents, getImpactEmoji, getHumorNote } from '@/lib/calendar';
+import CalendarTable from '@/components/CalendarTable';
 import type { Metadata } from 'next';
 
 type Props = {
@@ -24,23 +24,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-const FLAG_MAP: Record<string, string> = {
-  US: '🇺🇸',
-  BR: '🇧🇷',
-  EU: '🇪🇺',
-  JP: '🇯🇵',
-  CN: '🇨🇳',
-  GB: '🇬🇧',
-  DE: '🇩🇪',
-  FR: '🇫🇷',
-  CA: '🇨🇦',
-  AU: '🇦🇺',
-};
-
 export default async function CalendarioPage({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'calendar' });
-  const events = getSampleCalendarEvents();
 
   return (
     <div className="max-w-content mx-auto px-4 py-8">
@@ -52,20 +38,6 @@ export default async function CalendarioPage({ params }: Props) {
         <p className="font-body text-body-lg text-navy-500 italic mb-4">
           {t('subtitle')}
         </p>
-        <div className="flex items-center justify-center gap-3 font-sans text-body-sm text-navy-400">
-          <span className="font-medium text-navy-600">
-            {new Date().toLocaleDateString(
-              locale === 'pt' ? 'pt-BR' : locale === 'es' ? 'es-ES' : 'en-US',
-              { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }
-            )}
-          </span>
-          <span className="text-navy-300">|</span>
-          <span>
-            {locale === 'pt' ? 'Horários em ET (Nova York) · GMT-5' :
-             locale === 'es' ? 'Horarios en ET (Nueva York) · GMT-5' :
-             'Times in ET (New York) · GMT-5'}
-          </span>
-        </div>
       </div>
 
       {/* Impact Legend */}
@@ -84,111 +56,8 @@ export default async function CalendarioPage({ params }: Props) {
         </div>
       </div>
 
-      {/* Date tabs */}
-      <div className="flex gap-1 mb-6 border-b border-rule-gray">
-        <button className="px-5 py-3 font-sans text-body-sm uppercase tracking-wider bg-dollar-800 text-cream-50">
-          {t('today')}
-        </button>
-        <button className="px-5 py-3 font-sans text-body-sm uppercase tracking-wider text-navy-500 hover:bg-cream-50 transition-colors">
-          {t('tomorrow')}
-        </button>
-        <button className="px-5 py-3 font-sans text-body-sm uppercase tracking-wider text-navy-500 hover:bg-cream-50 transition-colors">
-          {t('thisWeek')}
-        </button>
-      </div>
-
-      {/* Calendar Table */}
-      <div className="overflow-x-auto">
-        <table className="w-full">
-          <thead>
-            <tr className="border-b-2 border-dollar-800">
-              <th className="py-3 px-4 text-left font-sans text-caption uppercase tracking-wider text-navy-500">
-                {t('time')}
-              </th>
-              <th className="py-3 px-4 text-left font-sans text-caption uppercase tracking-wider text-navy-500">
-                {t('country')}
-              </th>
-              <th className="py-3 px-4 text-left font-sans text-caption uppercase tracking-wider text-navy-500">
-                {t('event')}
-              </th>
-              <th className="py-3 px-4 text-center font-sans text-caption uppercase tracking-wider text-navy-500">
-                {t('impact')}
-              </th>
-              <th className="py-3 px-4 text-right font-sans text-caption uppercase tracking-wider text-navy-500">
-                {t('previous')}
-              </th>
-              <th className="py-3 px-4 text-right font-sans text-caption uppercase tracking-wider text-navy-500">
-                {t('forecast')}
-              </th>
-              <th className="py-3 px-4 text-right font-sans text-caption uppercase tracking-wider text-navy-500">
-                {t('actual')}
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {events.map((event) => {
-              const humorNote = getHumorNote(event.event, locale);
-              const impactEmoji = getImpactEmoji(event.impact, event.id);
-              const flag = FLAG_MAP[event.countryCode] || '🌍';
-
-              return (
-                <tr
-                  key={event.id}
-                  className={`border-b border-cream-200 hover:bg-cream-50 transition-colors ${
-                    event.impact === 'high' ? 'bg-salmon-50/30' : ''
-                  }`}
-                >
-                  <td className="py-4 px-4 font-sans text-body-sm text-navy-700 font-mono">
-                    {event.time}
-                  </td>
-                  <td className="py-4 px-4">
-                    <span className="text-xl mr-2">{flag}</span>
-                    <span className="font-sans text-body-sm text-navy-700">{event.country}</span>
-                  </td>
-                  <td className="py-4 px-4">
-                    <div>
-                      <span className="font-serif text-body-md text-navy-900 font-semibold">
-                        {event.event}
-                      </span>
-                      {humorNote && (
-                        <p className="font-sans text-caption text-navy-400 italic mt-1">
-                          {humorNote}
-                        </p>
-                      )}
-                    </div>
-                  </td>
-                  <td className="py-4 px-4 text-center">
-                    <span className={`impact-${event.impact} cursor-help`} title={event.impact}>
-                      {impactEmoji}
-                    </span>
-                  </td>
-                  <td className="py-4 px-4 text-right font-sans text-body-sm text-navy-600 font-mono">
-                    {event.previous || '—'}
-                  </td>
-                  <td className="py-4 px-4 text-right font-sans text-body-sm text-navy-600 font-mono">
-                    {event.forecast || '—'}
-                  </td>
-                  <td className="py-4 px-4 text-right font-sans text-body-sm font-mono font-bold">
-                    {event.actual ? (
-                      <span className={
-                        parseFloat(event.actual) > parseFloat(event.forecast || '0')
-                          ? 'text-green-600'
-                          : parseFloat(event.actual) < parseFloat(event.forecast || '0')
-                          ? 'text-red-600'
-                          : 'text-navy-600'
-                      }>
-                        {event.actual}
-                      </span>
-                    ) : (
-                      <span className="text-navy-300">—</span>
-                    )}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
+      {/* Dynamic Calendar Table (client-side for real-time dates) */}
+      <CalendarTable />
 
       {/* Fun disclaimer */}
       <div className="mt-8 p-4 bg-cream-100 border-l-3 border-gold text-center">

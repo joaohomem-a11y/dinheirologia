@@ -21,6 +21,7 @@ export interface Article {
 
 export interface CalendarEvent {
   id: string;
+  date: string;
   time: string;
   country: string;
   countryCode: string;
