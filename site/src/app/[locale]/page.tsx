@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
-import { getAllArticles, getFeaturedArticles, getArticlesByCategory } from '@/lib/articles';
+import { getAllArticles, getFeaturedArticles } from '@/lib/articles';
 import ArticleCard from '@/components/ArticleCard';
+import { Link } from '@/i18n/navigation';
 import type { Metadata } from 'next';
 
 type Props = {
@@ -48,40 +49,45 @@ export default async function HomePage({ params, searchParams }: Props) {
     articles = articles.filter((a) => a.category === cat);
   }
 
-  const mainFeatured = featured[0] || articles[0];
-  const sideFeatured = (featured.length > 1 ? featured.slice(1, 4) : articles.slice(1, 4));
-  const restArticles = articles.filter(
+  // Separate articles from news
+  const artigos = articles.filter((a) => a.contentType === 'artigo');
+  const noticias = articles.filter((a) => a.contentType === 'noticia');
+
+  const mainFeatured = featured[0] || artigos[0];
+  const sideFeatured = (featured.length > 1 ? featured.slice(1, 4) : artigos.slice(1, 4));
+  const restArtigos = artigos.filter(
     (a) => a.slug !== mainFeatured?.slug && !sideFeatured.some((sf) => sf.slug === a.slug)
   );
 
-  // Split remaining articles into sections
-  const opiniao = restArticles.filter((a) => a.category === 'opiniao' || a.category === 'investimentos').slice(0, 3);
-  const mercados = restArticles.filter((a) => a.category === 'mercados' || a.category === 'trading').slice(0, 3);
-  const remaining = restArticles.filter(
-    (a) => !opiniao.some((o) => o.slug === a.slug) && !mercados.some((m) => m.slug === a.slug)
-  );
-
-  const sectionLabels: Record<string, Record<string, string>> = {
-    opiniao: { pt: 'Opiniao', en: 'Opinion', es: 'Opinion' },
-    mercados: { pt: 'Mercados', en: 'Markets', es: 'Mercados' },
+  const labels = {
+    artigos: { pt: 'Artigos', en: 'Articles', es: 'Articulos' },
+    noticias: { pt: 'Noticias', en: 'News', es: 'Noticias' },
+    opiniao: { pt: 'Opiniao & Analise', en: 'Opinion & Analysis', es: 'Opinion & Analisis' },
+    maisArtigos: { pt: 'Mais Artigos', en: 'More Articles', es: 'Mas Articulos' },
+    emBreve: {
+      pt: 'Em breve: nosso agente esta vasculhando o mundo em busca das noticias mais quentes do mercado financeiro. Volte em breve!',
+      en: 'Coming soon: our agent is scouring the world for the hottest financial market news. Check back soon!',
+      es: 'Proximamente: nuestro agente esta rastreando el mundo en busca de las noticias mas calientes del mercado financiero. Vuelve pronto!',
+    },
   };
 
   return (
     <div className="max-w-content mx-auto px-4">
-      {/* ===== MAIN HERO SECTION ===== */}
-      {mainFeatured && (
-        <section className="py-6 border-b-3 border-navy-900">
+
+      {/* ===== HERO SECTION: FEATURED ARTICLE ===== */}
+      {mainFeatured && !cat && (
+        <section className="py-6 border-b-3 border-dollar-800">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
-            {/* Main Story - takes 8 columns */}
+            {/* Main Story */}
             <div className="lg:col-span-8 lg:pr-8 lg:border-r lg:border-rule-gray">
               <ArticleCard article={mainFeatured} variant="featured" />
             </div>
 
-            {/* Sidebar Stories - takes 4 columns */}
+            {/* Sidebar */}
             <div className="lg:col-span-4 lg:pl-8 mt-6 lg:mt-0">
-              <div className="section-label">
+              <span className="font-sans text-caption uppercase tracking-[0.2em] font-bold text-dollar-600 border-b-2 border-dollar-500 pb-1 inline-block mb-4">
                 {t('trending')}
-              </div>
+              </span>
               <div className="space-y-0">
                 {sideFeatured.map((article, idx) => (
                   <div key={article.slug} className={idx < sideFeatured.length - 1 ? 'border-b border-rule-gray pb-4 mb-4' : ''}>
@@ -94,68 +100,19 @@ export default async function HomePage({ params, searchParams }: Props) {
         </section>
       )}
 
-      {/* ===== MIDDLE SECTIONS: OPINIÃO + MERCADOS ===== */}
+      {/* ===== NOTICIAS SECTION ===== */}
       <section className="py-8 border-b border-rule-gray">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-          {/* Opinião / Investimentos column */}
-          <div className="lg:pr-8 lg:border-r lg:border-rule-gray mb-8 lg:mb-0">
-            <div className="section-label">
-              {sectionLabels.opiniao[locale] || 'Opiniao'}
-            </div>
-            {opiniao.length > 0 ? (
-              <div className="space-y-0">
-                {opiniao.map((article, idx) => (
-                  <div key={article.slug} className={idx < opiniao.length - 1 ? 'border-b border-cream-200 pb-5 mb-5' : ''}>
-                    <ArticleCard article={article} variant="standard" />
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <p className="font-serif text-body-md text-navy-400 italic">
-                {locale === 'pt' ? 'Em breve mais opinioes...' : locale === 'en' ? 'More opinions coming soon...' : 'Mas opiniones pronto...'}
-              </p>
-            )}
-          </div>
-
-          {/* Mercados / Trading column */}
-          <div className="lg:pl-8">
-            <div className="section-label">
-              {sectionLabels.mercados[locale] || 'Mercados'}
-            </div>
-            {mercados.length > 0 ? (
-              <div className="space-y-0">
-                {mercados.map((article, idx) => (
-                  <div key={article.slug} className={idx < mercados.length - 1 ? 'border-b border-cream-200 pb-5 mb-5' : ''}>
-                    <ArticleCard article={article} variant="standard" />
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <p className="font-serif text-body-md text-navy-400 italic">
-                {locale === 'pt' ? 'O mercado esta quieto hoje...' : locale === 'en' ? 'Markets are quiet today...' : 'El mercado esta tranquilo hoy...'}
-              </p>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== ALL ARTICLES GRID ===== */}
-      <section className="py-8">
-        <div className="section-header">
-          <h2>{cat ? (articles[0]?.category || t('latest')) : t('latest')}</h2>
+        <div className="flex items-center gap-4 mb-6">
+          <div className="flex-1 h-px bg-dollar-700" />
+          <h2 className="text-headline-sm font-serif uppercase tracking-wider text-dollar-800 whitespace-nowrap flex items-center gap-2">
+            <span className="text-xl">📰</span> {labels.noticias[locale as keyof typeof labels.noticias] || labels.noticias.pt}
+          </h2>
+          <div className="flex-1 h-px bg-dollar-700" />
         </div>
 
-        {remaining.length === 0 && !cat ? (
-          <div className="text-center py-16">
-            <p className="font-serif text-headline-md text-navy-400 italic">
-              {locale === 'pt' ? 'Nenhum artigo encontrado. O mercado esta quieto hoje...' :
-               locale === 'en' ? 'No articles found. The market is quiet today...' :
-               'No se encontraron articulos. El mercado esta tranquilo hoy...'}
-            </p>
-          </div>
-        ) : (
+        {noticias.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
-            {(cat ? articles : remaining).map((article, idx) => (
+            {noticias.slice(0, 6).map((article, idx) => (
               <div
                 key={article.slug}
                 className={`pb-6 mb-6 border-b border-cream-200 ${
@@ -166,6 +123,81 @@ export default async function HomePage({ params, searchParams }: Props) {
               </div>
             ))}
           </div>
+        ) : (
+          <div className="text-center py-10 bg-cream-100/50 border border-dashed border-rule-gray">
+            <p className="text-3xl mb-3">🤖📡</p>
+            <p className="font-body text-body-md text-navy-500 italic max-w-lg mx-auto">
+              {labels.emBreve[locale as keyof typeof labels.emBreve] || labels.emBreve.pt}
+            </p>
+          </div>
+        )}
+      </section>
+
+      {/* ===== ARTIGOS SECTION ===== */}
+      <section className="py-8 border-b border-rule-gray">
+        <div className="flex items-center gap-4 mb-6">
+          <div className="flex-1 h-px bg-dollar-700" />
+          <h2 className="text-headline-sm font-serif uppercase tracking-wider text-dollar-800 whitespace-nowrap flex items-center gap-2">
+            <span className="text-xl">✍️</span> {labels.artigos[locale as keyof typeof labels.artigos] || labels.artigos.pt}
+          </h2>
+          <div className="flex-1 h-px bg-dollar-700" />
+        </div>
+
+        {cat ? (
+          /* Category filter mode */
+          articles.length === 0 ? (
+            <div className="text-center py-16">
+              <p className="font-serif text-headline-md text-navy-400 italic">
+                {locale === 'pt' ? 'Nenhum artigo encontrado nesta categoria.' :
+                 locale === 'en' ? 'No articles found in this category.' :
+                 'No se encontraron articulos en esta categoria.'}
+              </p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
+              {articles.map((article, idx) => (
+                <div
+                  key={article.slug}
+                  className={`pb-6 mb-6 border-b border-cream-200 ${
+                    idx % 3 !== 2 ? 'lg:pr-8 lg:border-r lg:border-rule-gray' : ''
+                  } ${idx % 3 === 1 ? 'lg:px-8' : ''} ${idx % 3 === 2 ? 'lg:pl-8' : ''}`}
+                >
+                  <ArticleCard article={article} variant="standard" />
+                </div>
+              ))}
+            </div>
+          )
+        ) : (
+          /* Default: show opinion/analysis articles in two columns, then rest */
+          <>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 mb-8">
+              {restArtigos.slice(0, 4).map((article, idx) => (
+                <div
+                  key={article.slug}
+                  className={`pb-5 mb-5 border-b border-cream-200 ${
+                    idx % 2 === 0 ? 'lg:pr-8 lg:border-r lg:border-rule-gray' : 'lg:pl-8'
+                  }`}
+                >
+                  <ArticleCard article={article} variant="standard" />
+                </div>
+              ))}
+            </div>
+
+            {restArtigos.length > 4 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
+                {restArtigos.slice(4).map((article, idx) => (
+                  <div
+                    key={article.slug}
+                    className={`pb-6 mb-6 border-b border-cream-200 ${
+                      idx % 3 !== 2 ? 'lg:pr-8 lg:border-r lg:border-rule-gray' : ''
+                    } ${idx % 3 === 1 ? 'lg:px-8' : ''} ${idx % 3 === 2 ? 'lg:pl-8' : ''}`}
+                  >
+                    <ArticleCard article={article} variant="standard" />
+                  </div>
+                ))}
+              </div>
+            )}
+          </>
         )}
       </section>
     </div>

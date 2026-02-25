@@ -68,7 +68,7 @@ export default function ArticleCard({ article, variant = 'standard' }: ArticleCa
       <article className="article-card group py-3 border-b border-cream-200 last:border-0">
         <Link href={`/artigo/${article.slug}`} className="flex gap-4 items-start">
           <div className="flex-1 min-w-0">
-            <span className="font-sans text-caption uppercase tracking-wider text-salmon-600">
+            <span className="font-sans text-caption uppercase tracking-wider text-dollar-600">
               {categoryLabel}
             </span>
             <h3 className="font-serif text-headline-sm text-navy-900 group-hover:text-navy-700 transition-colors mt-1 line-clamp-2">

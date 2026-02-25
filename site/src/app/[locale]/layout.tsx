@@ -2,15 +2,16 @@ import type { ReactNode } from 'react';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { Playfair_Display, Source_Serif_4, Inter } from 'next/font/google';
+import { Libre_Baskerville, Source_Serif_4, Inter } from 'next/font/google';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import '@/styles/globals.css';
 
-const playfair = Playfair_Display({
+const baskerville = Libre_Baskerville({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  weight: ['400', '700'],
+  variable: '--font-baskerville',
   display: 'swap',
 });
 
@@ -45,7 +46,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${playfair.variable} ${sourceSerif.variable} ${inter.variable}`}>
+    <html lang={locale} className={`${baskerville.variable} ${sourceSerif.variable} ${inter.variable}`}>
       <body className="min-h-screen flex flex-col bg-paper-white">
         <NextIntlClientProvider messages={messages}>
           <Header />

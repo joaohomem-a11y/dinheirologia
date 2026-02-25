@@ -72,7 +72,7 @@ export default async function CalendarioPage({ params }: Props) {
 
       {/* Date tabs */}
       <div className="flex gap-1 mb-6 border-b border-rule-gray">
-        <button className="px-5 py-3 font-sans text-body-sm uppercase tracking-wider bg-navy-900 text-cream-50">
+        <button className="px-5 py-3 font-sans text-body-sm uppercase tracking-wider bg-dollar-800 text-cream-50">
           {t('today')}
         </button>
         <button className="px-5 py-3 font-sans text-body-sm uppercase tracking-wider text-navy-500 hover:bg-cream-50 transition-colors">
@@ -87,7 +87,7 @@ export default async function CalendarioPage({ params }: Props) {
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
-            <tr className="border-b-2 border-navy-900">
+            <tr className="border-b-2 border-dollar-800">
               <th className="py-3 px-4 text-left font-sans text-caption uppercase tracking-wider text-navy-500">
                 {t('time')}
               </th>

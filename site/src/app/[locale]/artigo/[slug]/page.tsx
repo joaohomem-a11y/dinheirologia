@@ -180,7 +180,7 @@ export default async function ArticlePage({ params }: Props) {
 
       {/* Related Articles */}
       {related.length > 0 && (
-        <section className="max-w-content mx-auto px-4 py-8 border-t-3 border-navy-900">
+        <section className="max-w-content mx-auto px-4 py-8 border-t-3 border-dollar-800">
           <div className="section-header">
             <h2>{t('relatedArticles')}</h2>
           </div>

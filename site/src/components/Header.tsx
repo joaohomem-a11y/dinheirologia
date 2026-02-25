@@ -45,8 +45,8 @@ export default function Header() {
               locale={loc.code}
               className={`px-2 py-0.5 text-caption font-sans transition-colors ${
                 locale === loc.code
-                  ? 'bg-navy-900 text-cream-50'
-                  : 'hover:bg-cream-100 text-navy-500'
+                  ? 'bg-dollar-700 text-cream-50'
+                  : 'hover:bg-cream-100 text-navy-400'
               }`}
             >
               {loc.flag} {loc.label}
@@ -56,17 +56,16 @@ export default function Header() {
       </div>
 
       {/* Newspaper masthead */}
-      <div className="border-t-3 border-b-3 border-navy-900">
+      <div className="border-t-3 border-b-3 border-dollar-800">
         <div className="max-w-content mx-auto px-4 py-5 text-center">
-          {/* Double rule effect */}
-          <div className="border-b border-navy-900 mb-4 pb-4">
+          <div className="border-b border-dollar-700 mb-3 pb-3">
             <Link href="/" className="inline-block">
-              <h1 className="font-serif tracking-[0.08em] text-navy-900" style={{ fontSize: '3.8rem', lineHeight: '1' }}>
+              <h1 className="font-serif tracking-[0.06em] text-dollar-900" style={{ fontSize: '3.8rem', lineHeight: '1' }}>
                 DINHEIROLOGIA
               </h1>
             </Link>
           </div>
-          <p className="font-body text-body-sm italic text-navy-500">
+          <p className="font-body text-body-sm italic text-navy-400">
             {locale === 'pt' ? 'Sua leitura sobre dinheiro, sem frescuras' :
              locale === 'en' ? 'Your money read, no BS attached' :
              'Tu lectura sobre dinero, sin rodeos'}
@@ -74,15 +73,15 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Navigation bar */}
-      <nav className="bg-navy-900">
+      {/* Navigation bar - dollar green */}
+      <nav className="bg-dollar-800">
         <div className="max-w-content mx-auto px-4">
           {/* Desktop nav */}
           <ul className="hidden md:flex items-center justify-center gap-0">
             <li>
               <Link
                 href="/"
-                className="block px-5 py-3 font-sans text-body-sm uppercase tracking-[0.15em] text-cream-200 hover:text-cream-50 hover:bg-navy-800 transition-colors"
+                className="block px-5 py-3 font-sans text-body-sm uppercase tracking-[0.15em] text-cream-100 hover:text-cream-50 hover:bg-dollar-700 transition-colors"
               >
                 {t('home')}
               </Link>
@@ -91,7 +90,7 @@ export default function Header() {
               <li key={item.key}>
                 <Link
                   href={item.href}
-                  className="block px-5 py-3 font-sans text-body-sm uppercase tracking-[0.15em] text-cream-200 hover:text-cream-50 hover:bg-navy-800 transition-colors"
+                  className="block px-5 py-3 font-sans text-body-sm uppercase tracking-[0.15em] text-cream-100 hover:text-cream-50 hover:bg-dollar-700 transition-colors"
                 >
                   {t(item.key)}
                 </Link>
@@ -103,7 +102,7 @@ export default function Header() {
           <div className="md:hidden flex justify-center py-2">
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="font-sans text-body-sm uppercase tracking-wider text-cream-200 px-4 py-2"
+              className="font-sans text-body-sm uppercase tracking-wider text-cream-100 px-4 py-2"
               aria-label="Menu"
             >
               {mobileOpen ? '✕ Fechar' : '☰ Menu'}
@@ -112,12 +111,12 @@ export default function Header() {
 
           {/* Mobile menu */}
           {mobileOpen && (
-            <ul className="md:hidden border-t border-navy-700">
+            <ul className="md:hidden border-t border-dollar-600">
               <li>
                 <Link
                   href="/"
                   onClick={() => setMobileOpen(false)}
-                  className="block px-5 py-3 font-sans text-body-sm uppercase tracking-wider text-cream-200 hover:bg-navy-800 border-b border-navy-700"
+                  className="block px-5 py-3 font-sans text-body-sm uppercase tracking-wider text-cream-100 hover:bg-dollar-700 border-b border-dollar-600"
                 >
                   {t('home')}
                 </Link>
@@ -127,7 +126,7 @@ export default function Header() {
                   <Link
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className="block px-5 py-3 font-sans text-body-sm uppercase tracking-wider text-cream-200 hover:bg-navy-800 border-b border-navy-700 last:border-0"
+                    className="block px-5 py-3 font-sans text-body-sm uppercase tracking-wider text-cream-100 hover:bg-dollar-700 border-b border-dollar-600 last:border-0"
                   >
                     {t(item.key)}
                   </Link>

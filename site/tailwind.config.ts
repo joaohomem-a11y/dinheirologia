@@ -9,16 +9,46 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // NYT-inspired cream/sepia palette
+        // Dollar bill paper - warm cream with subtle green undertone
         cream: {
-          50: '#FDF8F0',
-          100: '#FAF0E1',
-          200: '#F5E6CF',
-          300: '#EDD9B7',
-          400: '#E5CC9F',
-          500: '#D4B896',
+          50: '#F7F5EC',
+          100: '#F0ECDF',
+          200: '#E5E0CD',
+          300: '#D8D1BA',
+          400: '#C9C0A5',
+          500: '#B8AD8E',
         },
-        // FT salmon accent
+        // Dollar green palette
+        dollar: {
+          50: '#EEF3EC',
+          100: '#D4E0D0',
+          200: '#A8BFA0',
+          300: '#7D9E72',
+          400: '#5A7D4F',
+          500: '#3D6B35',
+          600: '#2F5429',
+          700: '#234020',
+          800: '#1A3018',
+          900: '#12200F',
+        },
+        // Dark ink for text (WSJ-style deep black-green)
+        navy: {
+          50: '#EAEBE8',
+          100: '#CDD0CA',
+          200: '#A3A89D',
+          300: '#7A8172',
+          400: '#5A6352',
+          500: '#3D4637',
+          600: '#333B2E',
+          700: '#2A3125',
+          800: '#1F251B',
+          900: '#141A11',
+          950: '#0B0F09',
+        },
+        // Accent - muted gold (seal on dollar)
+        gold: '#B8942E',
+        'gold-light': '#D4B04A',
+        // FT salmon for highlights/alerts
         salmon: {
           50: '#FFF5F0',
           100: '#FFE8DB',
@@ -28,35 +58,23 @@ const config: Config = {
           500: '#F2A68A',
           600: '#E8967A',
         },
-        // Dark navy for text
-        navy: {
-          50: '#E8EBF0',
-          100: '#C4CAD6',
-          200: '#9DA7BA',
-          300: '#76849E',
-          400: '#586A89',
-          500: '#3B5075',
-          600: '#33476B',
-          700: '#2A3B5E',
-          800: '#223052',
-          900: '#151E39',
-          950: '#0D1526',
-        },
-        // Accent colors
-        gold: '#C9A84C',
-        'ink-black': '#1A1A1A',
-        'paper-white': '#F4EDDB',
-        'newsprint': '#EDE5D0',
-        'rule-gray': '#C8C0AD',
+        // Core page colors
+        'paper-white': '#F2EDDE',
+        'newsprint': '#EBE5D3',
+        'ink-black': '#1A1A14',
+        'rule-gray': '#C5BCAA',
       },
       fontFamily: {
-        serif: ['var(--font-playfair)', 'Playfair Display', 'Georgia', 'serif'],
+        // WSJ-style: Libre Baskerville for that authoritative Scotch Roman feel
+        serif: ['var(--font-baskerville)', 'Libre Baskerville', 'Georgia', 'serif'],
+        // Body text: Source Serif for readability
         body: ['var(--font-source-serif)', 'Source Serif 4', 'Georgia', 'serif'],
+        // Sans for UI elements
         sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        'headline-xl': ['3.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        'headline-lg': ['2.5rem', { lineHeight: '1.15', letterSpacing: '-0.01em' }],
+        'headline-xl': ['3.5rem', { lineHeight: '1.08', letterSpacing: '-0.02em' }],
+        'headline-lg': ['2.5rem', { lineHeight: '1.12', letterSpacing: '-0.01em' }],
         'headline-md': ['1.75rem', { lineHeight: '1.2' }],
         'headline-sm': ['1.25rem', { lineHeight: '1.3' }],
         'body-lg': ['1.125rem', { lineHeight: '1.7' }],

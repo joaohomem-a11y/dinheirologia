@@ -41,6 +41,7 @@ export async function getArticleBySlug(slug: string, locale: string = 'pt'): Pro
     image: data.image || null,
     imageCaption: data.imageCaption || null,
     readTime,
+    contentType: data.contentType || 'artigo',
     featured: data.featured || false,
     locale,
   };

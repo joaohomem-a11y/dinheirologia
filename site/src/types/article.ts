@@ -1,3 +1,5 @@
+export type ContentType = 'artigo' | 'noticia';
+
 export interface Article {
   slug: string;
   title: string;
@@ -8,6 +10,7 @@ export interface Article {
   author: string;
   authorSlug: string;
   category: 'mercados' | 'trading' | 'investimentos' | 'negocios' | 'opiniao';
+  contentType: ContentType;
   tags: string[];
   image?: string;
   imageCaption?: string;
