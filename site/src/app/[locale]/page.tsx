@@ -148,11 +148,6 @@ export default async function HomePage({ params, searchParams }: Props) {
                       alt={leadStory.title}
                       className="w-full h-[340px] object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
                     />
-                    {leadStory.imageCaption && (
-                      <p className="absolute bottom-0 left-0 right-0 bg-navy-900/80 text-cream-200 text-caption px-3 py-1 font-sans">
-                        {leadStory.imageCaption}
-                      </p>
-                    )}
                   </div>
                 )}
                 <h2 className="font-serif text-headline-xl text-navy-900 group-hover:text-navy-700 transition-colors leading-tight mb-3">
