@@ -62,8 +62,25 @@ export default async function HomePage({ params, searchParams }: Props) {
   // Lead story: best featured item overall
   const leadStory = featuredNoticia || featuredArtigo;
 
-  // Headlines for center column (mix of remaining noticias + artigos)
-  const headlines = [...restNoticias, ...restArtigos].slice(0, 6);
+  // Secondary stories below lead (fill the column)
+  const leadExtras = [...restNoticias, ...restArtigos]
+    .filter((a) => a.slug !== leadStory?.slug)
+    .slice(0, 2);
+
+  // Headlines for center column - deduplicate images
+  const seenImages = new Set<string>();
+  if (leadStory?.image) seenImages.add(leadStory.image);
+  leadExtras.forEach((a) => { if (a.image) seenImages.add(a.image); });
+
+  const headlineCandidates = [...restNoticias, ...restArtigos]
+    .filter((a) => !leadExtras.some((e) => e.slug === a.slug));
+
+  // Mark articles with duplicate images so we can hide them
+  const headlines = headlineCandidates.slice(0, 7).map((a) => {
+    const isDupe = a.image ? seenImages.has(a.image) : false;
+    if (a.image && !isDupe) seenImages.add(a.image);
+    return { ...a, image: isDupe ? undefined : a.image };
+  });
 
   // "Most Read" sidebar - interleave noticias and artigos
   const mostRead: typeof articles = [];
@@ -136,7 +153,7 @@ export default async function HomePage({ params, searchParams }: Props) {
       {/* ===== MAIN 3-COLUMN GRID (WSJ STYLE) ===== */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
 
-        {/* ===== LEFT: LEAD STORY (col 1-5) ===== */}
+        {/* ===== LEFT: LEAD STORY + EXTRAS (col 1-5) ===== */}
         <div className="lg:col-span-5 lg:pr-6 lg:border-r lg:border-rule-gray pb-6 lg:pb-0">
           {leadStory && (
             <article className="group">
@@ -146,7 +163,7 @@ export default async function HomePage({ params, searchParams }: Props) {
                     <img
                       src={leadStory.image}
                       alt={leadStory.title}
-                      className="w-full h-[340px] object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
+                      className="w-full h-[300px] object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
                     />
                   </div>
                 )}
@@ -170,6 +187,33 @@ export default async function HomePage({ params, searchParams }: Props) {
                 </div>
               </Link>
             </article>
+          )}
+
+          {/* Secondary stories to fill the column */}
+          {leadExtras.length > 0 && (
+            <div className="mt-5 pt-5 border-t border-rule-gray space-y-4">
+              {leadExtras.map((article) => (
+                <article key={article.slug} className="group">
+                  <Link href={`/artigo/${article.slug}`} className="flex gap-4 items-start">
+                    {article.image && (
+                      <img
+                        src={article.image}
+                        alt=""
+                        className="w-24 h-16 object-cover flex-shrink-0 rounded-sm grayscale-[20%] group-hover:grayscale-0 transition-all duration-300"
+                      />
+                    )}
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-serif text-body-md text-navy-900 group-hover:text-dollar-700 leading-snug transition-colors line-clamp-2">
+                        {article.title}
+                      </h3>
+                      <span className="font-sans text-caption text-navy-400 mt-1 block">
+                        {article.author} · {formattedDate(article.date)}
+                      </span>
+                    </div>
+                  </Link>
+                </article>
+              ))}
+            </div>
           )}
         </div>
 
@@ -201,22 +245,13 @@ export default async function HomePage({ params, searchParams }: Props) {
           <ol className="numbered-list">
             {mostRead.map((article) => (
               <li key={article.slug}>
-                <Link href={`/artigo/${article.slug}`} className="flex gap-3 items-start group">
-                  <div className="flex-1 min-w-0">
-                    <h4 className="font-serif text-headline-sm text-navy-900 group-hover:text-dollar-700 leading-snug transition-colors">
-                      {article.title}
-                    </h4>
-                    <span className="font-sans text-body-sm text-navy-400 mt-1 block">
-                      {article.author}
-                    </span>
-                  </div>
-                  {article.image && (
-                    <img
-                      src={article.image}
-                      alt=""
-                      className="w-14 h-14 object-cover flex-shrink-0 grayscale-[30%] group-hover:grayscale-0 transition-all duration-300"
-                    />
-                  )}
+                <Link href={`/artigo/${article.slug}`} className="block group">
+                  <h4 className="font-serif text-body-md text-navy-900 group-hover:text-dollar-700 leading-snug transition-colors line-clamp-2">
+                    {article.title}
+                  </h4>
+                  <span className="font-sans text-caption text-navy-400 mt-1 block">
+                    {article.author}
+                  </span>
                 </Link>
               </li>
             ))}

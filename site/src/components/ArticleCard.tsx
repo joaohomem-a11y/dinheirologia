@@ -22,25 +22,28 @@ export default function ArticleCard({ article, variant = 'standard' }: ArticleCa
   if (variant === 'headline') {
     return (
       <article className="py-3 border-b border-rule-gray">
-        <Link href={`/artigo/${article.slug}`} className="flex gap-3 items-start group">
-          <div className="flex-1 min-w-0">
-            <span className="font-sans text-caption uppercase tracking-wider text-dollar-600">
-              {categoryLabel}
-            </span>
-            <h3 className="font-serif text-headline-sm text-navy-900 group-hover:text-dollar-700 mt-1 leading-snug transition-colors">
-              {article.title}
-            </h3>
-            <time className="font-sans text-body-sm text-navy-400 mt-1 block">
-              {formattedDate}
-            </time>
-          </div>
+        <Link href={`/artigo/${article.slug}`} className="flex gap-3 items-center group">
           {article.image && (
             <img
               src={article.image}
               alt=""
-              className="w-16 h-16 object-cover flex-shrink-0 grayscale-[30%] group-hover:grayscale-0 transition-all duration-300"
+              className="w-[72px] h-[48px] object-cover flex-shrink-0 rounded-sm grayscale-[20%] group-hover:grayscale-0 transition-all duration-300"
             />
           )}
+          <div className="flex-1 min-w-0">
+            <h3 className="font-serif text-body-md text-navy-900 group-hover:text-dollar-700 leading-snug transition-colors line-clamp-2">
+              {article.title}
+            </h3>
+            <div className="flex items-center gap-2 mt-1">
+              <span className="font-sans text-caption uppercase tracking-wider text-dollar-600">
+                {categoryLabel}
+              </span>
+              <span className="text-navy-300">·</span>
+              <time className="font-sans text-caption text-navy-400">
+                {formattedDate}
+              </time>
+            </div>
+          </div>
         </Link>
       </article>
     );
