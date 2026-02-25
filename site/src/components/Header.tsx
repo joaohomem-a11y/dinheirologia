@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { useLocale } from 'next-intl';
 import { useState } from 'react';
+import MarketTicker from '@/components/MarketTicker';
 
 const NAV_ITEMS = [
   { key: 'markets', href: '/?cat=mercados' },
@@ -34,6 +35,9 @@ export default function Header() {
 
   return (
     <header className="bg-paper-white">
+      {/* Market ticker */}
+      <MarketTicker />
+
       {/* Top utility bar */}
       <div className="max-w-content mx-auto px-4 py-2 flex items-center justify-between">
         <time className="font-sans text-caption text-navy-400 capitalize">{today}</time>
@@ -56,16 +60,16 @@ export default function Header() {
       </div>
 
       {/* Newspaper masthead */}
-      <div className="border-t-3 border-b-3 border-dollar-800">
+      <div className="border-t-3 border-b-3 border-navy-800">
         <div className="max-w-content mx-auto px-4 py-5 text-center">
-          <div className="border-b border-dollar-700 mb-3 pb-3">
+          <div className="border-b border-navy-300 mb-3 pb-3">
             <Link href="/" className="inline-block">
-              <h1 className="font-serif tracking-[0.06em] text-dollar-900" style={{ fontSize: '3.8rem', lineHeight: '1' }}>
+              <h1 className="font-serif tracking-[0.06em] text-navy-900" style={{ fontSize: '3.8rem', lineHeight: '1' }}>
                 DINHEIROLOGIA
               </h1>
             </Link>
           </div>
-          <p className="font-body text-body-sm italic text-navy-400">
+          <p className="font-body text-body-lg italic text-navy-400">
             {locale === 'pt' ? 'Sua leitura sobre dinheiro, sem frescuras' :
              locale === 'en' ? 'Your money read, no BS attached' :
              'Tu lectura sobre dinero, sin rodeos'}

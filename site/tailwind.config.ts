@@ -59,18 +59,18 @@ const config: Config = {
           600: '#E8967A',
         },
         // Core page colors
-        'paper-white': '#F2EDDE',
-        'newsprint': '#EBE5D3',
+        'paper-white': '#FAF9F6',
+        'newsprint': '#F0EDE6',
         'ink-black': '#1A1A14',
         'rule-gray': '#C5BCAA',
       },
       fontFamily: {
-        // WSJ-style: Libre Baskerville for that authoritative Scotch Roman feel
-        serif: ['var(--font-baskerville)', 'Libre Baskerville', 'Georgia', 'serif'],
-        // Body text: Source Serif for readability
-        body: ['var(--font-source-serif)', 'Source Serif 4', 'Georgia', 'serif'],
-        // Sans for UI elements
-        sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
+        // WSJ-style: Playfair Display for that authoritative Scotch Roman feel
+        serif: ['var(--font-playfair)', 'Playfair Display', 'Georgia', 'serif'],
+        // Body text: Lora for readability in columns
+        body: ['var(--font-lora)', 'Lora', 'Georgia', 'serif'],
+        // Sans for UI/navigation elements
+        sans: ['var(--font-franklin)', 'Libre Franklin', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'headline-xl': ['3.5rem', { lineHeight: '1.08', letterSpacing: '-0.02em' }],

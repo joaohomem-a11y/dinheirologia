@@ -7,7 +7,7 @@ import { useLocale } from 'next-intl';
 
 interface ArticleCardProps {
   article: Article;
-  variant?: 'featured' | 'standard' | 'compact';
+  variant?: 'featured' | 'standard' | 'compact' | 'headline';
 }
 
 export default function ArticleCard({ article, variant = 'standard' }: ArticleCardProps) {
@@ -19,9 +19,27 @@ export default function ArticleCard({ article, variant = 'standard' }: ArticleCa
     { day: 'numeric', month: 'short', year: 'numeric' }
   );
 
+  if (variant === 'headline') {
+    return (
+      <article className="py-3 border-b border-rule-gray">
+        <Link href={`/artigo/${article.slug}`} className="block group">
+          <span className="font-sans text-caption uppercase tracking-wider text-dollar-600">
+            {categoryLabel}
+          </span>
+          <h3 className="font-serif text-headline-sm text-navy-900 group-hover:text-dollar-700 mt-1 leading-snug transition-colors">
+            {article.title}
+          </h3>
+          <time className="font-sans text-body-sm text-navy-400 mt-1 block">
+            {formattedDate}
+          </time>
+        </Link>
+      </article>
+    );
+  }
+
   if (variant === 'featured') {
     return (
-      <article className="article-card group">
+      <article className="article-card group p-4">
         <Link href={`/artigo/${article.slug}`} className="block">
           {article.image && (
             <div className="relative overflow-hidden mb-4">
@@ -65,7 +83,7 @@ export default function ArticleCard({ article, variant = 'standard' }: ArticleCa
 
   if (variant === 'compact') {
     return (
-      <article className="article-card group py-3 border-b border-cream-200 last:border-0">
+      <article className="article-card group p-3">
         <Link href={`/artigo/${article.slug}`} className="flex gap-4 items-start">
           <div className="flex-1 min-w-0">
             <span className="font-sans text-caption uppercase tracking-wider text-dollar-600">

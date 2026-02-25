@@ -10,7 +10,6 @@
 
   body {
     @apply bg-paper-white text-navy-900 font-body;
-    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -68,11 +67,26 @@
   .section-header::before,
   .section-header::after {
     content: '';
-    @apply flex-1 h-px bg-dollar-700;
+    @apply flex-1 h-px bg-navy-300;
   }
 
   .section-header h2 {
-    @apply text-headline-sm font-serif uppercase tracking-wider text-dollar-800 whitespace-nowrap;
+    @apply text-headline-sm font-serif uppercase tracking-wider text-navy-700 whitespace-nowrap;
+  }
+
+  /* Numbered list for "Most Read" sidebar */
+  .numbered-list {
+    counter-reset: most-read;
+  }
+
+  .numbered-list li {
+    counter-increment: most-read;
+    @apply relative pl-10 py-3 border-b border-rule-gray;
+  }
+
+  .numbered-list li::before {
+    content: counter(most-read);
+    @apply absolute left-0 top-3 font-serif text-headline-lg text-newsprint font-bold;
   }
 
   /* Section label (category marker) */
@@ -80,9 +94,9 @@
     @apply font-sans text-caption uppercase tracking-[0.2em] font-bold text-dollar-600 border-b-2 border-dollar-500 pb-1 inline-block mb-4;
   }
 
-  /* Article card hover */
+  /* Article card - flat WSJ/FT style, no elevation */
   .article-card {
-    @apply transition-all duration-200 hover:bg-newsprint/50;
+    @apply transition-colors duration-200;
   }
 
   /* Tag pill */
@@ -119,7 +133,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-cream-100;
+  @apply bg-cream-200;
 }
 
 ::-webkit-scrollbar-thumb {
