@@ -67,20 +67,21 @@ export default async function HomePage({ params, searchParams }: Props) {
     .filter((a) => a.slug !== leadStory?.slug)
     .slice(0, 2);
 
-  // Headlines for center column - deduplicate images
-  const seenImages = new Set<string>();
-  if (leadStory?.image) seenImages.add(leadStory.image);
-  leadExtras.forEach((a) => { if (a.image) seenImages.add(a.image); });
+  // Bullet headlines: remaining articles after lead + extras, sliced to 7
+  const usedSlugs = new Set<string>();
+  if (leadStory) usedSlugs.add(leadStory.slug);
+  leadExtras.forEach((a) => usedSlugs.add(a.slug));
 
-  const headlineCandidates = [...restNoticias, ...restArtigos]
-    .filter((a) => !leadExtras.some((e) => e.slug === a.slug));
+  const bulletHeadlines = [...restNoticias, ...restArtigos]
+    .filter((a) => !usedSlugs.has(a.slug))
+    .slice(0, 7);
 
-  // Mark articles with duplicate images so we can hide them
-  const headlines = headlineCandidates.slice(0, 7).map((a) => {
-    const isDupe = a.image ? seenImages.has(a.image) : false;
-    if (a.image && !isDupe) seenImages.add(a.image);
-    return { ...a, image: isDupe ? undefined : a.image };
-  });
+  // Category-based arrays (exclude leadStory, sliced to 4)
+  const allExceptLead = [...noticias, ...artigos].filter((a) => a.slug !== leadStory?.slug);
+  const mercadosArticles = allExceptLead.filter((a) => a.category === 'mercados').slice(0, 4);
+  const opiniaoArticles = allExceptLead.filter((a) => a.category === 'opiniao').slice(0, 4);
+  const tradingArticles = allExceptLead.filter((a) => a.category === 'trading').slice(0, 4);
+  const investimentosArticles = allExceptLead.filter((a) => a.category === 'investimentos').slice(0, 4);
 
   // "Most Read" sidebar - interleave noticias and artigos
   const mostRead: typeof articles = [];
@@ -91,19 +92,27 @@ export default async function HomePage({ params, searchParams }: Props) {
     if (mostRead.length < 7 && artigosPool.length > 0) mostRead.push(artigosPool.shift()!);
   }
 
-  // Opinion & Analysis section
-  const opinionArticles = restArtigos.slice(0, 4);
-
-  const labels = {
-    noticias: { pt: 'Ultimas Noticias', en: 'Latest News', es: 'Ultimas Noticias' },
+  const labels: Record<string, Record<string, string>> = {
+    whatsNews: { pt: 'O Que E Noticia', en: "What's News", es: 'Que Es Noticia' },
     maisLidos: { pt: 'Mais Lidos', en: 'Most Read', es: 'Mas Leidos' },
     opiniao: { pt: 'Opiniao & Analise', en: 'Opinion & Analysis', es: 'Opinion & Analisis' },
+    mercados: { pt: 'Mercados', en: 'Markets', es: 'Mercados' },
+    trading: { pt: 'Trading', en: 'Trading', es: 'Trading' },
+    investimentos: { pt: 'Investimentos', en: 'Investments', es: 'Inversiones' },
     emBreve: {
       pt: 'Em breve: nosso agente esta vasculhando o mundo em busca das noticias mais quentes do mercado financeiro. Volte em breve!',
       en: 'Coming soon: our agent is scouring the world for the hottest financial market news. Check back soon!',
       es: 'Proximamente: nuestro agente esta rastreando el mundo en busca de las noticias mas calientes del mercado financiero. Vuelve pronto!',
     },
   };
+  const label = (key: string) => labels[key]?.[locale] || labels[key]?.pt || key;
+
+  // Whether each conditional section will render
+  const showMercados = mercadosArticles.length >= 2;
+  const showOpiniao = opiniaoArticles.length >= 2;
+  const hasTradingContent = tradingArticles.length > 0;
+  const hasInvestimentosContent = investimentosArticles.length > 0;
+  const showBottomFallback = !hasTradingContent && !hasInvestimentosContent && !showOpiniao;
 
   // Category filter mode
   if (cat) {
@@ -150,11 +159,11 @@ export default async function HomePage({ params, searchParams }: Props) {
   return (
     <div className="max-w-content mx-auto px-4 py-6">
 
-      {/* ===== MAIN 3-COLUMN GRID (WSJ STYLE) ===== */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
+      {/* ===== SECTION 1: HERO + "O QUE E NOTICIA" ===== */}
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 border-b border-rule-gray pb-8">
 
-        {/* ===== LEFT: LEAD STORY + EXTRAS (col 1-5) ===== */}
-        <div className="lg:col-span-5 lg:pr-6 lg:border-r lg:border-rule-gray pb-6 lg:pb-0">
+        {/* Left (col-span-3): Lead story + secondary stories */}
+        <div className="lg:col-span-3 lg:pr-6 lg:border-r lg:border-rule-gray pb-6 lg:pb-0">
           {leadStory && (
             <article className="group">
               <Link href={`/artigo/${leadStory.slug}`} className="block">
@@ -163,7 +172,7 @@ export default async function HomePage({ params, searchParams }: Props) {
                     <img
                       src={leadStory.image}
                       alt={leadStory.title}
-                      className="w-full h-[300px] object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
+                      className="w-full h-[280px] sm:h-[340px] object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
                     />
                   </div>
                 )}
@@ -189,27 +198,27 @@ export default async function HomePage({ params, searchParams }: Props) {
             </article>
           )}
 
-          {/* Secondary stories to fill the column */}
+          {/* Secondary stories below hero */}
           {leadExtras.length > 0 && (
-            <div className="mt-5 pt-5 border-t border-rule-gray space-y-4">
+            <div className="mt-6 pt-6 border-t border-rule-gray grid grid-cols-1 sm:grid-cols-2 gap-6">
               {leadExtras.map((article) => (
                 <article key={article.slug} className="group">
-                  <Link href={`/artigo/${article.slug}`} className="flex gap-4 items-start">
+                  <Link href={`/artigo/${article.slug}`} className="block">
                     {article.image && (
-                      <img
-                        src={article.image}
-                        alt=""
-                        className="w-24 h-16 object-cover flex-shrink-0 rounded-sm grayscale-[20%] group-hover:grayscale-0 transition-all duration-300"
-                      />
+                      <div className="overflow-hidden mb-3">
+                        <img
+                          src={article.image}
+                          alt=""
+                          className="w-full h-36 object-cover rounded-sm grayscale-[20%] group-hover:grayscale-0 transition-all duration-300"
+                        />
+                      </div>
                     )}
-                    <div className="flex-1 min-w-0">
-                      <h3 className="font-serif text-body-md text-navy-900 group-hover:text-dollar-700 leading-snug transition-colors line-clamp-2">
-                        {article.title}
-                      </h3>
-                      <span className="font-sans text-caption text-navy-400 mt-1 block">
-                        {article.author} · {formattedDate(article.date)}
-                      </span>
-                    </div>
+                    <h3 className="font-serif text-body-md text-navy-900 group-hover:text-dollar-700 leading-snug transition-colors line-clamp-2">
+                      {article.title}
+                    </h3>
+                    <span className="font-sans text-caption text-navy-400 mt-1 block">
+                      {article.author} · {formattedDate(article.date)}
+                    </span>
                   </Link>
                 </article>
               ))}
@@ -217,29 +226,106 @@ export default async function HomePage({ params, searchParams }: Props) {
           )}
         </div>
 
-        {/* ===== CENTER: HEADLINES (col 6-9) ===== */}
-        <div className="lg:col-span-4 lg:px-6 lg:border-r lg:border-rule-gray py-6 lg:py-0 border-t lg:border-t-0 border-rule-gray">
+        {/* Right (col-span-2): "O Que E Noticia" bullet headlines */}
+        <div className="lg:col-span-2 lg:pl-6 pt-6 lg:pt-0 border-t lg:border-t-0 border-rule-gray">
           <h3 className="font-sans text-body-sm uppercase tracking-[0.2em] font-bold text-navy-500 border-b-2 border-navy-800 pb-2 mb-2">
-            {labels.noticias[locale as keyof typeof labels.noticias] || labels.noticias.pt}
+            {label('whatsNews')}
           </h3>
 
-          {headlines.length > 0 ? (
-            <div>
-              {headlines.map((article) => (
-                <ArticleCard key={article.slug} article={article} variant="headline" />
+          {bulletHeadlines.length > 0 ? (
+            <ul className="bullet-headlines">
+              {bulletHeadlines.map((article) => (
+                <ArticleCard key={article.slug} article={article} variant="bullet" />
               ))}
-            </div>
+            </ul>
           ) : (
             <p className="font-body text-body-sm text-navy-400 italic py-4">
-              {labels.emBreve[locale as keyof typeof labels.emBreve] || labels.emBreve.pt}
+              {label('emBreve')}
             </p>
           )}
         </div>
 
-        {/* ===== RIGHT: MOST READ SIDEBAR (col 10-12) ===== */}
-        <div className="lg:col-span-3 lg:pl-6 py-6 lg:py-0 border-t lg:border-t-0 border-rule-gray">
+      </div>
+
+      {/* ===== SECTION 2: MERCADOS ===== */}
+      {showMercados && (
+        <section className="py-8 border-b border-rule-gray">
+          <div className="section-header mb-6">
+            <h2>{label('mercados')}</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {mercadosArticles.map((article) => (
+              <ArticleCard key={article.slug} article={article} variant="standard" />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* ===== SECTION 3: OPINIAO & ANALISE ===== */}
+      {showOpiniao && (
+        <section className="opinion-section border-b border-rule-gray">
+          <div className="section-header mb-6">
+            <h2>{label('opiniao')}</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {opiniaoArticles.map((article) => (
+              <ArticleCard key={article.slug} article={article} variant="standard" />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* ===== SECTION 4: TRADING + INVESTIMENTOS + MAIS LIDOS ===== */}
+      <div className="grid grid-cols-1 lg:grid-cols-10 gap-0 py-8">
+
+        {/* Left (7/10): Trading + Investimentos sub-sections */}
+        <div className="lg:col-span-7 lg:pr-6 lg:border-r lg:border-rule-gray pb-6 lg:pb-0">
+
+          {/* Trading sub-section */}
+          {hasTradingContent && (
+            <div className="mb-8">
+              <h3 className="font-sans text-body-sm uppercase tracking-[0.2em] font-bold text-navy-500 border-b-2 border-navy-800 pb-2 mb-4">
+                {label('trading')}
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {tradingArticles.map((article) => (
+                  <ArticleCard key={article.slug} article={article} variant="standard" />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Investimentos sub-section */}
+          {hasInvestimentosContent && (
+            <div>
+              <h3 className="font-sans text-body-sm uppercase tracking-[0.2em] font-bold text-navy-500 border-b-2 border-navy-800 pb-2 mb-4">
+                {label('investimentos')}
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {investimentosArticles.map((article) => (
+                  <ArticleCard key={article.slug} article={article} variant="standard" />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Fallback: show artigos if no trading/investimentos AND no opiniao */}
+          {showBottomFallback && artigos.length > 0 && (
+            <div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {artigos.slice(0, 4).map((article) => (
+                  <ArticleCard key={article.slug} article={article} variant="standard" />
+                ))}
+              </div>
+            </div>
+          )}
+
+        </div>
+
+        {/* Right (3/10): Mais Lidos numbered sidebar */}
+        <div className="lg:col-span-3 lg:pl-6 pt-6 lg:pt-0 border-t lg:border-t-0 border-rule-gray">
           <h3 className="font-sans text-body-sm uppercase tracking-[0.2em] font-bold text-navy-500 border-b-2 border-navy-800 pb-2 mb-2">
-            {labels.maisLidos[locale as keyof typeof labels.maisLidos] || labels.maisLidos.pt}
+            {label('maisLidos')}
           </h3>
 
           <ol className="numbered-list">
@@ -259,23 +345,6 @@ export default async function HomePage({ params, searchParams }: Props) {
         </div>
 
       </div>
-
-      {/* ===== OPINION & ANALYSIS SECTION ===== */}
-      {opinionArticles.length > 0 && (
-        <section className="mt-8 pt-6 border-t-3 border-navy-800">
-          <div className="section-header mb-6">
-            <h2>
-              {labels.opiniao[locale as keyof typeof labels.opiniao] || labels.opiniao.pt}
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {opinionArticles.map((article) => (
-              <ArticleCard key={article.slug} article={article} variant="standard" />
-            ))}
-          </div>
-        </section>
-      )}
 
     </div>
   );
