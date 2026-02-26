@@ -5,8 +5,8 @@
 # Activates the Python virtual environment, runs the content agent pipeline,
 # and logs output with timestamps.
 #
-# CRON SETUP (every 12 hours, at 07:00 and 19:00 local time):
-#   0 7,19 * * * /Users/macbookjoaohomem/Documents/VSCode_Projects/dinheirologia/agent/run_agent.sh >> /Users/macbookjoaohomem/Documents/VSCode_Projects/dinheirologia/agent/logs/cron.log 2>&1
+# CRON SETUP (every 12 hours, at 06:00 and 18:00 BRT = 09:00 and 21:00 UTC):
+#   0 9,21 * * * /Users/macbookjoaohomem/Documents/VSCode_Projects/dinheirologia/agent/run_agent.sh >> /Users/macbookjoaohomem/Documents/VSCode_Projects/dinheirologia/agent/logs/cron.log 2>&1
 #
 # To add to crontab:
 #   crontab -e
