@@ -25,7 +25,7 @@ export default function ArticleCard({ article, variant = 'standard' }: ArticleCa
         <Link href={`/artigo/${article.slug}`} className="flex items-start gap-2">
           <span className="text-dollar-600 font-bold mt-0.5 flex-shrink-0">&#x2022;</span>
           <div className="flex-1 min-w-0">
-            <h3 className="font-serif text-body-md text-navy-900 group-hover:text-dollar-700 leading-snug transition-colors line-clamp-2">
+            <h3 className="font-serif text-body-md font-bold text-navy-900 group-hover:text-dollar-700 leading-snug transition-colors line-clamp-2">
               {article.title}
             </h3>
             <span className="font-sans text-caption uppercase tracking-wider text-navy-400 mt-0.5 block">
@@ -49,7 +49,7 @@ export default function ArticleCard({ article, variant = 'standard' }: ArticleCa
             />
           )}
           <div className="flex-1 min-w-0">
-            <h3 className="font-serif text-body-md text-navy-900 group-hover:text-dollar-700 leading-snug transition-colors line-clamp-2">
+            <h3 className="font-serif text-body-md font-bold text-navy-900 group-hover:text-dollar-700 leading-snug transition-colors line-clamp-2">
               {article.title}
             </h3>
             <div className="flex items-center gap-2 mt-1">
@@ -87,7 +87,7 @@ export default function ArticleCard({ article, variant = 'standard' }: ArticleCa
           )}
           <div className="space-y-2">
             <span className="tag-pill">{categoryLabel}</span>
-            <h2 className="font-serif text-headline-lg text-navy-900 group-hover:text-navy-700 transition-colors leading-tight">
+            <h2 className="font-serif text-headline-lg font-bold text-navy-900 group-hover:text-navy-700 transition-colors leading-tight">
               {article.title}
             </h2>
             {article.subtitle && (
@@ -154,7 +154,7 @@ export default function ArticleCard({ article, variant = 'standard' }: ArticleCa
           </div>
         )}
         <span className="tag-pill mb-2 inline-block">{categoryLabel}</span>
-        <h3 className="font-serif text-headline-sm text-navy-900 group-hover:text-navy-700 transition-colors mt-2 mb-2">
+        <h3 className="font-serif text-headline-sm font-bold text-navy-900 group-hover:text-navy-700 transition-colors mt-2 mb-2">
           {article.title}
         </h3>
         <p className="font-body text-body-sm text-navy-600 line-clamp-2 mb-2">

@@ -159,11 +159,40 @@ export default async function HomePage({ params, searchParams }: Props) {
   return (
     <div className="max-w-content mx-auto px-4 py-6">
 
-      {/* ===== SECTION 1: HERO + "O QUE E NOTICIA" ===== */}
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 border-b border-rule-gray pb-8">
+      {/* ===== SECTION 1: HERO + "O QUE E NOTICIA" (3-col WSJ layout) ===== */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 border-b border-rule-gray pb-8">
 
-        {/* Left (col-span-3): Lead story + secondary stories */}
-        <div className="lg:col-span-3 lg:pr-6 lg:border-r lg:border-rule-gray pb-6 lg:pb-0">
+        {/* Left (col-span-3): Secondary stories stacked vertically */}
+        <div className="order-2 lg:order-1 lg:col-span-3 lg:pr-6 lg:border-r lg:border-rule-gray pt-6 lg:pt-0">
+          {leadExtras.length > 0 && (
+            <div className="flex flex-col gap-6">
+              {leadExtras.map((article) => (
+                <article key={article.slug} className="group">
+                  <Link href={`/artigo/${article.slug}`} className="block">
+                    {article.image && (
+                      <div className="overflow-hidden mb-3">
+                        <img
+                          src={article.image}
+                          alt=""
+                          className="w-full h-36 object-cover rounded-sm grayscale-[20%] group-hover:grayscale-0 transition-all duration-300"
+                        />
+                      </div>
+                    )}
+                    <h3 className="font-serif text-body-md font-bold text-navy-900 group-hover:text-dollar-700 leading-snug transition-colors line-clamp-2">
+                      {article.title}
+                    </h3>
+                    <span className="font-sans text-caption text-navy-400 mt-1 block">
+                      {article.author} · {formattedDate(article.date)}
+                    </span>
+                  </Link>
+                </article>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Center (col-span-6): Lead/Hero story */}
+        <div className="order-1 lg:order-2 lg:col-span-6 lg:px-6 pb-6 lg:pb-0">
           {leadStory && (
             <article className="group">
               <Link href={`/artigo/${leadStory.slug}`} className="block">
@@ -176,7 +205,7 @@ export default async function HomePage({ params, searchParams }: Props) {
                     />
                   </div>
                 )}
-                <h2 className="font-serif text-headline-xl text-navy-900 group-hover:text-navy-700 transition-colors leading-tight mb-3">
+                <h2 className="font-serif text-headline-xl font-bold text-navy-900 group-hover:text-navy-700 transition-colors leading-tight mb-3">
                   {leadStory.title}
                 </h2>
                 {leadStory.subtitle && (
@@ -197,43 +226,16 @@ export default async function HomePage({ params, searchParams }: Props) {
               </Link>
             </article>
           )}
-
-          {/* Secondary stories below hero */}
-          {leadExtras.length > 0 && (
-            <div className="mt-6 pt-6 border-t border-rule-gray grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {leadExtras.map((article) => (
-                <article key={article.slug} className="group">
-                  <Link href={`/artigo/${article.slug}`} className="block">
-                    {article.image && (
-                      <div className="overflow-hidden mb-3">
-                        <img
-                          src={article.image}
-                          alt=""
-                          className="w-full h-36 object-cover rounded-sm grayscale-[20%] group-hover:grayscale-0 transition-all duration-300"
-                        />
-                      </div>
-                    )}
-                    <h3 className="font-serif text-body-md text-navy-900 group-hover:text-dollar-700 leading-snug transition-colors line-clamp-2">
-                      {article.title}
-                    </h3>
-                    <span className="font-sans text-caption text-navy-400 mt-1 block">
-                      {article.author} · {formattedDate(article.date)}
-                    </span>
-                  </Link>
-                </article>
-              ))}
-            </div>
-          )}
         </div>
 
-        {/* Right (col-span-2): "O Que E Noticia" bullet headlines */}
-        <div className="lg:col-span-2 lg:pl-6 pt-6 lg:pt-0 border-t lg:border-t-0 border-rule-gray">
+        {/* Right (col-span-3): "O Que E Noticia" bullet headlines */}
+        <div className="order-3 lg:order-3 lg:col-span-3 lg:pl-6 lg:border-l lg:border-rule-gray pt-6 lg:pt-0 border-t lg:border-t-0 border-rule-gray flex flex-col">
           <h3 className="font-sans text-body-sm uppercase tracking-[0.2em] font-bold text-navy-500 border-b-2 border-navy-800 pb-2 mb-2">
             {label('whatsNews')}
           </h3>
 
           {bulletHeadlines.length > 0 ? (
-            <ul className="bullet-headlines">
+            <ul className="bullet-headlines flex-1">
               {bulletHeadlines.map((article) => (
                 <ArticleCard key={article.slug} article={article} variant="bullet" />
               ))}
@@ -332,7 +334,7 @@ export default async function HomePage({ params, searchParams }: Props) {
             {mostRead.map((article) => (
               <li key={article.slug}>
                 <Link href={`/artigo/${article.slug}`} className="block group">
-                  <h4 className="font-serif text-body-md text-navy-900 group-hover:text-dollar-700 leading-snug transition-colors line-clamp-2">
+                  <h4 className="font-serif text-body-md font-bold text-navy-900 group-hover:text-dollar-700 leading-snug transition-colors line-clamp-2">
                     {article.title}
                   </h4>
                   <span className="font-sans text-caption text-navy-400 mt-1 block">
