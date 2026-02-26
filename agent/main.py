@@ -32,7 +32,8 @@ from rich.panel import Panel
 from rich.table import Table
 
 from config import settings
-from fetcher import FeedFetcher, ProcessedURLStore, RawArticle
+from drop_processor import DropFolderProcessor
+from fetcher import AuthenticatedFetcher, FeedFetcher, ProcessedURLStore, RawArticle
 from image_sourcer import ImageSourcer
 from manual_input import ManualArticle, ManualInputProcessor
 from publisher import ArticlePublisher, PublishResult
@@ -106,7 +107,7 @@ def _process_rss_article(
             translations=translations,
             image=image,
             featured=False,
-            content_type="noticia",
+            content_type=rewritten.content_type,
         )
         return result
 
@@ -293,12 +294,54 @@ def run(
                 errors += 1
 
     # -----------------------------------------------------------------------
+    # Drop folder articles (blocked sources, manually copied)
+    # -----------------------------------------------------------------------
+    if not rss_only:
+        drop_processor = DropFolderProcessor(settings.drop_folder_dir)
+        drop_articles = drop_processor.load_articles()
+        for raw, file_path in drop_articles:
+            console.rule(f"[bold]Drop: {raw.title[:50]}[/bold]")
+            result = _process_rss_article(
+                raw=raw,
+                rewriter=rewriter,
+                translator=translator,
+                image_sourcer=image_sourcer,
+                publisher=publisher,
+                dry_run=dry_run,
+            )
+            if result:
+                results.append(result)
+                if not dry_run:
+                    drop_processor.delete_processed(file_path)
+            else:
+                errors += 1
+
+    # -----------------------------------------------------------------------
     # RSS articles
     # -----------------------------------------------------------------------
     if not manual_only:
         fetcher = FeedFetcher(store)
         rss_articles = fetcher.fetch_all()
-        console.log(f"[blue]Total new RSS articles:[/blue] {len(rss_articles)}")
+
+        # Authenticated sources (FT, Gavekal)
+        if settings.ft_email and settings.ft_password:
+            auth_fetcher = AuthenticatedFetcher(store)
+            try:
+                ft_articles = auth_fetcher.fetch_ft()
+                rss_articles.extend(ft_articles)
+            except Exception as exc:
+                log.warning(f"FT fetch failed: {exc}")
+
+            if settings.gavekal_email and settings.gavekal_password:
+                try:
+                    gavekal_articles = auth_fetcher.fetch_gavekal()
+                    rss_articles.extend(gavekal_articles)
+                except Exception as exc:
+                    log.warning(f"Gavekal fetch failed: {exc}")
+
+            auth_fetcher.close()
+
+        console.log(f"[blue]Total new articles (RSS + authenticated):[/blue] {len(rss_articles)}")
 
         for raw in rss_articles:
             console.rule(f"[bold]RSS: {raw.title[:50]}[/bold]")

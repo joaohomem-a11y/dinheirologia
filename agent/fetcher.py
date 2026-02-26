@@ -22,7 +22,7 @@ from bs4 import BeautifulSoup
 from rich.console import Console
 from tenacity import retry, stop_after_attempt, wait_exponential
 
-from config import RSS_FEEDS, settings
+from config import AUTHENTICATED_SOURCES, RSS_FEEDS, settings
 
 console = Console()
 
@@ -45,6 +45,7 @@ class RawArticle:
     source_url: str
     category: str
     language: str
+    content_type: str = "noticia"
     url_hash: str = field(init=False)
 
     def __post_init__(self) -> None:
@@ -246,8 +247,217 @@ class FeedFetcher:
                 source_url=feed.feed.get("link", feed_cfg["url"]),
                 category=feed_cfg["category"],
                 language=feed_cfg["language"],
+                content_type=feed_cfg.get("content_type", "noticia"),
             )
 
             self._store.mark_seen(url)
             count += 1
             yield article
+
+
+# ---------------------------------------------------------------------------
+# Authenticated fetcher (FT, Gavekal)
+# ---------------------------------------------------------------------------
+
+
+class AuthenticatedFetcher:
+    """Fetches articles from login-protected sites (FT, Gavekal)."""
+
+    def __init__(self, store: ProcessedURLStore) -> None:
+        self._store = store
+        self._client = httpx.Client(follow_redirects=True, timeout=30.0)
+        self._headers = {
+            "User-Agent": (
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            ),
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9",
+        }
+
+    def close(self) -> None:
+        """Close the underlying HTTP client."""
+        self._client.close()
+
+    def fetch_ft(self) -> list[RawArticle]:
+        """Login to FT and fetch latest articles."""
+        articles: list[RawArticle] = []
+        ft_cfg = next(
+            (s for s in AUTHENTICATED_SOURCES if s["name"] == "Financial Times"), None
+        )
+        if not ft_cfg:
+            return articles
+
+        max_articles = int(ft_cfg.get("max_articles", 3))
+
+        try:
+            # Step 1: Login to FT
+            login_page = self._client.get(
+                "https://accounts.ft.com/login", headers=self._headers
+            )
+            login_page.raise_for_status()
+
+            # Extract CSRF token if present
+            soup = BeautifulSoup(login_page.text, "lxml")
+            csrf_input = soup.find("input", {"name": "token"}) or soup.find(
+                "input", {"name": "_csrf"}
+            )
+            csrf_token = csrf_input["value"] if csrf_input else ""
+
+            login_data = {
+                "email": settings.ft_email,
+                "password": settings.ft_password,
+            }
+            if csrf_token:
+                login_data["token"] = csrf_token
+
+            login_resp = self._client.post(
+                "https://accounts.ft.com/login",
+                data=login_data,
+                headers=self._headers,
+            )
+            login_resp.raise_for_status()
+            console.log("[green]FT login successful[/green]")
+
+            # Step 2: Fetch article listing pages
+            sections = ["/markets", "/technology", "/opinion"]
+            article_links: list[tuple[str, str]] = []
+
+            for section in sections:
+                if len(article_links) >= max_articles * 2:
+                    break
+                try:
+                    resp = self._client.get(
+                        f"https://www.ft.com{section}", headers=self._headers
+                    )
+                    resp.raise_for_status()
+                    page_soup = BeautifulSoup(resp.text, "lxml")
+
+                    for link in page_soup.select("a.js-teaser-heading-link, a[data-trackable='heading-link']"):
+                        href = link.get("href", "")
+                        title = link.get_text(strip=True)
+                        if href and title and "/content/" in href:
+                            full_url = (
+                                href
+                                if href.startswith("http")
+                                else f"https://www.ft.com{href}"
+                            )
+                            if not self._store.has_seen(full_url):
+                                article_links.append((full_url, title))
+                    time.sleep(1)
+                except Exception as exc:
+                    console.log(f"[yellow]FT section {section} failed: {exc}[/yellow]")
+
+            # Step 3: Fetch individual articles
+            for url, title in article_links[:max_articles]:
+                try:
+                    resp = self._client.get(url, headers=self._headers)
+                    resp.raise_for_status()
+                    body = _clean_html(resp.text)
+
+                    if len(body) < settings.min_article_length:
+                        continue
+
+                    article = RawArticle(
+                        url=url,
+                        title=title,
+                        body=body,
+                        summary=body[:500],
+                        published_at=datetime.now(tz=timezone.utc),
+                        source_name="Financial Times",
+                        source_url="https://www.ft.com",
+                        category=str(ft_cfg["category"]),
+                        language="en",
+                        content_type=str(ft_cfg["content_type"]),
+                    )
+                    self._store.mark_seen(url)
+                    articles.append(article)
+                    time.sleep(1)
+                except Exception as exc:
+                    console.log(f"[yellow]FT article fetch failed: {exc}[/yellow]")
+
+        except Exception as exc:
+            console.log(f"[red]FT login/fetch failed: {exc}[/red]")
+
+        console.log(f"[green]Fetched {len(articles)} articles from FT[/green]")
+        return articles
+
+    def fetch_gavekal(self) -> list[RawArticle]:
+        """Login to Gavekal Research and fetch latest research pieces."""
+        articles: list[RawArticle] = []
+        gk_cfg = next(
+            (s for s in AUTHENTICATED_SOURCES if s["name"] == "Gavekal Research"),
+            None,
+        )
+        if not gk_cfg:
+            return articles
+
+        max_articles = int(gk_cfg.get("max_articles", 2))
+
+        try:
+            # Step 1: Login to Gavekal
+            login_resp = self._client.post(
+                "https://research.gavekal.com/login/",
+                data={
+                    "email": settings.gavekal_email,
+                    "password": settings.gavekal_password,
+                },
+                headers=self._headers,
+            )
+            login_resp.raise_for_status()
+            console.log("[green]Gavekal login successful[/green]")
+
+            # Step 2: Fetch research listing
+            listing_resp = self._client.get(
+                "https://research.gavekal.com/research/",
+                headers=self._headers,
+            )
+            listing_resp.raise_for_status()
+            soup = BeautifulSoup(listing_resp.text, "lxml")
+
+            article_links: list[tuple[str, str]] = []
+            for link in soup.select("a.research-title, h3 a, .article-title a"):
+                href = link.get("href", "")
+                title = link.get_text(strip=True)
+                if href and title:
+                    full_url = (
+                        href
+                        if href.startswith("http")
+                        else f"https://research.gavekal.com{href}"
+                    )
+                    if not self._store.has_seen(full_url):
+                        article_links.append((full_url, title))
+
+            # Step 3: Fetch individual research pieces
+            for url, title in article_links[:max_articles]:
+                try:
+                    resp = self._client.get(url, headers=self._headers)
+                    resp.raise_for_status()
+                    body = _clean_html(resp.text)
+
+                    if len(body) < settings.min_article_length:
+                        continue
+
+                    article = RawArticle(
+                        url=url,
+                        title=title,
+                        body=body,
+                        summary=body[:500],
+                        published_at=datetime.now(tz=timezone.utc),
+                        source_name="Gavekal Research",
+                        source_url="https://research.gavekal.com",
+                        category=str(gk_cfg["category"]),
+                        language="en",
+                        content_type=str(gk_cfg["content_type"]),
+                    )
+                    self._store.mark_seen(url)
+                    articles.append(article)
+                    time.sleep(1)
+                except Exception as exc:
+                    console.log(f"[yellow]Gavekal article fetch failed: {exc}[/yellow]")
+
+        except Exception as exc:
+            console.log(f"[red]Gavekal login/fetch failed: {exc}[/red]")
+
+        console.log(f"[green]Fetched {len(articles)} articles from Gavekal[/green]")
+        return articles

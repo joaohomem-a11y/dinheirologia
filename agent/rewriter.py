@@ -58,6 +58,18 @@ IDIOMA: Sempre em Portugues do Brasil.
 OUTPUT: Apenas o corpo do artigo em Markdown. Sem frontmatter. Sem titulo H1 no inicio (o titulo vai no frontmatter).
 """
 
+_CONTENT_TYPE_INSTRUCTIONS = {
+    "noticia": (
+        "Escreva como NOTICIA: reporte o fato com sua analise acida por cima. "
+        "Foco na novidade. Minimo 400 palavras, maximo 900 palavras."
+    ),
+    "artigo": (
+        "Escreva como ARTIGO DE OPINIAO: destrinche o tema em profundidade, "
+        "coloque sua opiniao forte, eduque o leitor. Pode ser mais longo "
+        "(ate 1200 palavras). Menos foco na novidade, mais na analise e ensinamento."
+    ),
+}
+
 _REWRITE_USER_TEMPLATE = """\
 Reescreva o artigo abaixo no estilo descrito. O artigo original e em {language} — traduza e reescreva ao mesmo tempo para Portugues do Brasil.
 
@@ -70,14 +82,16 @@ CONTEUDO ORIGINAL:
 
 ---
 INSTRUCOES ADICIONAIS:
-- Categoria do artigo: {category}
+- TIPO DE CONTEUDO: {content_type_instruction}
+- Categoria sugerida: {category}
+- Se o conteudo tiver forte opiniao ou analise de posicionamento, prefira a categoria 'opiniao'. Se envolver analise tecnica, price action ou estrategia de entrada/saida, prefira 'trading'.
 - Crie um titulo em portugues mais provocativo e direto (retorne como primeira linha no formato: TITULO: <titulo aqui>)
 - Crie um subtitulo opcional (retorne como segunda linha no formato: SUBTITULO: <subtitulo aqui> — ou SUBTITULO: nenhum)
 - Depois do subtitulo, escreva o corpo do artigo em Markdown
-- Minimo 400 palavras, maximo 900 palavras
 - Escolha 3 a 5 tags relevantes em portugues (retorne ao final no formato: TAGS: tag1, tag2, tag3)
 - Escolha a categoria mais adequada dentre: mercados, trading, investimentos, negocios, opiniao
   (retorne ao final no formato: CATEGORIA: categoria)
+- Retorne o tipo de conteudo ao final: TIPO: noticia ou TIPO: artigo
 """
 
 
@@ -100,6 +114,7 @@ class RewrittenArticle:
     source_name: str
     published_at: str  # ISO date string
     url_hash: str
+    content_type: str = "noticia"
 
 
 # ---------------------------------------------------------------------------
@@ -156,12 +171,18 @@ class ArticleRewriter:
         """
         console.log(f"[cyan]Rewriting:[/cyan] {article.title[:70]}")
 
+        content_type = getattr(article, "content_type", "noticia") or "noticia"
+        content_type_instruction = _CONTENT_TYPE_INSTRUCTIONS.get(
+            content_type, _CONTENT_TYPE_INSTRUCTIONS["noticia"]
+        )
+
         prompt = _REWRITE_USER_TEMPLATE.format(
             language="inglês" if article.language == "en" else "português",
             title=article.title,
             source_name=article.source_name,
             body=article.body[:6000],  # Respect context limits
             category=article.category,
+            content_type_instruction=content_type_instruction,
         )
 
         message = self._client.messages.create(
@@ -172,13 +193,14 @@ class ArticleRewriter:
         )
 
         raw_output = message.content[0].text.strip()
-        return self._parse_output(raw_output, article, is_manual)
+        return self._parse_output(raw_output, article, is_manual, content_type)
 
     def _parse_output(
         self,
         raw_output: str,
         original: RawArticle,
         is_manual: bool,
+        fallback_content_type: str = "noticia",
     ) -> RewrittenArticle:
         """
         Parse the structured output from Claude into a RewrittenArticle.
@@ -189,12 +211,14 @@ class ArticleRewriter:
             <body markdown>
             TAGS: tag1, tag2, tag3
             CATEGORIA: categoria
+            TIPO: noticia or artigo
         """
         lines = raw_output.splitlines()
         title_pt = original.title
         subtitle_pt = ""
         tags: list[str] = []
         category = original.category
+        content_type = fallback_content_type
         body_lines: list[str] = []
         in_body = False
 
@@ -218,6 +242,12 @@ class ArticleRewriter:
 
             if stripped.upper().startswith("CATEGORIA:"):
                 category = stripped.split(":", 1)[1].strip().lower()
+                continue
+
+            if stripped.upper().startswith("TIPO:"):
+                parsed_type = stripped.split(":", 1)[1].strip().lower()
+                if parsed_type in ("noticia", "artigo"):
+                    content_type = parsed_type
                 continue
 
             if in_body:
@@ -244,4 +274,5 @@ class ArticleRewriter:
             source_name=original.source_name,
             published_at=original.published_at.strftime("%Y-%m-%d"),
             url_hash=original.url_hash,
+            content_type=content_type,
         )

@@ -39,6 +39,10 @@ class Settings(BaseSettings):
         default=_AGENT_DIR / "agent_state.json",
         env="STATE_FILE",
     )
+    drop_folder_dir: Path = Field(
+        default=_AGENT_DIR / "drop_articles",
+        env="DROP_FOLDER_DIR",
+    )
 
     # Agent behavior
     max_articles_per_feed: int = Field(default=3, env="MAX_ARTICLES_PER_FEED")
@@ -47,9 +51,15 @@ class Settings(BaseSettings):
     log_level: str = Field(default="INFO", env="LOG_LEVEL")
     save_raw_articles: bool = Field(default=False, env="SAVE_RAW_ARTICLES")
 
+    # Authenticated source credentials
+    ft_email: str = Field(default="", env="FT_EMAIL")
+    ft_password: str = Field(default="", env="FT_PASSWORD")
+    gavekal_email: str = Field(default="", env="GAVEKAL_EMAIL")
+    gavekal_password: str = Field(default="", env="GAVEKAL_PASSWORD")
+
     model_config = {"env_file": str(_AGENT_DIR / ".env"), "extra": "ignore"}
 
-    @field_validator("content_output_dir", "manual_input_file", "state_file", mode="before")
+    @field_validator("content_output_dir", "manual_input_file", "state_file", "drop_folder_dir", mode="before")
     @classmethod
     def resolve_path(cls, v: str | Path) -> Path:
         """Resolve relative paths against the agent directory."""
@@ -70,36 +80,93 @@ RSS_FEEDS: Final[list[dict[str, str]]] = [
         "url": "https://finance.yahoo.com/rss/",
         "language": "en",
         "category": "investimentos",
+        "content_type": "noticia",
     },
     {
         "name": "CNBC Finance",
         "url": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
         "language": "en",
         "category": "mercados",
+        "content_type": "noticia",
     },
     {
         "name": "CNBC Investing",
         "url": "https://www.cnbc.com/id/15839135/device/rss/rss.html",
         "language": "en",
         "category": "investimentos",
+        "content_type": "noticia",
     },
     {
         "name": "CNBC Business",
         "url": "https://www.cnbc.com/id/10001147/device/rss/rss.html",
         "language": "en",
         "category": "negocios",
+        "content_type": "noticia",
     },
     {
         "name": "Google News Business",
         "url": "https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx6TVdZU0FtVnVHZ0pWVXlnQVAB",
         "language": "en",
         "category": "negocios",
+        "content_type": "noticia",
     },
     {
         "name": "Google News Economy",
         "url": "https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGRqTVhZU0FtVnVHZ0pWVXlnQVAB",
         "language": "en",
         "category": "mercados",
+        "content_type": "noticia",
+    },
+    # --- Seeking Alpha ---
+    {
+        "name": "Seeking Alpha",
+        "url": "https://seekingalpha.com/feed.xml",
+        "language": "en",
+        "category": "investimentos",
+        "content_type": "noticia",
+    },
+    {
+        "name": "Seeking Alpha Analysis",
+        "url": "https://seekingalpha.com/feed/tag/long-ideas",
+        "language": "en",
+        "category": "investimentos",
+        "content_type": "artigo",
+    },
+    # --- Investopedia ---
+    {
+        "name": "Investopedia News",
+        "url": "https://www.investopedia.com/feedbuilder/feed/getfeed/?feedName=rss_headline",
+        "language": "en",
+        "category": "mercados",
+        "content_type": "noticia",
+    },
+    {
+        "name": "Investopedia Education",
+        "url": "https://www.investopedia.com/feedbuilder/feed/getfeed/?feedName=rss_articles",
+        "language": "en",
+        "category": "investimentos",
+        "content_type": "artigo",
+    },
+]
+
+# ---------------------------------------------------------------------------
+# Authenticated sources (require login credentials)
+# ---------------------------------------------------------------------------
+
+AUTHENTICATED_SOURCES: Final[list[dict[str, str | int]]] = [
+    {
+        "name": "Financial Times",
+        "base_url": "https://www.ft.com",
+        "category": "mercados",
+        "content_type": "artigo",
+        "max_articles": 3,
+    },
+    {
+        "name": "Gavekal Research",
+        "base_url": "https://research.gavekal.com",
+        "category": "mercados",
+        "content_type": "artigo",
+        "max_articles": 2,
     },
 ]
 
@@ -108,13 +175,16 @@ RSS_FEEDS: Final[list[dict[str, str]]] = [
 # ---------------------------------------------------------------------------
 
 FICTIONAL_AUTHORS: Final[list[str]] = [
-    "Seu Zé das Couve",
-    "Creuza",
-    "Gertrudes",
-    "Tião",
-    "Dona Clotilde",
-    "Zé Mané",
-    "Toninho Maluco",
+    "Seu Zé das Couve Flambado",
+    "Creuza Maravilha",
+    "Gertrudes Von Boleto",
+    "Tião Poupança",
+    "Dona Clotilde Dividendo",
+    "Zé Mané Alavancado",
+    "Toninho Maluco das Opções",
+    "Jurema Short-Squeeze",
+    "Beto Calote Neto",
+    "Marlene Fibonacci",
 ]
 
 # The site owner's byline — always used for manually-fed content
