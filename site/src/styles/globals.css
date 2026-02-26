@@ -125,6 +125,25 @@
   .byline .author {
     @apply font-semibold text-navy-600;
   }
+
+  /* WSJ-style masthead with thin rules */
+  .wsj-masthead {
+    @apply border-t border-b border-navy-300 inline-block px-2;
+  }
+
+  /* Opinion section with differentiated background */
+  .opinion-section {
+    @apply bg-cream-100 -mx-4 px-4 py-8;
+  }
+
+  /* Bullet headline list for "O Que E Noticia" */
+  .bullet-headlines li {
+    @apply py-2.5 border-b border-rule-gray;
+  }
+
+  .bullet-headlines li:last-child {
+    @apply border-b-0;
+  }
 }
 
 /* Scrollbar */

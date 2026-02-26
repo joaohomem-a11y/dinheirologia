@@ -7,7 +7,7 @@ import { useLocale } from 'next-intl';
 
 interface ArticleCardProps {
   article: Article;
-  variant?: 'featured' | 'standard' | 'compact' | 'headline';
+  variant?: 'featured' | 'standard' | 'compact' | 'headline' | 'bullet';
 }
 
 export default function ArticleCard({ article, variant = 'standard' }: ArticleCardProps) {
@@ -18,6 +18,24 @@ export default function ArticleCard({ article, variant = 'standard' }: ArticleCa
     locale === 'pt' ? 'pt-BR' : locale === 'es' ? 'es-ES' : 'en-US',
     { day: 'numeric', month: 'short', year: 'numeric' }
   );
+
+  if (variant === 'bullet') {
+    return (
+      <li className="group">
+        <Link href={`/artigo/${article.slug}`} className="flex items-start gap-2">
+          <span className="text-dollar-600 font-bold mt-0.5 flex-shrink-0">&#x2022;</span>
+          <div className="flex-1 min-w-0">
+            <h3 className="font-serif text-body-md text-navy-900 group-hover:text-dollar-700 leading-snug transition-colors line-clamp-2">
+              {article.title}
+            </h3>
+            <span className="font-sans text-caption uppercase tracking-wider text-navy-400 mt-0.5 block">
+              {categoryLabel}
+            </span>
+          </div>
+        </Link>
+      </li>
+    );
+  }
 
   if (variant === 'headline') {
     return (
