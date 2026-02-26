@@ -65,7 +65,7 @@ export default async function HomePage({ params, searchParams }: Props) {
   // Secondary stories below lead (fill the column)
   const leadExtras = [...restNoticias, ...restArtigos]
     .filter((a) => a.slug !== leadStory?.slug)
-    .slice(0, 4);
+    .slice(0, 6);
 
   // Bullet headlines: remaining articles after lead + extras, sliced to 7
   const usedSlugs = new Set<string>();
@@ -165,28 +165,28 @@ export default async function HomePage({ params, searchParams }: Props) {
         {/* Left (col-span-3): Secondary stories stacked vertically */}
         <div className="order-2 lg:order-1 lg:col-span-3 lg:pr-6 lg:border-r lg:border-rule-gray pt-6 lg:pt-0">
           {leadExtras.length > 0 && (
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3">
               {leadExtras.map((article, idx) => (
                 <article key={article.slug} className="group">
                   <Link href={`/artigo/${article.slug}`} className="block">
-                    {idx < 2 && article.image && (
+                    {idx === 0 && article.image && (
                       <div className="overflow-hidden mb-2">
                         <img
                           src={article.image}
                           alt=""
-                          className="w-full h-28 object-cover rounded-sm grayscale-[20%] group-hover:grayscale-0 transition-all duration-300"
+                          className="w-full h-32 object-cover rounded-sm grayscale-[20%] group-hover:grayscale-0 transition-all duration-300"
                         />
                       </div>
                     )}
-                    <h3 className="font-serif text-body-md font-bold text-navy-900 group-hover:text-dollar-700 leading-snug transition-colors line-clamp-2">
+                    <h3 className="font-serif text-body-sm font-bold text-navy-900 group-hover:text-dollar-700 leading-snug transition-colors line-clamp-2">
                       {article.title}
                     </h3>
-                    <span className="font-sans text-caption text-navy-400 mt-1 block">
-                      {article.author} · {formattedDate(article.date)}
+                    <span className="font-sans text-caption text-navy-400 mt-0.5 block">
+                      {article.author}
                     </span>
                   </Link>
                   {idx < leadExtras.length - 1 && (
-                    <div className="border-b border-rule-gray mt-4" />
+                    <div className="border-b border-rule-gray mt-3" />
                   )}
                 </article>
               ))}
