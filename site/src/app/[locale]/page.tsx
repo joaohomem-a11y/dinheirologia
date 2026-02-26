@@ -163,9 +163,9 @@ export default async function HomePage({ params, searchParams }: Props) {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 border-b border-rule-gray pb-8">
 
         {/* Left (col-span-3): Secondary stories stacked vertically */}
-        <div className="order-2 lg:order-1 lg:col-span-3 lg:pr-6 lg:border-r lg:border-rule-gray pt-6 lg:pt-0">
+        <div className="order-2 lg:order-1 lg:col-span-3 lg:pr-6 lg:border-r lg:border-rule-gray pt-6 lg:pt-0 flex flex-col">
           {leadExtras.length > 0 && (
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col justify-between flex-1">
               {leadExtras.map((article, idx) => (
                 <article key={article.slug} className="group">
                   <Link href={`/artigo/${article.slug}`} className="block">
