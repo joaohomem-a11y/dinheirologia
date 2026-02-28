@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import Script from 'next/script';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -48,6 +49,18 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className={`${playfair.variable} ${lora.variable} ${franklin.variable}`}>
       <body className="min-h-screen flex flex-col bg-paper-white">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-PLZYDV5EYR"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PLZYDV5EYR');
+          `}
+        </Script>
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main className="flex-1">
