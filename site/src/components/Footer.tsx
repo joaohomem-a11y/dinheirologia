@@ -50,6 +50,10 @@ export default function Footer() {
             <Link href="/sobre" className="font-sans text-body-sm text-gold-light hover:text-gold transition-colors">
               {nav('about')} →
             </Link>
+            <br />
+            <Link href="/anuncie" className="font-sans text-body-sm text-gold-light hover:text-gold transition-colors">
+              {nav('advertise')} →
+            </Link>
           </div>
         </div>
 
