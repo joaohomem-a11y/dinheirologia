@@ -11,8 +11,8 @@ tags:
 - Netflix
 - fusões e aquisições
 - mercado de mídia
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1556742111-a301076d9d18?w=1200&q=80&fit=crop"
+imageCaption: "Person holding black android smartphone close-up photography — Photo by Clay Banks on Unsplash"
 excerpt: '--- "Synergies." If there''s one word in the corporate dictionary that should
   come with a hazard warning, it''s that one. Every time a CEO talks about "eliminating
   redundant operations," go ahead and...'

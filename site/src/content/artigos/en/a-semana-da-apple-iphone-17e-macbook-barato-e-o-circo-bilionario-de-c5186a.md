@@ -11,8 +11,10 @@ tags:
 - iPhone 17e
 - jornalismo financeiro
 - mercado de tecnologia
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1627719172031-ab42dc849bc3?w=1200&q=80&fit=crop"
+imageCaption: "Interactive brokers mobile app! | via techdaily.ca
+
+#finance #interactivebrokers #ibkr #stocks  — Photo by Tech Daily on Unsplash"
 excerpt: Look, I was going to write a deep-dive analysis of Apple's launch week. Seriously.
   I was going to break down the iPhone 17e, the "affordable" MacBook, the new iPads,
   the impact on the Asian supply...

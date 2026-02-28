@@ -10,8 +10,8 @@ tags:
 - ações internacionais
 - ciclo econômico
 - investimentos
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1633158829875-e5316a358c6f?w=1200&q=80&fit=crop"
+imageCaption: "A glass jar filled with coins and a plant — Photo by Towfiqu barbhuiya on Unsplash"
 excerpt: '--- Tem uma cena clássica no Matrix onde o Neo finalmente enxerga o código
   por trás da realidade. Tudo que parecia sólido vira ruído verde piscando na tela.
   É mais ou menos o que acontece quando você...'

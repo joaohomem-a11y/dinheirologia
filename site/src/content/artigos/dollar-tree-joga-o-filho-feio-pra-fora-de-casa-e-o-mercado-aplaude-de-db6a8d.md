@@ -10,8 +10,8 @@ tags:
 - desinvestimento
 - varejo de desconto
 - alocação de capital
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1718752773168-a44aa1601ddd?w=1200&q=80&fit=crop"
+imageCaption: "Scottsdale mint 1 kilo gold bullion bars sitting on a simple textured backdrop. each bar is pure 9999 fine and made from gold precious metals. please give a shoutout to scottsdale mint if able! shop online for the most beautiful bullion at scottsdalemint.com! — Photo by Scottsdale Mint on Unsplash"
 excerpt: '--- Sabe aquela cena clássica do Poderoso Chefão em que Michael Corleone
   manda resolver todos os problemas da família de uma vez só? Pois é. A Dollar Tree
   (DLTR) fez exatamente isso — mas em vez de...'

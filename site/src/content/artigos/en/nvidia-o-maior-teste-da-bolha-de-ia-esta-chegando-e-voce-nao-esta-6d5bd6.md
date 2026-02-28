@@ -10,8 +10,8 @@ tags:
 - mercado de ações
 - semicondutores
 - análise de investimentos
-image: https://images.unsplash.com/photo-1630934402156-32e2068f173d?w=1200&q=80&fit=crop
-imageCaption: Row of jacksons — Photo by Dan Dennis on Unsplash
+image: "https://images.unsplash.com/photo-1484417894907-623942c8ee29?w=1200&q=80&fit=crop"
+imageCaption: "Light work — Photo by Emile Perron on Unsplash"
 excerpt: '--- There''s a classic scene in poker. Everyone at the table shoves their
   chips to the center. Nobody blinks. The air gets heavy. And then comes the moment
   of truth: flip the cards. That''s exactly...'

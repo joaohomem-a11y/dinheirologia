@@ -11,8 +11,12 @@ tags:
 - Paramount
 - regulação
 - streaming
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1553484771-4e29a68540f4?w=1200&q=80&fit=crop"
+imageCaption: "Model: @austindistel
+https://www.instagram.com/austindistel/
+
+photographer: @breeandstephen
+https://www.instagram.com/breeandstephen/ — Photo by Austin Distel on Unsplash"
 excerpt: '--- Olha, eu ia escrever uma análise detalhada sobre a mega-fusão Paramount
   + Warner Bros Discovery e a investigação liderada pela procuradora-geral da Califórnia
   que está arregimentando uma coalizão...'

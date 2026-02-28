@@ -11,8 +11,8 @@ tags:
 - mercado de ações
 - investimentos
 - Wall Street
-image: https://images.unsplash.com/photo-1662947683395-1ce33bdcd094?w=1200&q=80&fit=crop
-imageCaption: Logo — Photo by BoliviaInteligente on Unsplash
+image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1200&q=80&fit=crop"
+imageCaption: "Business top shot - www.chromaluts.shop — Photo by Tyler Franta on Unsplash"
 excerpt: '--- Existe uma cena clássica em Breaking Bad onde toda a operação de Walter
   White depende de uma única variável fora do seu controle. Um movimento errado, e
   tudo desmorona. O cara construiu um...'

@@ -11,8 +11,8 @@ tags:
 - dividendos
 - diversificação
 - ações europeias
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1553270092-2fd1383ce030?w=1200&q=80&fit=crop"
+imageCaption: "Black and gray vehicle interior — Photo by Lai Man Nung on Unsplash"
 excerpt: Sabe qual é o problema de 90% dos investidores brasileiros? Eles acham que
   o mundo acaba na B3, no S&P 500 e, no máximo, num ETF de Nasdaq. Enquanto isso,
   tem gente ganhando dinheiro quieto em...

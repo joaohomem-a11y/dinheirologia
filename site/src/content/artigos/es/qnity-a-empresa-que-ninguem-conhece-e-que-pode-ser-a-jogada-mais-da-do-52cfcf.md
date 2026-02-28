@@ -11,8 +11,8 @@ tags:
 - Qnity
 - picks and shovels
 - spin-off
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1653469894102-5e59f8d13900?w=1200&q=80&fit=crop"
+imageCaption: "A close up of a typewriter with a paper that reads hedge funds — Photo by Markus Winkler on Unsplash"
 excerpt: Recuerdan aquella vieja frase de la fiebre del oro? "Los que se hicieron
   ricos de verdad no fueron los que cavaron oro — fueron los que vendieron los picos
   y las palas." Exacto. Mientras todo el...

@@ -11,8 +11,8 @@ tags:
 - Pokémon
 - bolha especulativa
 - mercado financeiro
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1622715996710-e34593731ae0?w=1200&q=80&fit=crop"
+imageCaption: "Blue and white ship on sea under blue sky during daytime — Photo by John Simmons on Unsplash"
 excerpt: '--- "Pokémon significa muito mais do que um Picasso para as pessoas." Essa
   frase foi dita sem ironia por AJ Scaramucci — sim, filho do Anthony Scaramucci,
   aquele que durou 11 dias como diretor de...'

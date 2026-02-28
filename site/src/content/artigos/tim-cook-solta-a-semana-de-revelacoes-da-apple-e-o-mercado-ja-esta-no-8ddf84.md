@@ -11,8 +11,8 @@ tags:
 - big techs
 - mercado americano
 - hype tecnológico
-image: https://images.unsplash.com/photo-1571715268998-d6e79bed5fc9?w=1200&q=80&fit=crop
-imageCaption: White apple card — Photo by blocks on Unsplash
+image: "https://images.unsplash.com/photo-1542744173-05336fcc7ad4?w=1200&q=80&fit=crop"
+imageCaption: "Person using macbook pro — Photo by Campaign Creators on Unsplash"
 excerpt: '--- Olha, eu ia escrever sobre macroeconomia hoje. Sobre juros, sobre o
   circo fiscal, sobre alguma coisa que realmente impacta a vida do brasileiro médio
   que está tentando não ser engolido pela...'

@@ -10,8 +10,8 @@ tags:
 - análise fundamentalista
 - armadilha de valor
 - mercado americano
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1623118176012-9b0c6fa0712d?w=1200&q=80&fit=crop"
+imageCaption: "A closeup of a us hundred dollar bill (benjamin franklin side). — Photo by Adam Nir on Unsplash"
 excerpt: '--- You know that scene in The Matrix where Morpheus offers Neo the two
   pills? "Blue pill: you keep believing the pretty story. Red pill: you see reality
   for what it is." Well then. Yahoo Finance...'

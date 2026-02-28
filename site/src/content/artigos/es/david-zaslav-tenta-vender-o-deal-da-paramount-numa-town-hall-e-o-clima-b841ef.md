@@ -11,8 +11,8 @@ tags:
 - fusões e aquisições
 - David Zaslav
 - mídia e entretenimento
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1665072204431-b3ba11bd6d06?w=1200&q=80&fit=crop"
+imageCaption: "A man holding a baby — Photo by Erika Fletcher on Unsplash"
 excerpt: '--- ¿Conocen ese momento en las películas de desastre en que el capitán
   del barco toma el micrófono para decir que "todo está bajo control" mientras el
   agua ya le llega a los tobillos a todo el...'

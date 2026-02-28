@@ -11,8 +11,8 @@ tags:
 - IPO
 - investimentos em tecnologia
 - mercado de capitais
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1200&q=80&fit=crop"
+imageCaption: "Closeup photo of eyeglasses — Photo by Kevin Ku on Unsplash"
 excerpt: '--- Você já viu esse filme antes. Uma empresa com tecnologia "revolucionária",
   nome difícil de pronunciar, promessas que chegam ao ano 2040, e um acordo via SPAC
   — aquela estrutura que Wall Street...'

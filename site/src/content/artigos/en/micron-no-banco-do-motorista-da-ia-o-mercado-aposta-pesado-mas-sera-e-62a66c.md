@@ -11,8 +11,8 @@ tags:
 - opções
 - semicondutores
 - mercado de ações
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&q=80&fit=crop"
+imageCaption: "Monitor screengrab — Photo by Stephen Phillips - Hostreviews.co.uk on Unsplash"
 excerpt: '--- Look, I know the original content of this TipRanks story came locked
   behind a wall of cookies and consent — basically Google asking you to agree to be
   tracked before showing you anything useful....'

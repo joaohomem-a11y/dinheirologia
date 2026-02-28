@@ -11,8 +11,8 @@ tags:
 - modelo mútuo
 - mercado americano
 - skin in the game
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1474631245212-32dc3c8310c6?w=1200&q=80&fit=crop"
+imageCaption: "Man holding incandescent bulb — Photo by Riccardo Annandale on Unsplash"
 excerpt: 'Pega essa: a State Farm, maior seguradora de automóveis dos Estados Unidos
   — uma mútua, ou seja, uma empresa que pertence aos seus segurados, não a acionistas
   de Wall Street — anunciou que vai...'

@@ -11,8 +11,8 @@ tags:
 - mercado EV
 - prejuízo
 - startups
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1501324682324-0d8d7c4b9706?w=1200&q=80&fit=crop"
+imageCaption: "Windows of skyscraper office with blue sky — Photo by JESHOOTS.COM on Unsplash"
 excerpt: '--- Tem uma cena clássica no Breaking Bad em que Walter White, cercado de
   cinzas e destroços, ainda tenta convencer todo mundo de que está no controle da
   situação. Eu me lembro dessa cena toda vez...'

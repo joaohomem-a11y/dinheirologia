@@ -11,8 +11,8 @@ tags:
 - Jamie Dimon
 - mercado de trabalho
 - automação
-image: https://images.unsplash.com/photo-1770233621425-5d9ee7a0a700?w=1200&q=80&fit=crop
-imageCaption: A somewhat commonly-used artistic trope that can be used to illustrate
+image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80&fit=crop"
+imageCaption: "People sitting down near table with assorted laptop computers — Photo by Marvin Meyer on Unsplash"
   both pro-ai and anti-ai sentiment. modeled and rendered with blender cycles 5.0.1
   — Photo by Zach M on Unsplash
 excerpt: '--- "We''ve already displaced people because of AI — and we offered them

@@ -11,8 +11,8 @@ tags:
 - doações políticas
 - investimentos nos EUA
 - eleições americanas
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1510070112810-d4e9a46d9e91?w=1200&q=80&fit=crop"
+imageCaption: "Assorted-color paper and brown wooden pencil — Photo by Joanna Kosinska on Unsplash"
 excerpt: '--- Look, I was going to bring you a detailed breakdown of which companies
   are promising "matching funds" — that scheme where they match employee donations
   — to accounts tied to Trump. But you know...'

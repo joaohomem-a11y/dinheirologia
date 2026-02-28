@@ -11,8 +11,8 @@ tags:
 - JPMorgan
 - Jamie Dimon
 - tecnologia financeira
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1614029951539-4b1ce4821be8?w=1200&q=80&fit=crop"
+imageCaption: "Wealthsimple investing app  | via techdaily.ca | #stocks #finance #investing #wealthsimple #canada #toronto — Photo by Tech Daily on Unsplash"
 excerpt: '--- Hay una escena clásica en El Padrino donde el Don mira a la cámara y
   dice la verdad que todos ya sabían, pero nadie tenía el coraje de decir en voz alta.
   Jamie Dimon hizo eso la semana pasada. No...'

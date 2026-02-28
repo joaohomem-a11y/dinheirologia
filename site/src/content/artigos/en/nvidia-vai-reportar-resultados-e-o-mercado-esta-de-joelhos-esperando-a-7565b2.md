@@ -11,8 +11,8 @@ tags:
 - resultados trimestrais
 - chips de IA
 - mercado de tecnologia
-image: https://images.unsplash.com/photo-1662947683280-3be5bfc47075?w=1200&q=80&fit=crop
-imageCaption: Logo — Photo by BoliviaInteligente on Unsplash
+image: "https://images.unsplash.com/photo-1583320975624-d099f8c042f6?w=1200&q=80&fit=crop"
+imageCaption: "Person holding golden foil wrapped chocolate candy eggs. — Photo by Alexander Grey on Unsplash"
 excerpt: '--- There''s a classic scene in Gladiator where the crowd at the Colosseum
   is going absolutely wild, breathlessly waiting for the next blood spectacle. That''s
   exactly where Wall Street is right now —...'

@@ -11,8 +11,8 @@ tags:
 - fusões e aquisições
 - streaming
 - mídia
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1739298061766-e2751d92e9db?w=1200&q=80&fit=crop"
+imageCaption: "A team of three people, with a man and a lady facing opposite each other and another lady in the middle. find more afro-centric images at www.ninthgrid.com — Photo by Ninthgrid on Unsplash"
 excerpt: '--- There''s a classic scene in disaster movies: two characters falling
   together try to grab onto each other, convinced that''ll somehow stop the fall.
   Spoiler: it doesn''t. That''s pretty much what it...'

@@ -10,8 +10,8 @@ tags:
 - análise crítica
 - comportamento do investidor
 - hype de mercado
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1496096265110-f83ad7f96608?w=1200&q=80&fit=crop"
+imageCaption: "Vivid sydney — Photo by Christopher Burns on Unsplash"
 excerpt: '--- ¿Recuerdas esa escena de Matrix donde Neo intenta acceder al sistema
   y se encuentra con un muro? Exactamente eso fue lo que pasó cuando intenté leer
   la nota original sobre el Oppo Find N6 — una...'

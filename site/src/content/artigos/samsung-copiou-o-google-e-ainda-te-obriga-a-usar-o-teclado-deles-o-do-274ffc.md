@@ -11,8 +11,8 @@ tags:
 - inovação
 - investimentos em tech
 - ecossistema fechado
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1606961947900-6722c7358f23?w=1200&q=80&fit=crop"
+imageCaption: "Music that the kids love — Photo by Eryka Rose Raton on Unsplash"
 excerpt: '--- Deixa eu te contar uma coisa que resume perfeitamente como funciona
   o capitalismo de fachada em 2025. A Samsung acabou de anunciar uma funcionalidade
   chamada "Now Nudge" pro Galaxy S26. Sabe o...'

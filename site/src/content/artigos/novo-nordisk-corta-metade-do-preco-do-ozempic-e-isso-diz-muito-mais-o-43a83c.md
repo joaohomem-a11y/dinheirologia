@@ -11,8 +11,8 @@ tags:
 - GLP-1
 - farmacêuticas
 - mercado americano
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1499540633125-484965b60031?w=1200&q=80&fit=crop"
+imageCaption: "We did it — Photo by Natalie Pedigo on Unsplash"
 excerpt: '--- Existe uma velha regra no mundo dos negócios que nenhum MBA te ensina
   direito: Empresa não baixa preço por bondade. Empresa baixa preço porque está perdendo.
   Guarda essa frase. Ela explica tudo o...'

@@ -10,8 +10,8 @@ tags:
 - guerra comercial
 - geopolítica
 - tarifas
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1640161704729-cbe966a08476?w=1200&q=80&fit=crop"
+imageCaption: "A pile of cryptocurrencies placed on a black background — Photo by Traxer on Unsplash"
 excerpt: '--- Tem um velho ditado que os traders experientes conhecem bem: o que não
   é dito vale mais do que o que é. Trump acabou de fazer o maior discurso do Estado
   da União de toda a história americana. O...'

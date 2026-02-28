@@ -11,8 +11,8 @@ tags:
 - Warner Bros Discovery
 - Paramount
 - Netflix
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200&q=80&fit=crop"
+imageCaption: "A person sitting at a table with a laptop — Photo by Microsoft 365 on Unsplash"
 excerpt: '--- Tem uma cena no Coringa em que o Arthur Fleck diz: "A pior parte de
   ter uma doença mental é que as pessoas esperam que você se comporte como se não
   tivesse." Pois é. A pior parte do mercado de...'

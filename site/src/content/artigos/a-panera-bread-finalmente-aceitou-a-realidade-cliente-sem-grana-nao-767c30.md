@@ -11,8 +11,8 @@ tags:
 - consumo
 - estratégia de negócios
 - economia americana
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1565728744382-61accd4aa148?w=1200&q=80&fit=crop"
+imageCaption: "Laptops meeting in coffee shop  — Photo by Maranda Vandergriff on Unsplash"
 excerpt: '--- Tem uma cena clássica no filme O Rei Leão — quando Simba volta ao reino
   destruído e percebe que ignorar a realidade por anos tem um preço. A Panera Bread
   viveu essa cena na pele. A rede que...'

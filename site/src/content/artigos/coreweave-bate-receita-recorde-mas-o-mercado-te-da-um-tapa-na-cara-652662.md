@@ -10,8 +10,8 @@ tags:
 - infraestrutura cloud
 - resultados trimestrais
 - dívida corporativa
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1624365168056-daf44387e2ae?w=1200&q=80&fit=crop"
+imageCaption: "Pile of gold bullion coins and bars. argor heraeus, münze österreich, royal canadian mint, u.s. mint, australian mint of perth, panda and krugerrand. if you use our photos, please add credit to https://zlataky.cz, when possible — Photo by Zlaťáky.cz on Unsplash"
 excerpt: '--- Tem uma cena no Coringa em que o Arthur Fleck dança naquela escadaria,
   achando que finalmente chegou ao topo. O mundo todo aplaude. E aí, dois minutos
   depois, a realidade desaba em cima dele. A...'

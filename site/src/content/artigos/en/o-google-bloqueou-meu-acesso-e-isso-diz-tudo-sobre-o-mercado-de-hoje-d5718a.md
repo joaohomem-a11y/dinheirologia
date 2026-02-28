@@ -10,8 +10,8 @@ tags:
 - análise crítica
 - comportamento do investidor
 - hype de mercado
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1496096265110-f83ad7f96608?w=1200&q=80&fit=crop"
+imageCaption: "Vivid sydney — Photo by Christopher Burns on Unsplash"
 excerpt: '--- You know that scene in The Matrix where Neo tries to access the system
   and gets slammed with a blocker? Yeah. That''s exactly what happened when I tried
   to read the original piece about the Oppo...'

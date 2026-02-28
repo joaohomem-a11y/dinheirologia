@@ -11,8 +11,8 @@ tags:
 - consumismo
 - smartphones
 - estratégia corporativa
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1614028674026-a65e31bfd27c?w=1200&q=80&fit=crop"
+imageCaption: "Gme stock chart on robinhood app! | via techdaily.ca | #stocks #finance #investing #gme #stonks #citadel  — Photo by Tech Daily on Unsplash"
 excerpt: '--- Mira, yo iba a escribir un análisis profundo sobre el nuevo Samsung
   Galaxy S26 y sus preventas con hasta 200 dólares en gift cards. De verdad iba a
   hacerlo. Pero ¿sabes qué pasó? El propio...'

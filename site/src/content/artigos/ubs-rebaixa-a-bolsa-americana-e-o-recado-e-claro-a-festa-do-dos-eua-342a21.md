@@ -11,8 +11,8 @@ tags:
 - dólar
 - mercado americano
 - alocação global
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1717147727046-0db3701ed4ea?w=1200&q=80&fit=crop"
+imageCaption: "Businessman holding blank screen smartphone — Photo by Jakub Żerdzicki on Unsplash"
 excerpt: '--- Sabe aquela cena do Titanic em que o navio já bateu no iceberg, a água
   já está entrando pela proa, mas a orquestra continua tocando no salão de festas?
   Pois é. O UBS acabou de largar o violino e...'

@@ -11,8 +11,8 @@ tags:
 - inteligência artificial
 - investimentos globais
 - governança corporativa
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1759429084833-334282cbd58d?w=1200&q=80&fit=crop"
+imageCaption: "Real estate purchase documents keys money property deal. conceptual representation of home buying process — Photo by Jakub Żerdzicki on Unsplash"
 excerpt: Look, before anything else, I need to be honest with you. The original content
   of this story — published by Yahoo Finance — came completely locked behind a wall
   of cookies and privacy consent forms....

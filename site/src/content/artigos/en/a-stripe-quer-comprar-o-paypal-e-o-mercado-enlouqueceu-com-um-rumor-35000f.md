@@ -10,8 +10,8 @@ tags:
 - fusões e aquisições
 - mercado financeiro
 - fintechs
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1464349347811-3c5a10c43e2e?w=1200&q=80&fit=crop"
+imageCaption: "2 person walking on white tiled floor — Photo by Mona Sorcelli on Unsplash"
 excerpt: '--- Let me tell you how financial markets actually work. A company in free
   fall. A rumor leaks to Bloomberg. The stock jumps 7% that same day. Everyone cheers.
   Nobody asks questions. Welcome to the...'

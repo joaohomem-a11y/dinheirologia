@@ -11,8 +11,8 @@ tags:
 - crise financeira
 - crédito privado
 - ciclo econômico
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1707761918029-1295034aa31e?w=1200&q=80&fit=crop"
+imageCaption: "Currencies and finance. stock exchange. calculator on the table — Photo by Jakub Żerdzicki on Unsplash"
 excerpt: '--- Hay una escena clásica en la película "The Big Short" en la que Mark
   Baum — el personaje de Steve Carell — mira alrededor de la mesa de un restaurante
   en Las Vegas y se da cuenta de que todos...'

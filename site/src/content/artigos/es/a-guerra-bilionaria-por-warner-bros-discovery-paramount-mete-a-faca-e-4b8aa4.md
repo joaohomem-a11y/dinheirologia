@@ -11,8 +11,8 @@ tags:
 - Paramount Skydance
 - fusões e aquisições
 - mídia
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1615321771528-1426355a8927?w=1200&q=80&fit=crop"
+imageCaption: "Woman in black shirt wearing eyeglasses — Photo by Waddas Magalhães on Unsplash"
 excerpt: '--- Imagínate la escena: estás en una subasta de arte, lanzas tu oferta
   con confianza, y entonces el tipo de al lado — que jurabas que no tenía con qué
   — supera tu oferta con una sonrisa en la cara y...'

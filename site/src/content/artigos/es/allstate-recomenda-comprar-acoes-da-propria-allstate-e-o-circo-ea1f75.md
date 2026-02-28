@@ -10,8 +10,8 @@ tags:
 - seguradoras
 - ratings de mercado
 - skin in the game
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1504607798333-52a30db54a5d?w=1200&q=80&fit=crop"
+imageCaption: "Stock market direction — Photo by AbsolutVision on Unsplash"
 excerpt: '--- Miren, les juro que ya intento no sorprenderme. Pero el mercado financiero
   es como ese episodio de Black Mirror que te parece demasiado exagerado — hasta que
   se vuelve realidad. La noticia es la...'

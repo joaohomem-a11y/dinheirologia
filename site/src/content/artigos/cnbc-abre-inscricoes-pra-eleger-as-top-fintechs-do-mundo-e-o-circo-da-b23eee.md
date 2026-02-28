@@ -11,8 +11,8 @@ tags:
 - investimentos em tecnologia
 - mercado global
 - regtech
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1745509267699-1b1db256601e?w=1200&q=80&fit=crop"
+imageCaption: "Stock market chart shows a declining trend. — Photo by Arturo Añez on Unsplash"
 excerpt: Olha, se tem uma coisa que o mercado financeiro adora mais do que dinheiro
   é uma listinha bonita pra pendurar na parede do escritório. A CNBC, em parceria
   com a Statista (aquela firma alemã de...

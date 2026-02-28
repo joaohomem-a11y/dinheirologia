@@ -11,8 +11,8 @@ tags:
 - consumo
 - estratégia de negócios
 - economia americana
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1565728744382-61accd4aa148?w=1200&q=80&fit=crop"
+imageCaption: "Laptops meeting in coffee shop  — Photo by Maranda Vandergriff on Unsplash"
 excerpt: '--- There''s a classic scene in The Lion King — when Simba returns to the
   destroyed kingdom and realizes that ignoring reality for years comes with a price
   tag. Panera Bread just lived that scene in...'

@@ -10,8 +10,8 @@ tags:
 - prejuízo
 - mercado automotivo
 - queima de caixa
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1507537362848-9c7e70b7b5c1?w=1200&q=80&fit=crop"
+imageCaption: "Two men talking — Photo by LinkedIn Sales Solutions on Unsplash"
 excerpt: '--- Sabe aquela cena do Monty Python em que o cavaleiro negro perde os dois
   braços e as duas pernas e grita "é só um arranhão"? Pois é. A Lucid acabou de entregar
   o relatório do quarto trimestre de...'

@@ -11,8 +11,8 @@ tags:
 - Netflix
 - fusões e aquisições
 - mercado de mídia
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1556742111-a301076d9d18?w=1200&q=80&fit=crop"
+imageCaption: "Person holding black android smartphone close-up photography — Photo by Clay Banks on Unsplash"
 excerpt: '--- "Sinergias." Si existe una palabra en el vocabulario corporativo que
   debería venir con una advertencia de peligro, es esa. Cada vez que un CEO habla
   de "eliminar operaciones duplicadas", puedes...'

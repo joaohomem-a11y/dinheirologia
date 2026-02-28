@@ -11,8 +11,11 @@ tags:
 - David Ellison
 - fusões e aquisições
 - Hollywood
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1530099486328-e021101a494a?w=1200&q=80&fit=crop"
+imageCaption: "We were in the 44th teaching building of tianjin university.
+i took this graduation photo for my seniors.
+this is my first shoot in my photography career.
+thanks a lot for the opportunity my seniors afford to me. — Photo by Akson on Unsplash"
 excerpt: '--- There''s a classic scene in Jerry Maguire where Tom Cruise screams "Show
   me the money!" — and that''s exactly what David Ellison should be screaming at his
   mirror every morning. Because, look,...'

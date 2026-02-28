@@ -11,8 +11,8 @@ tags:
 - ouro
 - semicondutores
 - bitcoin
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1590103514966-5e2a11c13e21?w=1200&q=80&fit=crop"
+imageCaption: "Person writing on white board — Photo by Slidebean on Unsplash"
 excerpt: '--- Tem uma cena clássica no filme Rounders em que o personagem do Matt
   Damon diz: "Se você não consegue identificar o otário na mesa de pôquer nos primeiros
   30 minutos, o otário é você." Pois bem. A...'

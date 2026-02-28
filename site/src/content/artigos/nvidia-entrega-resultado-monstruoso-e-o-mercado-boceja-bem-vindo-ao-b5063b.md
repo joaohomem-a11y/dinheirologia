@@ -11,8 +11,8 @@ tags:
 - wall street
 - resultados trimestrais
 - valuation
-image: https://images.unsplash.com/photo-1662947683280-3be5bfc47075?w=1200&q=80&fit=crop
-imageCaption: Logo — Photo by BoliviaInteligente on Unsplash
+image: "https://images.unsplash.com/photo-1632137349293-14d5e9f0e0ef?w=1200&q=80&fit=crop"
+imageCaption: "A close up of a chess board with pieces on it — Photo by Alexander Mils on Unsplash"
 excerpt: '--- Existe uma piada velha no mercado financeiro que nunca envelhece: a
   empresa bate recorde, supera todas as estimativas, entrega crescimento que qualquer
   CEO venderia a alma pra ter — e a ação cai....'

@@ -11,8 +11,8 @@ tags:
 - mercado EV
 - prejuízo
 - startups
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1501324682324-0d8d7c4b9706?w=1200&q=80&fit=crop"
+imageCaption: "Windows of skyscraper office with blue sky — Photo by JESHOOTS.COM on Unsplash"
 excerpt: '--- There''s a classic scene in Breaking Bad where Walter White, surrounded
   by ash and rubble, is still trying to convince everyone he''s got the situation
   under control. I think about that scene every...'

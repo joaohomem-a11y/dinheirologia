@@ -11,8 +11,8 @@ tags:
 - ações internacionais
 - mercado aeroespacial
 - investimento de longo prazo
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1626178793926-22b28830aa30?w=1200&q=80&fit=crop"
+imageCaption: " the concept of finance concept , man holding house in hand . — Photo by Towfiqu barbhuiya on Unsplash"
 excerpt: '--- Tem uma frase do Charlie Munger que eu nunca esqueço: "O dinheiro grande
   não está na compra ou na venda, mas na espera." Quem comprou Rolls-Royce há dois
   anos e simplesmente sentou na mão acabou...'

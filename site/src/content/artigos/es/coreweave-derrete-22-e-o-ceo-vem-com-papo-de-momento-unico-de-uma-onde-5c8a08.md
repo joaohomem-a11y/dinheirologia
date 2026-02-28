@@ -11,8 +11,8 @@ tags:
 - dívida corporativa
 - Nvidia
 - bolha de IA
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1589556763333-ad818080f39e?w=1200&q=80&fit=crop"
+imageCaption: "Eight round gold coins on white surface — Photo by Marcel Strauß on Unsplash"
 excerpt: '--- Hay una escena clásica en El Lobo de Wall Street donde Jordan Belfort,
   ya hundido hasta el cuello en mierda, mira a la cámara y dice que todo está bajo
   control. Los ojos dicen otra cosa. Los...'

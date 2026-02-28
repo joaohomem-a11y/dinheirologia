@@ -11,8 +11,8 @@ tags:
 - inteligência artificial
 - Nvidia
 - volatilidade
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1708920326024-e7e3aa80ebf1?w=1200&q=80&fit=crop"
+imageCaption: "A street sign on the corner of wall street — Photo by Shlok Jethwa on Unsplash"
 excerpt: '--- Hay una frase de Mike Tyson que me encanta: "Todos tienen un plan hasta
   que reciben el primer golpe en la cara." Ayer el mercado americano recibió ese golpe.
   Miedo a "disrupción por IA",...'

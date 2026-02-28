@@ -11,8 +11,8 @@ tags:
 - alexa
 - big tech
 - investimentos
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1511883040705-6011fad9edfc?w=1200&q=80&fit=crop"
+imageCaption: "Wall st at night — Photo by Jeffrey Blum on Unsplash"
 excerpt: '--- You know what really pisses me off? When a tech story with direct implications
   for the future of consumer behavior, advertising, and the market flies completely
   under the radar because everyone''s...'

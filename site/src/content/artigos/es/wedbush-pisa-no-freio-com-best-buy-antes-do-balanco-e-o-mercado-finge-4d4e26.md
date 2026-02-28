@@ -11,8 +11,8 @@ tags:
 - balanço trimestral
 - análise de ações
 - Wall Street
-image: https://images.unsplash.com/photo-1759429084833-334282cbd58d?w=1200&q=80&fit=crop
-imageCaption: Real estate purchase documents keys money property deal. conceptual
+image: "https://images.unsplash.com/photo-1718778449026-fc05939d7650?w=1200&q=80&fit=crop"
+imageCaption: "Financial results stock market. — Photo by Jakub Żerdzicki on Unsplash"
   representation of home buying process — Photo by Jakub Żerdzicki on Unsplash
 excerpt: '--- Miren, me encanta cuando el circo de Wall Street decide soltar una "nota
   de cautela" sobre una empresa días antes del reporte trimestral. Es como ese amigo

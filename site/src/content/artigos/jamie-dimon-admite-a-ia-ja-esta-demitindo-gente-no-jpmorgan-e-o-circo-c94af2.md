@@ -11,8 +11,8 @@ tags:
 - JPMorgan
 - Jamie Dimon
 - tecnologia financeira
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1614029951539-4b1ce4821be8?w=1200&q=80&fit=crop"
+imageCaption: "Wealthsimple investing app  | via techdaily.ca | #stocks #finance #investing #wealthsimple #canada #toronto — Photo by Tech Daily on Unsplash"
 excerpt: '--- Tem uma cena clássica no Poderoso Chefão onde o Don olha pra câmera
   e diz a verdade que todo mundo já sabia, mas ninguém tinha coragem de falar em voz
   alta. Jamie Dimon fez isso semana passada....'

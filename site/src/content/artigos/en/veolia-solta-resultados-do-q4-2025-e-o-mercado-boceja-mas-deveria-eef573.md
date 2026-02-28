@@ -11,8 +11,8 @@ tags:
 - investimentos internacionais
 - utilities
 - ESG
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=1200&q=80&fit=crop"
+imageCaption: "Assorted-color abstract painting — Photo by Hal Gatewood on Unsplash"
 excerpt: You know what's more revealing than the earnings report of a multinational
   pulling in 40 billion euros in revenue? The fact that almost nobody in Brazil pays
   attention to it. Veolia Environnement —...

@@ -11,8 +11,8 @@ tags:
 - fusões e aquisições
 - Paramount
 - entretenimento
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=1200&q=80&fit=crop"
+imageCaption: "My bedroom-simplicity — Photo by Samantha Gades on Unsplash"
 excerpt: '--- Tem um tipo específico de pessoa em Hollywood que você precisa conhecer.
   Ele não veio do nada. Não dormiu no carro nem comeu miojo por anos esperando sua
   chance. Ele é filho de Larry Ellison — o...'

@@ -6,8 +6,8 @@ author: "Como Dirigir Uma Mercearia e Umas Coisinhas Que Aprendi Sobre Pescaria"
 authorSlug: "joao-homem"
 category: "mercados"
 tags: ["mercado", "circo", "bartunek", "copolla", "daytrade"]
-image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200"
-imageCaption: "En los mercados financieros, tu bolsillo cierra bocas"
+image: "https://images.unsplash.com/photo-1559329007-7eea52183565?w=1200&q=80&fit=crop"
+imageCaption: "Landscape photography of city — Photo by K8 on Unsplash"
 excerpt: "No existe debate defendiendo una escuela y atacando a la otra entre los verdaderos hacedores. En los mercados financieros tu bolsillo cierra bocas..."
 featured: false
 lang: es

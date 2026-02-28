@@ -10,8 +10,8 @@ tags:
 - ações internacionais
 - ciclo econômico
 - investimentos
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1633158829875-e5316a358c6f?w=1200&q=80&fit=crop"
+imageCaption: "A glass jar filled with coins and a plant — Photo by Towfiqu barbhuiya on Unsplash"
 excerpt: '--- There''s a classic scene in The Matrix where Neo finally sees the code
   behind reality. Everything that seemed solid turns into green digits flickering
   on a screen. That''s pretty much what happens...'

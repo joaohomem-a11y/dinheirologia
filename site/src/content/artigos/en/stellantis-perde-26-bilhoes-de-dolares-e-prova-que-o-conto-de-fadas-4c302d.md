@@ -11,8 +11,8 @@ tags:
 - write-down
 - transição energética
 - ações internacionais
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1559058922-5d29e1f00075?w=1200&q=80&fit=crop"
+imageCaption: "Brass metal frame — Photo by Nick Fewings on Unsplash"
 excerpt: '--- "Reality doesn''t give a damn about your PowerPoint." That sentence
   should be framed on the wall of every CEO who, over the past five years, walked
   onto a stage with lasers and fog machines to...'

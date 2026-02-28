@@ -10,8 +10,8 @@ tags:
 - sentimento de mercado
 - bolha especulativa
 - investimento em ações
-image: https://images.unsplash.com/photo-1662947683280-3be5bfc47075?w=1200&q=80&fit=crop
-imageCaption: Logo — Photo by BoliviaInteligente on Unsplash
+image: "https://images.unsplash.com/photo-1634979150381-b271f68da27d?w=1200&q=80&fit=crop"
+imageCaption: "A bitcoin is sitting on a blue cloth — Photo by rc.xyz NFT gallery on Unsplash"
 excerpt: '--- Existe uma cena clássica no filme "A Grande Aposta" em que Mark Baum
   olha pra mesa de traders comemorando e pergunta: "Vocês têm noção do que estão comprando?"
   Pois é. Estamos em 2025 e o roteiro...'

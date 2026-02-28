@@ -11,8 +11,8 @@ tags:
 - sentimento de mercado
 - bolha especulativa
 - investimento em ações
-image: https://images.unsplash.com/photo-1662947683280-3be5bfc47075?w=1200&q=80&fit=crop
-imageCaption: Logo — Photo by BoliviaInteligente on Unsplash
+image: "https://images.unsplash.com/photo-1634979150381-b271f68da27d?w=1200&q=80&fit=crop"
+imageCaption: "A bitcoin is sitting on a blue cloth — Photo by rc.xyz NFT gallery on Unsplash"
 excerpt: '--- There''s a classic scene in "The Big Short" where Mark Baum looks at
   a table of traders celebrating and asks: "Do you have any idea what you just bought?"
   Yeah. It''s 2025 and the script hasn''t...'

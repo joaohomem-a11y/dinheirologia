@@ -10,8 +10,8 @@ tags:
 - prejuízo
 - mercado automotivo
 - queima de caixa
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1507537362848-9c7e70b7b5c1?w=1200&q=80&fit=crop"
+imageCaption: "Two men talking — Photo by LinkedIn Sales Solutions on Unsplash"
 excerpt: '--- Remember that Monty Python scene where the Black Knight loses both arms
   and both legs and yells "it''s just a scratch"? Yeah. Lucid just dropped its Q4
   2025 earnings report, and that''s exactly...'

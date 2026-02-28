@@ -11,8 +11,8 @@ tags:
 - crise financeira
 - crédito privado
 - ciclo econômico
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1707761918029-1295034aa31e?w=1200&q=80&fit=crop"
+imageCaption: "Currencies and finance. stock exchange. calculator on the table — Photo by Jakub Żerdzicki on Unsplash"
 excerpt: '--- There''s a classic scene in "The Big Short" where Mark Baum — Steve
   Carell''s character — looks around a restaurant table in Las Vegas and realizes
   everyone is drunk on greed. Strippers with five...'

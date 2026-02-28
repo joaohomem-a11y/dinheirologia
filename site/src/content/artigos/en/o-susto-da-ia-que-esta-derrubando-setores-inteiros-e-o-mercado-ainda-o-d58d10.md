@@ -11,8 +11,8 @@ tags:
 - investimentos
 - análise de setores
 - narrativa de mercado
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1760327109318-e0e6a07483f3?w=1200&q=80&fit=crop"
+imageCaption: "Close-up of two pink powder puff flowers with green leaves. — Photo by Winston Chen on Unsplash"
 excerpt: '--- There''s an old market saying: "The market can stay irrational longer
   than you can stay solvent." Keynes said that. But he might as well have been describing
   what happens every time financial...'

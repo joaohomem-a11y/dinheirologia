@@ -11,8 +11,8 @@ tags:
 - dívida corporativa
 - Nvidia
 - bolha de IA
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1589556763333-ad818080f39e?w=1200&q=80&fit=crop"
+imageCaption: "Eight round gold coins on white surface — Photo by Marcel Strauß on Unsplash"
 excerpt: '--- There''s a classic scene in The Wolf of Wall Street where Jordan Belfort,
   already neck-deep in shit, looks straight at the camera and says everything''s under
   control. His eyes say something else....'

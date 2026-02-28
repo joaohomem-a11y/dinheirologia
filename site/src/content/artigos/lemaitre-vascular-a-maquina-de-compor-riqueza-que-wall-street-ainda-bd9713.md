@@ -10,8 +10,8 @@ tags:
 - ações de saúde
 - dividend growth
 - small caps
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1462899006636-339e08d1844e?w=1200&q=80&fit=crop"
+imageCaption: "Tall skyscrapers in calgary — Photo by Samson on Unsplash"
 excerpt: Existe um tipo de empresa que os grandes fundos ignoram, que os gurus de
   Instagram nunca mencionam e que os analistas de bancão tratam como nota de rodapé.
   São empresas pequenas demais pra mover o...

@@ -6,8 +6,8 @@ author: "Como Dirigir Uma Mercearia e Umas Coisinhas Que Aprendi Sobre Pescaria"
 authorSlug: "joao-homem"
 category: "mercados"
 tags: ["mercado", "circo", "bartunek", "copolla", "daytrade"]
-image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200"
-imageCaption: "No mercado financeiro, o bolso cala bocas"
+image: "https://images.unsplash.com/photo-1559329007-7eea52183565?w=1200&q=80&fit=crop"
+imageCaption: "Landscape photography of city — Photo by K8 on Unsplash"
 excerpt: "Não existe debate defendendo uma escola e atacando a outra entre os verdadeiros fazedores. No mercado financeiro o bolso cala bocas..."
 featured: false
 contentType: artigo

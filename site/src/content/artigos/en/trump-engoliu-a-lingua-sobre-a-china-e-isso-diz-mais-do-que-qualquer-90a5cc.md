@@ -10,8 +10,8 @@ tags:
 - guerra comercial
 - geopolítica
 - tarifas
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1640161704729-cbe966a08476?w=1200&q=80&fit=crop"
+imageCaption: "A pile of cryptocurrencies placed on a black background — Photo by Traxer on Unsplash"
 excerpt: '--- There''s an old saying that seasoned traders know well: what isn''t
   said is worth more than what is. Trump just delivered the longest State of the Union
   address in American history. The man talked...'

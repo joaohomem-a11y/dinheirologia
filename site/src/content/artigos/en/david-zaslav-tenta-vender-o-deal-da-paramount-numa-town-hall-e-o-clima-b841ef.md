@@ -11,8 +11,8 @@ tags:
 - fusões e aquisições
 - David Zaslav
 - mídia e entretenimento
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1665072204431-b3ba11bd6d06?w=1200&q=80&fit=crop"
+imageCaption: "A man holding a baby — Photo by Erika Fletcher on Unsplash"
 excerpt: '--- You know that moment in a disaster movie when the ship''s captain grabs
   the mic to say "everything''s under control" while the water''s already ankle-deep
   for everyone? Yeah. David Zaslav, CEO of...'

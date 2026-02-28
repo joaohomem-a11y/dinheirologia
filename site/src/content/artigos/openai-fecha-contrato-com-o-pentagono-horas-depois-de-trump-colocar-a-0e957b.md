@@ -11,8 +11,8 @@ tags:
 - Anthropic
 - inteligência artificial
 - geopolítica
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1541596993953-970dd2ffdbdb?w=1200&q=80&fit=crop"
+imageCaption: "Gray and red metal shopping cart in store — Photo by Veronika Koroleva on Unsplash"
 excerpt: '--- Tem uma cena clássica em O Poderoso Chefão onde Michael Corleone diz:
   "É apenas negócios, não é pessoal." Porra, é sempre pessoal. A OpenAI acabou de
   fechar um acordo com o Pentágono. Horas —...'

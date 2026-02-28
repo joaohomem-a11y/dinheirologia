@@ -10,8 +10,8 @@ tags:
 - inteligência artificial
 - bolha tecnológica
 - investimentos em tech
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&fit=crop"
+imageCaption: "Speedcurve performance analytics — Photo by Luke Chesser on Unsplash"
 excerpt: '--- Tem uma cena clássica no filme O Lobo de Wall Street em que o Jordan
   Belfort, completamente chapado, tenta explicar pro público como ele ganha dinheiro.
   A plateia aplaude. Ninguém entendeu porra...'

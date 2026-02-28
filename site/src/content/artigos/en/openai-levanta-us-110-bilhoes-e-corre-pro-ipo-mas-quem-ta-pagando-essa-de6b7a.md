@@ -11,8 +11,8 @@ tags:
 - inteligência artificial
 - bolha tecnológica
 - investimentos em tech
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&fit=crop"
+imageCaption: "Speedcurve performance analytics — Photo by Luke Chesser on Unsplash"
 excerpt: '--- There''s a classic scene in The Wolf of Wall Street where Jordan Belfort,
   completely wasted, tries to explain to the audience how he makes money. The crowd
   cheers. Nobody understood a damn thing....'

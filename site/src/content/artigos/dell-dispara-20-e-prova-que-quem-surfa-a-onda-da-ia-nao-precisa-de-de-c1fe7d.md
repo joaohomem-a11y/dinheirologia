@@ -11,8 +11,8 @@ tags:
 - servidores IA
 - escassez de memória
 - resultados trimestrais
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1624365168898-1f7189831f41?w=1200&q=80&fit=crop"
+imageCaption: "Pile of gold bullion coins and bars. argor heraeus, münze österreich, royal canadian mint, u.s. mint, australian mint of perth, panda and krugerrand. if you use our photos, please add credit to https://zlataky.cz, when possible — Photo by Zlaťáky.cz on Unsplash"
 excerpt: '--- Existe uma cena no filme Moneyball em que o Brad Pitt, interpretando
   Billy Beane, fala algo do tipo: "Adapte-se ou morra." Não é exatamente essa a frase,
   mas a essência é essa. E é exatamente o...'

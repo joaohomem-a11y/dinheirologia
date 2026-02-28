@@ -6,8 +6,8 @@ author: "Como Dirigir Uma Mercearia e Umas Coisinhas Que Aprendi Sobre Pescaria"
 authorSlug: "joao-homem"
 category: "opiniao"
 tags: ["riqueza", "mentalidade", "buffett", "monstro"]
-image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200"
-imageCaption: "El monstruo necesita ser despertado"
+image: "https://images.unsplash.com/photo-1492273840898-6102ad35701e?w=1200&q=80&fit=crop"
+imageCaption: "Lavender sunset — Photo by Andre Benz on Unsplash"
 excerpt: "Si quitamos toda la hojarasca, los discursos políticamente correctos y los globos, esto es lo que queda. ¡Todos en el Mercado Financiero quieren volverse cada vez más ricos! Unos todavía solo por el dinero, otros por el juego..."
 featured: true
 lang: es

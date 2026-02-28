@@ -11,8 +11,8 @@ tags:
 - mercado de ações
 - bolsa americana
 - análise de mercado
-image: https://images.unsplash.com/photo-1495996797143-9fc04e79e304?w=1200&q=80&fit=crop
-imageCaption: Wall st and broadway signs — Photo by Roberto Júnior on Unsplash
+image: "https://images.unsplash.com/photo-1727072206145-bf6f47befe9b?w=1200&q=80&fit=crop"
+imageCaption: "Apartment prices and real estate market. — Photo by Jakub Żerdzicki on Unsplash"
 excerpt: '--- Hay una escena clásica en Breaking Bad donde Walter White se mira al
   espejo y tiene que decidir: sigue fingiendo que todo está bajo control, o admite
   que el castillo de arena se está derrumbando....'

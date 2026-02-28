@@ -11,8 +11,8 @@ tags:
 - investimentos
 - análise de setores
 - narrativa de mercado
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1760327109318-e0e6a07483f3?w=1200&q=80&fit=crop"
+imageCaption: "Close-up of two pink powder puff flowers with green leaves. — Photo by Winston Chen on Unsplash"
 excerpt: '--- Tem um velho ditado nos mercados: "O mercado pode ficar irracional por
   mais tempo do que você consegue ficar solvente." Keynes disse isso. Mas ele poderia
   muito bem estar descrevendo o que...'

@@ -11,8 +11,8 @@ tags:
 - semicondutores
 - mercado asiatico
 - tecnologia
-image: https://images.unsplash.com/photo-1662947683395-1ce33bdcd094?w=1200&q=80&fit=crop
-imageCaption: Logo — Photo by BoliviaInteligente on Unsplash
+image: "https://images.unsplash.com/photo-1513759565286-20e9c5fad06b?w=1200&q=80&fit=crop"
+imageCaption: "Silhouette of people on hill — Photo by Jehyun Sung on Unsplash"
 excerpt: '--- Hay una escena en Matrix donde Morpheus mira a Neo y le dice: "Hay una
   diferencia entre conocer el camino y recorrer el camino." En el mercado financiero,
   la mayoría de los analistas conoce el...'

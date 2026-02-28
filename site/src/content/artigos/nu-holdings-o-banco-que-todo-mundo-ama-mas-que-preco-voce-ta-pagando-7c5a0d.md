@@ -11,8 +11,8 @@ tags:
 - fintech
 - valuation
 - ações americanas
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1691404801714-07dab9c4dbce?w=1200&q=80&fit=crop"
+imageCaption: "A background of many gold bars. — Photo by Andrej Sachov on Unsplash"
 excerpt: '--- "Preço é o que você paga. Valor é o que você recebe." Essa frase do
   Buffett já virou clichê de perfil de Instagram de coach financeiro. Mas sabe por
   que ela vira clichê? Porque 99% das pessoas...'

@@ -10,8 +10,8 @@ tags:
 - infraestrutura cloud
 - resultados trimestrais
 - dívida corporativa
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1624365168056-daf44387e2ae?w=1200&q=80&fit=crop"
+imageCaption: "Pile of gold bullion coins and bars. argor heraeus, münze österreich, royal canadian mint, u.s. mint, australian mint of perth, panda and krugerrand. if you use our photos, please add credit to https://zlataky.cz, when possible — Photo by Zlaťáky.cz on Unsplash"
 excerpt: '--- There''s a scene in Joker where Arthur Fleck dances on that staircase,
   thinking he''s finally made it to the top. The whole world applauds. And then, two
   minutes later, reality comes crashing down...'

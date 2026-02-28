@@ -11,8 +11,8 @@ tags:
 - fusões e aquisições
 - Paramount
 - entretenimento
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=1200&q=80&fit=crop"
+imageCaption: "My bedroom-simplicity — Photo by Samantha Gades on Unsplash"
 excerpt: '--- Hay un tipo específico de persona en Hollywood que necesitas conocer.
   No llegó desde abajo. No durmió en su carro ni vivió de fideos instantáneos esperando
   su oportunidad. Es hijo de Larry...'

@@ -11,8 +11,8 @@ tags:
 - educação financeira
 - skin in the game
 - análise crítica
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1606503153255-59d8b8b82176?w=1200&q=80&fit=crop"
+imageCaption: "Risk, stratégie, conquest, game — Photo by Dave Photoz on Unsplash"
 excerpt: '--- Vou ser honesto com você: recebi esse "artigo" sobre o Bask Bank pra
   analisar e sabe o que veio? Nada. Literalmente nada. Uma parede de texto sobre cookies,
   privacidade e consentimento de dados....'

@@ -11,8 +11,8 @@ tags:
 - ações internacionais
 - investimento em saúde
 - compounder
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1604156425963-9be03f86a428?w=1200&q=80&fit=crop"
+imageCaption: "Money which is the medium of exchange in indonesia — Photo by Mufid Majnun on Unsplash"
 excerpt: '--- There''s a line from the late Charlie Munger I never forget: "The big
   money is not in the buying or the selling, but in the waiting." And anyone who''s
   been sitting on bioMérieux (BMXXY) for the...'

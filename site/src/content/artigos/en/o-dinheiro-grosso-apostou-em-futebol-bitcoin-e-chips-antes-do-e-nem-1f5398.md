@@ -11,8 +11,8 @@ tags:
 - ouro
 - semicondutores
 - bitcoin
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1590103514966-5e2a11c13e21?w=1200&q=80&fit=crop"
+imageCaption: "Person writing on white board — Photo by Slidebean on Unsplash"
 excerpt: '--- There''s a classic scene in Rounders where Matt Damon''s character says:
   "If you can''t spot the sucker in your first half hour at the table, then you are
   the sucker." Well. Every quarter, when the...'

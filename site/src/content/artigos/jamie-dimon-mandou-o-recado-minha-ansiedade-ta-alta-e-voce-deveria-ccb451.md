@@ -11,8 +11,8 @@ tags:
 - crise financeira
 - crédito privado
 - ciclo econômico
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1707761918029-1295034aa31e?w=1200&q=80&fit=crop"
+imageCaption: "Currencies and finance. stock exchange. calculator on the table — Photo by Jakub Żerdzicki on Unsplash"
 excerpt: '--- Tem uma cena clássica no filme "A Grande Aposta" em que Mark Baum —
   o personagem de Steve Carell — olha ao redor da mesa de um restaurante em Las Vegas
   e percebe que todo mundo está bêbado de...'

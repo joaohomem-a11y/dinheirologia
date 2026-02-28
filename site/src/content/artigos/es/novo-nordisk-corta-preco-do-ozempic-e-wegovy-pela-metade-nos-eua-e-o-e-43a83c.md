@@ -11,8 +11,8 @@ tags:
 - Wegovy
 - Big Pharma
 - GLP-1
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1573166675921-076ea6b621ce?w=1200&q=80&fit=crop"
+imageCaption: "Peope sitting around table — Photo by Christina @ wocintechchat.com M on Unsplash"
 excerpt: '--- Déjame contarte una historia que ya viste mil veces en el cine. El villano
   se pasa toda la película extorsionando a la ciudad, cobrando precios absurdos, construyendo
   un imperio. Entonces, cuando...'

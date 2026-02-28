@@ -10,8 +10,8 @@ tags:
 - bolsa coreana
 - valuation
 - consumidor
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1518103800393-ad559c4061f9?w=1200&q=80&fit=crop"
+imageCaption: "People walking on pedestrian lane near vehicles — Photo by Meriç Dağlı on Unsplash"
 excerpt: '--- Vou ser honesto com você. O conteúdo que deveria estar aqui era uma
   cobertura do Samsung Galaxy S26 Ultra. Um evento cheio de luzes, música eletrônica,
   executivos de terno contando quantos...'

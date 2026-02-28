@@ -11,8 +11,8 @@ tags:
 - aviação
 - reestruturação
 - companhias aéreas
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=1200&q=80&fit=crop"
+imageCaption: "Collaborative meeting — Photo by Redd Francisco on Unsplash"
 excerpt: '--- ¿Conocen a ese personaje de película de terror que ya le clavaron un
   cuchillo, le dispararon, se cayó de un edificio y todavía está arrastrándose por
   el piso tratando de sobrevivir? Bueno. Esa es...'

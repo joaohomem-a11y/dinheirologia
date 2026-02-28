@@ -11,8 +11,8 @@ tags:
 - prejuízo
 - mercado automotivo
 - queima de caixa
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1507537362848-9c7e70b7b5c1?w=1200&q=80&fit=crop"
+imageCaption: "Two men talking — Photo by LinkedIn Sales Solutions on Unsplash"
 excerpt: '--- ¿Se acuerdan de esa escena de Monty Python en la que el caballero negro
   pierde los dos brazos y las dos piernas y grita "¡es solo un rasguño!"? Bueno. Lucid
   acaba de entregar el reporte del...'

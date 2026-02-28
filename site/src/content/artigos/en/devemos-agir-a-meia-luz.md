@@ -6,8 +6,8 @@ author: "Como Dirigir Uma Mercearia e Umas Coisinhas Que Aprendi Sobre Pescaria"
 authorSlug: "joao-homem"
 category: "trading"
 tags: ["trading", "decisão", "incerteza", "buffett"]
-image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200"
-imageCaption: "Making decisions in the dark is what we do best"
+image: "https://images.unsplash.com/photo-1485344684417-d3e4bce08ac3?w=1200&q=80&fit=crop"
+imageCaption: "After a guided trading floor tour in the chicago board of trade, an even more breathtaking sight occured. — Photo by Flynn Doherty on Unsplash"
 excerpt: "Whenever we hear someone in the Market say that something was so clear, you'll notice the verb is always conjugated in the past tense. Nothing in the Market is that clear in the present..."
 featured: false
 lang: en

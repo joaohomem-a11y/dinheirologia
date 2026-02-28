@@ -11,8 +11,8 @@ tags:
 - JPMorgan
 - Jamie Dimon
 - tecnologia financeira
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1614029951539-4b1ce4821be8?w=1200&q=80&fit=crop"
+imageCaption: "Wealthsimple investing app  | via techdaily.ca | #stocks #finance #investing #wealthsimple #canada #toronto — Photo by Tech Daily on Unsplash"
 excerpt: '--- There''s a classic scene in The Godfather where the Don looks straight
   into the camera and says out loud what everyone already knew but nobody had the
   guts to admit. Jamie Dimon did that last...'

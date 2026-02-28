@@ -11,8 +11,8 @@ tags:
 - biotech
 - EXPAREL
 - earnings miss
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1758611972895-34286de80d4e?w=1200&q=80&fit=crop"
+imageCaption: "Entrepreneur attractive guy is relaxing in chair in office while money banknotes are falling down from above. happy young people, wealth and business concept. — Photo by Vitaly Gariev on Unsplash"
 excerpt: '--- Sabe aquele cara que chega na roda de pôquer todo confiante, pedindo
   all-in, e quando vira as cartas tem um par de dois? Pois é. A Pacira BioSciences
   (NASDAQ: PCRX) acabou de fazer exatamente...'

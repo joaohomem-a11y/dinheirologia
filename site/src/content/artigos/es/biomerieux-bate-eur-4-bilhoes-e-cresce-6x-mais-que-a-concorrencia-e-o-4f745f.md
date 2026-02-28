@@ -11,8 +11,8 @@ tags:
 - ações internacionais
 - investimento em saúde
 - compounder
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1604156425963-9be03f86a428?w=1200&q=80&fit=crop"
+imageCaption: "Money which is the medium of exchange in indonesia — Photo by Mufid Majnun on Unsplash"
 excerpt: '--- Hay una frase del viejo Charlie Munger que nunca me olvido: "El dinero
   grande no está en la compra ni en la venta, sino en la espera." Y quien lleva sentado
   en bioMérieux (BMXXY) desde hace...'

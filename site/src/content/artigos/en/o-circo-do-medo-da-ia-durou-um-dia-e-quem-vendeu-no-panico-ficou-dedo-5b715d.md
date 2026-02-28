@@ -11,8 +11,8 @@ tags:
 - inteligência artificial
 - Nvidia
 - volatilidade
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1708920326024-e7e3aa80ebf1?w=1200&q=80&fit=crop"
+imageCaption: "A street sign on the corner of wall street — Photo by Shlok Jethwa on Unsplash"
 excerpt: '--- There''s a Mike Tyson quote I love: "Everyone has a plan until they
   get punched in the mouth." Yesterday the American market got punched square in the
   face. Fear of "AI disruption," doomsday...'

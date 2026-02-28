@@ -11,8 +11,8 @@ tags:
 - fintech
 - valuation
 - ações americanas
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1691404801714-07dab9c4dbce?w=1200&q=80&fit=crop"
+imageCaption: "A background of many gold bars. — Photo by Andrej Sachov on Unsplash"
 excerpt: '--- "Price is what you pay. Value is what you get." That Buffett quote has
   become a cliché plastered on every financial coach''s Instagram profile. But you
   know why it became a cliché? Because 99% of...'

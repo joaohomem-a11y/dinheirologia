@@ -11,8 +11,8 @@ tags:
 - dividendos
 - diversificação
 - ações europeias
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1553270092-2fd1383ce030?w=1200&q=80&fit=crop"
+imageCaption: "Black and gray vehicle interior — Photo by Lai Man Nung on Unsplash"
 excerpt: You know what the problem is with 90% of Brazilian investors? They think
   the world ends at the B3, the S&P 500, and maybe — if they're feeling adventurous
   — a Nasdaq ETF. Meanwhile, there are people...

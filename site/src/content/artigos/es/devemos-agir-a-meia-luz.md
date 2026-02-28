@@ -6,8 +6,8 @@ author: "Como Dirigir Uma Mercearia e Umas Coisinhas Que Aprendi Sobre Pescaria"
 authorSlug: "joao-homem"
 category: "trading"
 tags: ["trading", "decisão", "incerteza", "buffett"]
-image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200"
-imageCaption: "Tomar decisiones en la oscuridad es lo que mejor hacemos"
+image: "https://images.unsplash.com/photo-1485344684417-d3e4bce08ac3?w=1200&q=80&fit=crop"
+imageCaption: "After a guided trading floor tour in the chicago board of trade, an even more breathtaking sight occured. — Photo by Flynn Doherty on Unsplash"
 excerpt: "Siempre que escuchamos a alguien en el Mercado decir que algo estaba tan claro, podrás notar que el verbo siempre está conjugado en pasado. Nada en el Mercado es tan claro en el presente..."
 featured: false
 lang: es

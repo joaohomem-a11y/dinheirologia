@@ -11,8 +11,8 @@ tags:
 - Qnity
 - picks and shovels
 - spin-off
-image: https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&fit=crop
-imageCaption: Financial markets — Unsplash
+image: "https://images.unsplash.com/photo-1653469894102-5e59f8d13900?w=1200&q=80&fit=crop"
+imageCaption: "A close up of a typewriter with a paper that reads hedge funds — Photo by Markus Winkler on Unsplash"
 excerpt: Lembra daquela frase do velho ditado da corrida do ouro? "Quem ficou rico
   de verdade não foi quem cavou ouro — foi quem vendeu as picaretas e as pás." Pois
   é. Enquanto o mercado inteiro briga pra...
