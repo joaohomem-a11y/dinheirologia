@@ -637,11 +637,30 @@
             h2 { font-size: 1.6rem; }
         }
 
+        @page {
+            size: 297mm 210mm landscape;
+            margin: 15mm 20mm;
+        }
+
         @media print {
-            .cover { min-height: auto; page-break-after: always; }
-            section { page-break-inside: avoid; }
+            body { font-size: 10pt; }
+            .page { max-width: 100%; padding: 0; }
+            .cover { min-height: auto; page-break-after: always; padding: 30px 20px; }
+            section { page-break-inside: avoid; page-break-before: always; padding: 30px 0; }
+            .page > section:first-child { page-break-before: avoid; }
+            h2 { font-size: 1.5rem; }
+            h3 { page-break-after: avoid; }
+            table { page-break-inside: avoid; font-size: 0.85rem; }
+            thead { display: table-header-group; }
+            .stats-grid { grid-template-columns: repeat(3, 1fr); page-break-inside: avoid; }
+            .audience-grid { page-break-inside: avoid; }
+            .terms-grid { page-break-inside: avoid; }
+            .packages { page-break-inside: avoid; grid-template-columns: repeat(3, 1fr); }
             .package.featured { transform: none; box-shadow: none; }
-            body { font-size: 11pt; }
+            .discount-strip { page-break-inside: avoid; grid-template-columns: repeat(3, 1fr); }
+            .highlight-box { page-break-inside: avoid; }
+            .alert-box { page-break-inside: avoid; }
+            .contact-section { page-break-before: always; page-break-inside: avoid; }
         }
     </style>
 </head>
