@@ -24,6 +24,12 @@ type Term = { title: string; text: string };
 
 type Content = {
   title: string;
+  /* Cover */
+  coverLabel: string;
+  coverSubtitle: string;
+  coverTagline: string;
+  coverYear: string;
+  coverQuote: string;
   /* I — Quem Somos */
   whoTitle: string;
   whoParagraphs: string[];
@@ -68,6 +74,12 @@ type Content = {
 const CONTENT: Record<string, Content> = {
   pt: {
     title: 'Anuncie no Dinheirologia',
+    /* Cover */
+    coverLabel: 'Proposta Comercial',
+    coverSubtitle: 'Media Kit & Tabela de Anunciantes',
+    coverTagline: 'Sua leitura sobre dinheiro, sem frescuras.',
+    coverYear: 'Fevereiro 2026 · Est. 2008',
+    coverQuote: '"O mercado premia quem tem paciência para esperar e coragem para agir quando ninguém mais quer."',
     /* I */
     whoTitle: 'Ninguém aqui quer te vender um curso.',
     whoParagraphs: [
@@ -98,10 +110,10 @@ const CONTENT: Record<string, Content> = {
     formatsTitle: 'O cardápio. Sem garçom empurrando sobremesa.',
     sponsoredLabel: 'Conteúdo Patrocinado',
     sponsoredRows: [
-      { name: 'Guest Post', desc: 'Artigo fornecido pelo anunciante, revisado pela nossa equipa editorial.', detail: '1.000 – 2.000 palavras. Publicado com tag "Patrocínio". Inclui até 2 links.', price: 'R$ 2.500 (~$500)' },
-      { name: 'Artigo Premium', desc: 'Escrito pela nossa equipa, no tom editorial do Dinheirologia.', detail: 'Integração natural ao conteúdo do site. O leitor lê porque é bom, não porque é pago.', price: 'R$ 5.000 (~$1.000)' },
+      { name: 'Guest Post', desc: 'Artigo fornecido pelo anunciante, revisado pela nossa equipa editorial.', detail: '1.000 – 2.000 palavras. Inclui até 2 links.', price: 'R$ 2.500 (~$500)' },
+      { name: 'Artigo Premium', desc: 'Escrito pela nossa equipa, no tom editorial do Dinheirologia.', detail: 'Integração natural ao conteúdo do site. O leitor lê porque é bom.', price: 'R$ 5.000 (~$1.000)' },
       { name: 'Série de Conteúdo', desc: '4 artigos/mês com narrativa integrada.', detail: 'Ideal para lançamentos, campanhas temáticas ou posicionamento de marca a longo prazo.', price: 'R$ 15.000 (~$3.000)' },
-      { name: 'Inserção de Link', desc: 'Link contextual em artigo existente e relevante.', detail: 'Adição natural a conteúdo já publicado. Link com atributo rel="sponsored".', price: 'R$ 1.500 (~$300)' },
+      { name: 'Inserção de Link', desc: 'Link contextual em artigo existente e relevante.', detail: 'Adição natural a conteúdo já publicado.', price: 'R$ 1.500 (~$300)' },
     ],
     displayLabel: 'Publicidade Display',
     displayRows: [
@@ -127,10 +139,10 @@ const CONTENT: Record<string, Content> = {
     /* V */
     termsTitle: 'As letras miúdas que a gente faz questão que você leia.',
     terms: [
-      { title: 'Transparência', text: 'Todo conteúdo pago é identificado como "Patrocínio" ou "Publicidade". É lei, é ética, e é inegociável. Nosso leitor confia em nós porque não mentimos para ele.' },
+      { title: 'Relatório de Performance', text: 'Cada campanha inclui relatório detalhado com métricas de visualizações, tempo de leitura e engajamento. Você sabe exactamente o retorno do seu investimento.' },
       { title: 'Conformidade SEO', text: 'Links patrocinados utilizam o atributo rel="sponsored", em conformidade com as diretrizes do Google. Protege o anunciante e protege o site.' },
       { title: 'Revisão Editorial', text: 'A equipa reserva o direito de editar, reformular ou recusar conteúdo que não atenda aos nossos padrões. Publicamos coisas boas — essa é a regra.' },
-      { title: 'Pagamento', text: '100% antecipado, antes da publicação. Aceitamos PayPal, transferência bancária internacional e Pix (Brasil).' },
+      { title: 'Pagamento', text: '100% antecipado, antes da publicação. Aceitamos PayPal, transferência bancária internacional, Pix (Brasil), USDT e USDC.' },
       { title: 'Permanência', text: 'Conteúdo publicado permanece no site por no mínimo 12 meses. Renovação com condições preferenciais.' },
       { title: 'Exclusividade', text: 'No pacote Premium, apenas 1 anunciante por segmento. Porque ninguém quer dividir o palco com o concorrente.' },
     ],
@@ -150,11 +162,16 @@ const CONTENT: Record<string, Content> = {
     contactName: 'Ricardina Cifrão',
     contactRole: 'Diretora de Parcerias Comerciais',
     contactEmail: 'anuncie@dinheirologia.com',
-    contactPayments: 'PayPal · Transferência · Pix',
+    contactPayments: 'PayPal · Transferência · Pix · USDT · USDC',
   },
 
   en: {
     title: 'Advertise on Dinheirologia',
+    coverLabel: 'Commercial Proposal',
+    coverSubtitle: 'Media Kit & Advertising Rates',
+    coverTagline: 'Your money read, no BS attached.',
+    coverYear: 'February 2026 · Est. 2008',
+    coverQuote: '"The market rewards those with the patience to wait and the courage to act when no one else will."',
     whoTitle: 'Nobody here is trying to sell you a course.',
     whoParagraphs: [
       'Dinheirologia was born in 2008, in the middle of the global financial crisis — because nothing teaches you more about money than watching it evaporate. Since then, we\'ve covered markets, trading, investments and business with one simple rule: skin in the game. If we don\'t risk ours, we don\'t opine about yours.',
@@ -182,10 +199,10 @@ const CONTENT: Record<string, Content> = {
     formatsTitle: 'The menu. No waiter pushing dessert.',
     sponsoredLabel: 'Sponsored Content',
     sponsoredRows: [
-      { name: 'Guest Post', desc: 'Article provided by the advertiser, reviewed by our editorial team.', detail: '1,000 – 2,000 words. Published with "Sponsored" tag. Includes up to 2 links.', price: 'R$ 2,500 (~$500)' },
-      { name: 'Premium Article', desc: 'Written by our team, in Dinheirologia\'s editorial tone.', detail: 'Natural integration into site content. The reader reads it because it\'s good, not because it\'s paid.', price: 'R$ 5,000 (~$1,000)' },
+      { name: 'Guest Post', desc: 'Article provided by the advertiser, reviewed by our editorial team.', detail: '1,000 – 2,000 words. Includes up to 2 links.', price: 'R$ 2,500 (~$500)' },
+      { name: 'Premium Article', desc: 'Written by our team, in Dinheirologia\'s editorial tone.', detail: 'Natural integration into site content. The reader reads it because it\'s good.', price: 'R$ 5,000 (~$1,000)' },
       { name: 'Content Series', desc: '4 articles/month with integrated narrative.', detail: 'Ideal for launches, themed campaigns or long-term brand positioning.', price: 'R$ 15,000 (~$3,000)' },
-      { name: 'Link Insertion', desc: 'Contextual link in an existing relevant article.', detail: 'Natural addition to already published content. Link with rel="sponsored" attribute.', price: 'R$ 1,500 (~$300)' },
+      { name: 'Link Insertion', desc: 'Contextual link in an existing relevant article.', detail: 'Natural addition to already published content.', price: 'R$ 1,500 (~$300)' },
     ],
     displayLabel: 'Display Advertising',
     displayRows: [
@@ -209,10 +226,10 @@ const CONTENT: Record<string, Content> = {
     ],
     termsTitle: 'The fine print we actually want you to read.',
     terms: [
-      { title: 'Transparency', text: 'All paid content is labeled as "Sponsored" or "Advertisement". It\'s the law, it\'s ethical, and it\'s non-negotiable. Our reader trusts us because we don\'t lie to them.' },
+      { title: 'Performance Report', text: 'Every campaign includes a detailed report with views, reading time and engagement metrics. You know exactly what your investment returns.' },
       { title: 'SEO Compliance', text: 'Sponsored links use the rel="sponsored" attribute, in compliance with Google guidelines. It protects the advertiser and protects the site.' },
       { title: 'Editorial Review', text: 'The team reserves the right to edit, rewrite or reject content that doesn\'t meet our standards. We publish good stuff — that\'s the rule.' },
-      { title: 'Payment', text: '100% upfront, before publication. We accept PayPal, international bank transfer and Pix (Brazil).' },
+      { title: 'Payment', text: '100% upfront, before publication. We accept PayPal, international bank transfer, Pix (Brazil), USDT and USDC.' },
       { title: 'Permanence', text: 'Published content stays on the site for a minimum of 12 months. Renewal with preferential conditions.' },
       { title: 'Exclusivity', text: 'In the Premium package, only 1 advertiser per segment. Because nobody wants to share the stage with the competition.' },
     ],
@@ -230,11 +247,16 @@ const CONTENT: Record<string, Content> = {
     contactName: 'Ricardina Cifrão',
     contactRole: 'Director of Commercial Partnerships',
     contactEmail: 'anuncie@dinheirologia.com',
-    contactPayments: 'PayPal · Wire Transfer · Pix',
+    contactPayments: 'PayPal · Wire Transfer · Pix · USDT · USDC',
   },
 
   es: {
     title: 'Anuncie en Dinheirologia',
+    coverLabel: 'Propuesta Comercial',
+    coverSubtitle: 'Media Kit & Tabla de Anunciantes',
+    coverTagline: 'Tu lectura sobre dinero, sin rodeos.',
+    coverYear: 'Febrero 2026 · Est. 2008',
+    coverQuote: '"El mercado premia a quien tiene paciencia para esperar y coraje para actuar cuando nadie más quiere."',
     whoTitle: 'Nadie aquí quiere venderte un curso.',
     whoParagraphs: [
       'Dinheirologia nació en 2008, en medio de la crisis financiera global — porque nada enseña más sobre dinero que verlo evaporarse. Desde entonces, cubrimos mercados, trading, inversiones y negocios con una regla simple: piel en el juego. Si no arriesgamos lo nuestro, no opinamos sobre lo tuyo.',
@@ -262,10 +284,10 @@ const CONTENT: Record<string, Content> = {
     formatsTitle: 'El menú. Sin mesero empujando postre.',
     sponsoredLabel: 'Contenido Patrocinado',
     sponsoredRows: [
-      { name: 'Guest Post', desc: 'Artículo proporcionado por el anunciante, revisado por nuestro equipo editorial.', detail: '1.000 – 2.000 palabras. Publicado con tag "Patrocinio". Incluye hasta 2 enlaces.', price: 'R$ 2.500 (~$500)' },
-      { name: 'Artículo Premium', desc: 'Escrito por nuestro equipo, en el tono editorial de Dinheirologia.', detail: 'Integración natural al contenido del sitio. El lector lo lee porque es bueno, no porque es pago.', price: 'R$ 5.000 (~$1.000)' },
+      { name: 'Guest Post', desc: 'Artículo proporcionado por el anunciante, revisado por nuestro equipo editorial.', detail: '1.000 – 2.000 palabras. Incluye hasta 2 enlaces.', price: 'R$ 2.500 (~$500)' },
+      { name: 'Artículo Premium', desc: 'Escrito por nuestro equipo, en el tono editorial de Dinheirologia.', detail: 'Integración natural al contenido del sitio. El lector lo lee porque es bueno.', price: 'R$ 5.000 (~$1.000)' },
       { name: 'Serie de Contenido', desc: '4 artículos/mes con narrativa integrada.', detail: 'Ideal para lanzamientos, campañas temáticas o posicionamiento de marca a largo plazo.', price: 'R$ 15.000 (~$3.000)' },
-      { name: 'Inserción de Link', desc: 'Link contextual en artículo existente y relevante.', detail: 'Adición natural a contenido ya publicado. Link con atributo rel="sponsored".', price: 'R$ 1.500 (~$300)' },
+      { name: 'Inserción de Link', desc: 'Link contextual en artículo existente y relevante.', detail: 'Adición natural a contenido ya publicado.', price: 'R$ 1.500 (~$300)' },
     ],
     displayLabel: 'Publicidad Display',
     displayRows: [
@@ -289,10 +311,10 @@ const CONTENT: Record<string, Content> = {
     ],
     termsTitle: 'La letra chica que sí queremos que leas.',
     terms: [
-      { title: 'Transparencia', text: 'Todo contenido pago se identifica como "Patrocinio" o "Publicidad". Es ley, es ética, y es innegociable. Nuestro lector confía en nosotros porque no le mentimos.' },
+      { title: 'Reporte de Performance', text: 'Cada campaña incluye un reporte detallado con métricas de visualizaciones, tiempo de lectura y engagement. Sabes exactamente el retorno de tu inversión.' },
       { title: 'Conformidad SEO', text: 'Los links patrocinados utilizan el atributo rel="sponsored", conforme a las directrices de Google. Protege al anunciante y protege al sitio.' },
       { title: 'Revisión Editorial', text: 'El equipo se reserva el derecho de editar, reformular o rechazar contenido que no cumpla nuestros estándares. Publicamos cosas buenas — esa es la regla.' },
-      { title: 'Pago', text: '100% anticipado, antes de la publicación. Aceptamos PayPal, transferencia bancaria internacional y Pix (Brasil).' },
+      { title: 'Pago', text: '100% anticipado, antes de la publicación. Aceptamos PayPal, transferencia bancaria internacional, Pix (Brasil), USDT y USDC.' },
       { title: 'Permanencia', text: 'El contenido publicado permanece en el sitio por mínimo 12 meses. Renovación con condiciones preferenciales.' },
       { title: 'Exclusividad', text: 'En el paquete Premium, solo 1 anunciante por segmento. Porque nadie quiere compartir el escenario con la competencia.' },
     ],
@@ -310,7 +332,7 @@ const CONTENT: Record<string, Content> = {
     contactName: 'Ricardina Cifrão',
     contactRole: 'Directora de Alianzas Comerciales',
     contactEmail: 'anuncie@dinheirologia.com',
-    contactPayments: 'PayPal · Transferencia · Pix',
+    contactPayments: 'PayPal · Transferencia · Pix · USDT · USDC',
   },
 };
 
@@ -354,9 +376,18 @@ export default async function AnunciePage({ params }: Props) {
 
   return (
     <div className="max-w-article mx-auto px-4 py-12">
-      {/* Title */}
-      <h1 className="font-serif text-headline-xl text-navy-900 mb-8 text-center">{c.title}</h1>
-      <div className="border-t-3 border-dollar-800 mb-10" />
+      {/* ── Cover ── */}
+      <section className="flex flex-col items-center text-center py-16 mb-10 border-b-3 border-rule-gray relative">
+        <div className="absolute top-0 left-0 right-0 h-1.5 bg-dollar-700" />
+        <p className="font-sans text-caption uppercase tracking-[0.25em] text-cream mb-10">{c.coverLabel}</p>
+        <h1 className="font-serif text-headline-xl md:text-[3.5rem] font-bold text-navy-900 tracking-[0.15em] uppercase border-y-2 border-navy-900 py-5 mb-8">
+          Dinheirologia.
+        </h1>
+        <p className="font-serif text-headline-md md:text-[2rem] italic text-dollar-600 mb-4">{c.coverSubtitle}</p>
+        <p className="font-body text-body-lg italic text-navy-400 mb-12">{c.coverTagline}</p>
+        <p className="font-sans text-caption uppercase tracking-[0.2em] text-cream mb-12">{c.coverYear}</p>
+        <p className="font-body text-body-sm italic text-navy-400 max-w-md">{c.coverQuote}</p>
+      </section>
 
       {/* I — Quem Somos */}
       <section className="mb-10">

@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Kit — DINHEIROLOGIA.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #FAF9F6;
+            --newsprint: #F0EDE6;
+            --ink: #1A1A14;
+            --dollar: #3D6B35;
+            --dollar-50: #EEF3EC;
+            --dollar-600: #2F5429;
+            --dollar-700: #234020;
+            --dollar-800: #1A3018;
+            --dollar-900: #12200F;
+            --cream: #B8AD8E;
+            --cream-50: #F7F5EC;
+            --cream-100: #F0ECDF;
+            --cream-200: #E5E0CD;
+            --navy: #3D4637;
+            --navy-400: #5A6352;
+            --navy-600: #333B2E;
+            --navy-700: #2A3125;
+            --navy-900: #141A11;
+            --gold: #B8942E;
+            --gold-light: #D4B04A;
+            --salmon: #F2A68A;
+            --rule-gray: #C5BCAA;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: var(--paper);
+            color: var(--navy);
+            font-family: 'Lora', Georgia, serif;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* ── Page Container ── */
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* ── Cover Page ── */
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 3px solid var(--rule-gray);
+            padding: 60px 40px;
+            position: relative;
+        }
+
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: var(--dollar-700);
+        }
+
+        .cover-label {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--cream);
+            margin-bottom: 40px;
+        }
+
+        .cover-masthead {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--navy-900);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            border-top: 2px solid var(--navy);
+            border-bottom: 2px solid var(--navy);
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+
+        .cover-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            font-style: italic;
+            color: var(--dollar-600);
+            margin-bottom: 15px;
+        }
+
+        .cover-tagline {
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            color: var(--navy-400);
+            font-style: italic;
+            margin-bottom: 50px;
+        }
+
+        .cover-year {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--cream);
+        }
+
+        .cover-bottom {
+            position: absolute;
+            bottom: 40px;
+            text-align: center;
+        }
+
+        .cover-bottom p {
+            font-family: 'Lora', serif;
+            font-size: 0.8rem;
+            color: var(--navy-400);
+            font-style: italic;
+        }
+
+        /* ── Section Styling ── */
+        section {
+            padding: 60px 0;
+            border-bottom: 2px solid var(--rule-gray);
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        .section-label {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--dollar-600);
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--navy-900);
+            margin-bottom: 25px;
+            line-height: 1.15;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--navy-700);
+            margin-bottom: 15px;
+            margin-top: 35px;
+            line-height: 1.25;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--navy);
+        }
+
+        /* ── Highlight Box ── */
+        .highlight-box {
+            background: var(--cream-50);
+            border-left: 3px solid var(--gold);
+            padding: 25px 30px;
+            margin: 30px 0;
+        }
+
+        .highlight-box p {
+            font-style: italic;
+            color: var(--navy-600);
+            margin-bottom: 0;
+        }
+
+        .highlight-box .attribution {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--cream);
+            margin-top: 10px;
+            font-style: normal;
+        }
+
+        /* ── Stats Grid ── */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 35px 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 30px 20px;
+            border: 1px solid var(--rule-gray);
+            background: var(--paper);
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dollar);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--navy-400);
+        }
+
+        /* ── Tables ── */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.95rem;
+        }
+
+        thead th {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--cream-100);
+            background: var(--dollar-800);
+            padding: 14px 18px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        thead th:last-child {
+            text-align: right;
+        }
+
+        tbody td {
+            padding: 14px 18px;
+            border-bottom: 1px solid var(--rule-gray);
+            color: var(--navy);
+            vertical-align: top;
+        }
+
+        tbody td:last-child {
+            text-align: right;
+            font-family: 'Libre Franklin', sans-serif;
+            font-weight: 600;
+            color: var(--dollar-600);
+            white-space: nowrap;
+        }
+
+        tbody tr:nth-child(even) {
+            background: var(--cream-50);
+        }
+
+        tbody tr:hover {
+            background: var(--dollar-50);
+        }
+
+        .table-description {
+            font-size: 0.85rem;
+            color: var(--navy-400);
+            display: block;
+            margin-top: 4px;
+            font-style: italic;
+        }
+
+        /* ── Package Cards ── */
+        .packages {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            margin: 35px 0;
+        }
+
+        .package {
+            border: 1px solid var(--rule-gray);
+            padding: 35px 25px;
+            text-align: center;
+            position: relative;
+            background: var(--paper);
+        }
+
+        .package:nth-child(2) {
+            border-left: none;
+            border-right: none;
+        }
+
+        .package.featured {
+            background: var(--dollar-800);
+            border-color: var(--dollar-700);
+            transform: scale(1.03);
+            box-shadow: 0 4px 20px rgba(26, 48, 24, 0.15);
+            z-index: 1;
+        }
+
+        .package.featured * {
+            color: var(--cream-100);
+        }
+
+        .package-badge {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 0.55rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            background: var(--gold);
+            color: var(--paper) !important;
+            padding: 4px 14px;
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .package-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            margin-top: 15px;
+        }
+
+        .package-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--dollar);
+            margin: 15px 0 5px;
+        }
+
+        .package.featured .package-price {
+            color: var(--gold-light) !important;
+        }
+
+        .package-period {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--navy-400);
+            margin-bottom: 20px;
+        }
+
+        .package-features {
+            list-style: none;
+            text-align: left;
+            padding: 0;
+        }
+
+        .package-features li {
+            font-size: 0.85rem;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--rule-gray);
+            color: var(--navy);
+        }
+
+        .package.featured .package-features li {
+            border-color: var(--dollar-700);
+        }
+
+        .package-features li::before {
+            content: '$ ';
+            color: var(--dollar);
+            font-weight: 700;
+            font-family: 'Libre Franklin', sans-serif;
+        }
+
+        .package.featured .package-features li::before {
+            color: var(--gold-light);
+        }
+
+        /* ── Discount Strip ── */
+        .discount-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            margin: 35px 0;
+            background: var(--newsprint);
+            border: 1px solid var(--rule-gray);
+        }
+
+        .discount-item {
+            text-align: center;
+            padding: 25px 15px;
+            border-right: 1px solid var(--rule-gray);
+        }
+
+        .discount-item:last-child {
+            border-right: none;
+        }
+
+        .discount-duration {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--navy-400);
+            margin-bottom: 8px;
+        }
+
+        .discount-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dollar);
+        }
+
+        /* ── Terms ── */
+        .terms-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin: 25px 0;
+        }
+
+        .term-item {
+            padding: 20px;
+            border: 1px solid var(--rule-gray);
+            background: var(--paper);
+        }
+
+        .term-item h4 {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--dollar-600);
+            margin-bottom: 8px;
+        }
+
+        .term-item p {
+            font-size: 0.85rem;
+            color: var(--navy);
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+
+        /* ── Contact Section ── */
+        .contact-section {
+            background: var(--dollar-800);
+            padding: 60px 40px;
+            text-align: center;
+            margin-top: 0;
+            border-bottom: none;
+        }
+
+        .contact-section .section-label {
+            color: var(--cream);
+        }
+
+        .contact-section h2 {
+            color: var(--cream-100);
+        }
+
+        .contact-section p {
+            color: var(--cream-200);
+        }
+
+        .contact-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold-light) !important;
+            margin-bottom: 3px;
+        }
+
+        .contact-role {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--cream) !important;
+            margin-bottom: 25px;
+        }
+
+        .contact-email {
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            color: var(--gold-light) !important;
+            text-decoration: none;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 2px;
+        }
+
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 25px;
+        }
+
+        .contact-method {
+            text-align: center;
+        }
+
+        .contact-method-label {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--cream) !important;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-method-value {
+            font-family: 'Lora', serif;
+            font-size: 0.95rem;
+            color: var(--cream-100) !important;
+        }
+
+        /* ── Footer ── */
+        .doc-footer {
+            background: var(--dollar-900);
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        .doc-footer p {
+            font-family: 'Lora', serif;
+            font-size: 0.75rem;
+            color: var(--cream);
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .doc-footer .copyright {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--navy-400);
+            font-style: normal;
+        }
+
+        /* ── Audience Profile ── */
+        .audience-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            margin: 25px 0;
+            border: 1px solid var(--rule-gray);
+        }
+
+        .audience-item {
+            padding: 20px 25px;
+            border-bottom: 1px solid var(--rule-gray);
+            border-right: 1px solid var(--rule-gray);
+        }
+
+        .audience-item:nth-child(even) {
+            border-right: none;
+        }
+
+        .audience-item:nth-last-child(-n+2) {
+            border-bottom: none;
+        }
+
+        .audience-label {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--dollar-600);
+            margin-bottom: 5px;
+        }
+
+        .audience-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--navy-900);
+        }
+
+        /* ── Divider ── */
+        .divider {
+            border: none;
+            border-top: 1px solid var(--rule-gray);
+            margin: 35px 0;
+        }
+
+        .divider.thick {
+            border-top-width: 3px;
+        }
+
+        /* ── Alert Box ── */
+        .alert-box {
+            background: var(--cream-50);
+            border: 1px solid var(--salmon);
+            border-left: 3px solid var(--salmon);
+            padding: 20px 25px;
+            margin: 25px 0;
+        }
+
+        .alert-box p {
+            font-size: 0.9rem;
+            color: var(--navy-600);
+            margin-bottom: 0;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .cover-masthead { font-size: 2.2rem; }
+            .cover-subtitle { font-size: 1.4rem; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .packages { grid-template-columns: 1fr; }
+            .package.featured { transform: none; }
+            .package:nth-child(2) { border: 1px solid var(--rule-gray); }
+            .terms-grid { grid-template-columns: 1fr; }
+            .audience-grid { grid-template-columns: 1fr; }
+            .audience-item { border-right: none !important; }
+            .audience-item:nth-last-child(2) { border-bottom: 1px solid var(--rule-gray); }
+            .discount-strip { grid-template-columns: 1fr; }
+            .discount-item { border-right: none; border-bottom: 1px solid var(--rule-gray); }
+            .discount-item:last-child { border-bottom: none; }
+            .contact-methods { flex-direction: column; gap: 20px; }
+            h2 { font-size: 1.6rem; }
+        }
+
+        @media print {
+            .cover { min-height: auto; page-break-after: always; }
+            section { page-break-inside: avoid; }
+            .package.featured { transform: none; box-shadow: none; }
+            body { font-size: 11pt; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- COVER PAGE                                  -->
+<!-- ════════════════════════════════════════════ -->
+<div class="cover">
+    <p class="cover-label">Documento Confidencial &middot; Proposta Comercial</p>
+    <h1 class="cover-masthead">Dinheirologia.</h1>
+    <p class="cover-subtitle">Media Kit &amp; Tabela de Anunciantes</p>
+    <p class="cover-tagline">Sua leitura sobre dinheiro, sem frescuras.</p>
+    <p class="cover-year">Fevereiro 2026 &middot; Est. 2008</p>
+    <div class="cover-bottom">
+        <p>"O mercado premia quem tem paciência para esperar<br>e coragem para agir quando ninguém mais quer."</p>
+    </div>
+</div>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- QUEM SOMOS                                  -->
+<!-- ════════════════════════════════════════════ -->
+<div class="page">
+    <section>
+        <p class="section-label">I &mdash; Quem Somos</p>
+        <h2>Ninguém aqui quer te vender um curso.</h2>
+
+        <p>O <strong>Dinheirologia</strong> nasceu em 2008, no meio da crise financeira global &mdash; porque nada ensina mais sobre dinheiro do que vê-lo evaporar. Desde então, cobrimos mercados, trading, investimentos e neg&oacute;cios com uma regra simples: <em>pele em jogo</em>. Se n&atilde;o arriscamos o nosso, n&atilde;o opinamos sobre o seu.</p>
+
+        <p>N&atilde;o somos mais um Bloomberg de m&atilde;os dadas com clickbait. N&atilde;o temos "semideuses" de redes sociais sem uma nota de corretora sequer. Somos um portal de an&aacute;lise financeira com humor &aacute;cido, profundidade real e alergia cr&ocirc;nica a quem promete dinheiro f&aacute;cil.</p>
+
+        <p>Publicamos em <strong>3 idiomas</strong> (Portugu&ecirc;s, Ingl&ecirc;s e Espanhol), todos os dias, porque mercado n&atilde;o espera &mdash; e nosso leitor tamb&eacute;m n&atilde;o.</p>
+
+        <div class="highlight-box">
+            <p>"Mastigamos, digerimos e cuspimos a informa&ccedil;&atilde;o de um jeito que voc&ecirc; realmente entende. Se voc&ecirc; quer f&oacute;rmulas m&aacute;gicas, voc&ecirc; est&aacute; no lugar errado. Se quer pensar, puxe a cadeira."</p>
+            <p class="attribution">&mdash; Manifesto Dinheirologia</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">18</div>
+                <div class="stat-label">Anos de Mercado</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Idiomas</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Artigos Publicados</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- AUDIÊNCIA                                    -->
+    <!-- ════════════════════════════════════════════ -->
+    <section>
+        <p class="section-label">II &mdash; Nosso Leitor</p>
+        <h2>Gente que pensa antes de clicar no bot&atilde;o de compra.</h2>
+
+        <p>Nosso p&uacute;blico n&atilde;o est&aacute; aqui por dicas de "a&ccedil;&atilde;o que vai bombar". Est&aacute; aqui porque desconfia de quem promete isso. S&atilde;o investidores, traders e empres&aacute;rios que valorizam an&aacute;lise s&oacute;lida, pensamento cr&iacute;tico e um bom sarcasmo quando o mercado merece.</p>
+
+        <div class="audience-grid">
+            <div class="audience-item">
+                <div class="audience-label">Faixa Et&aacute;ria</div>
+                <div class="audience-value">25 &ndash; 55 anos</div>
+            </div>
+            <div class="audience-item">
+                <div class="audience-label">Perfil</div>
+                <div class="audience-value">Investidores &amp; Traders Ativos</div>
+            </div>
+            <div class="audience-item">
+                <div class="audience-label">Literacia Financeira</div>
+                <div class="audience-value">Acima da m&eacute;dia</div>
+            </div>
+            <div class="audience-item">
+                <div class="audience-label">Renda</div>
+                <div class="audience-value">Classes A e B</div>
+            </div>
+            <div class="audience-item">
+                <div class="audience-label">Geografia</div>
+                <div class="audience-value">Brasil, EUA, Europa, Am. Latina</div>
+            </div>
+            <div class="audience-item">
+                <div class="audience-label">Comportamento</div>
+                <div class="audience-value">Leitura profunda, anti-hype</div>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <p>Nosso leitor sabe a diferen&ccedil;a entre EPS ajustado e lucro l&iacute;quido. N&atilde;o &eacute; o p&uacute;blico mais f&aacute;cil de impressionar &mdash; mas quando confia, confia de verdade. E &eacute; por isso que seu an&uacute;ncio aqui vale mais.</p>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- FORMATOS                                     -->
+    <!-- ════════════════════════════════════════════ -->
+    <section>
+        <p class="section-label">III &mdash; Formatos Dispon&iacute;veis</p>
+        <h2>O card&aacute;pio. Sem gar&ccedil;om empurrando sobremesa.</h2>
+
+        <h3>Conte&uacute;do Patrocinado</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Formato</th>
+                    <th>Descri&ccedil;&atilde;o</th>
+                    <th>Pre&ccedil;o</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>Guest Post</strong>
+                        <span class="table-description">Artigo fornecido pelo anunciante, revisado pela nossa equipa editorial.</span>
+                    </td>
+                    <td>1.000 &ndash; 2.000 palavras. Inclui at&eacute; 2 links.</td>
+                    <td>R$ 2.500<br><small style="color:var(--navy-400)">~$500</small></td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Artigo Premium</strong>
+                        <span class="table-description">Escrito pela nossa equipa, no tom editorial do Dinheirologia.</span>
+                    </td>
+                    <td>Integra&ccedil;&atilde;o natural ao conte&uacute;do do site. O leitor l&ecirc; porque &eacute; bom, n&atilde;o porque &eacute; pago.</td>
+                    <td>R$ 5.000<br><small style="color:var(--navy-400)">~$1.000</small></td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>S&eacute;rie de Conte&uacute;do</strong>
+                        <span class="table-description">4 artigos/m&ecirc;s com narrativa integrada.</span>
+                    </td>
+                    <td>Ideal para lan&ccedil;amentos, campanhas tem&aacute;ticas ou posicionamento de marca a longo prazo.</td>
+                    <td>R$ 15.000<br><small style="color:var(--navy-400)">~$3.000</small></td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Inser&ccedil;&atilde;o de Link</strong>
+                        <span class="table-description">Link contextual em artigo existente e relevante.</span>
+                    </td>
+                    <td>Adi&ccedil;&atilde;o natural a conte&uacute;do j&aacute; publicado. Link com atributo <code>rel="sponsored"</code>.</td>
+                    <td>R$ 1.500<br><small style="color:var(--navy-400)">~$300</small></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Publicidade Display</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Posi&ccedil;&atilde;o</th>
+                    <th>Formato</th>
+                    <th>Pre&ccedil;o / M&ecirc;s</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Header / Topo</strong></td>
+                    <td>Banner 728&times;90 ou 970&times;250 &mdash; primeira coisa que o leitor v&ecirc;.</td>
+                    <td>R$ 3.000<br><small style="color:var(--navy-400)">~$600</small></td>
+                </tr>
+                <tr>
+                    <td><strong>Sidebar</strong></td>
+                    <td>Banner 300&times;250 &mdash; presente em todas as p&aacute;ginas de artigo.</td>
+                    <td>R$ 1.500<br><small style="color:var(--navy-400)">~$300</small></td>
+                </tr>
+                <tr>
+                    <td><strong>In-Article</strong></td>
+                    <td>Banner entre par&aacute;grafos &mdash; m&aacute;xima aten&ccedil;&atilde;o, leitor engajado.</td>
+                    <td>R$ 2.000<br><small style="color:var(--navy-400)">~$400</small></td>
+                </tr>
+                <tr>
+                    <td><strong>Footer</strong></td>
+                    <td>Banner 728&times;90 &mdash; fecho de leitura, custo-benef&iacute;cio.</td>
+                    <td>R$ 800<br><small style="color:var(--navy-400)">~$160</small></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- PACOTES                                      -->
+    <!-- ════════════════════════════════════════════ -->
+    <section>
+        <p class="section-label">IV &mdash; Pacotes</p>
+        <h2>Para quem quer o bife, n&atilde;o s&oacute; o cheiro.</h2>
+    </section>
+</div>
+
+<div class="page" style="max-width: 960px;">
+    <div class="packages">
+        <div class="package">
+            <div class="package-name">Starter</div>
+            <div class="package-price">R$ 3.500</div>
+            <div class="package-period">por m&ecirc;s &middot; ~$700</div>
+            <ul class="package-features">
+                <li>1 Guest Post</li>
+                <li>Banner na Sidebar</li>
+                <li>Publica&ccedil;&atilde;o em 1 idioma</li>
+                <li>Relat&oacute;rio de views mensal</li>
+            </ul>
+        </div>
+        <div class="package featured">
+            <div class="package-badge">Mais Popular</div>
+            <div class="package-name">Growth</div>
+            <div class="package-price" style="color: var(--gold-light);">R$ 10.000</div>
+            <div class="package-period" style="color: var(--cream);">por m&ecirc;s &middot; ~$2.000</div>
+            <ul class="package-features">
+                <li>2 Artigos Premium</li>
+                <li>Banner no Header</li>
+                <li>2 Inser&ccedil;&otilde;es de Link</li>
+                <li>Publica&ccedil;&atilde;o em 2 idiomas</li>
+                <li>Relat&oacute;rio anal&iacute;tico semanal</li>
+            </ul>
+        </div>
+        <div class="package">
+            <div class="package-name">Premium</div>
+            <div class="package-price">R$ 25.000</div>
+            <div class="package-period">por m&ecirc;s &middot; ~$5.000</div>
+            <ul class="package-features">
+                <li>4 Artigos Premium</li>
+                <li>Banner Header + Sidebar</li>
+                <li>Men&ccedil;&atilde;o nos 3 idiomas</li>
+                <li>Exclusividade no segmento</li>
+                <li>Relat&oacute;rio anal&iacute;tico semanal</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="page">
+    <section style="border-top: none; padding-top: 0;">
+        <h3>Descontos por Compromisso</h3>
+        <p>Porque rela&ccedil;&otilde;es de longo prazo rendem mais que day trade.</p>
+
+        <div class="discount-strip">
+            <div class="discount-item">
+                <div class="discount-duration">Trimestral</div>
+                <div class="discount-value">-10%</div>
+            </div>
+            <div class="discount-item">
+                <div class="discount-duration">Semestral</div>
+                <div class="discount-value">-15%</div>
+            </div>
+            <div class="discount-item">
+                <div class="discount-duration">Anual</div>
+                <div class="discount-value">-25%</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- TERMOS                                       -->
+    <!-- ════════════════════════════════════════════ -->
+    <section>
+        <p class="section-label">V &mdash; Termos &amp; Condi&ccedil;&otilde;es</p>
+        <h2>As letras mi&uacute;das que a gente faz quest&atilde;o que voc&ecirc; leia.</h2>
+
+        <div class="terms-grid">
+            <div class="term-item">
+                <h4>Relat&oacute;rio de Performance</h4>
+                <p>Cada campanha inclui relat&oacute;rio detalhado com m&eacute;tricas de visualiza&ccedil;&otilde;es, tempo de leitura e engajamento. Voc&ecirc; sabe exactamente o retorno do seu investimento.</p>
+            </div>
+            <div class="term-item">
+                <h4>Conformidade SEO</h4>
+                <p>Links patrocinados utilizam o atributo <code>rel="sponsored"</code>, em conformidade com as diretrizes do Google. Protege o anunciante e protege o site.</p>
+            </div>
+            <div class="term-item">
+                <h4>Revis&atilde;o Editorial</h4>
+                <p>A equipa reserva o direito de editar, reformular ou recusar conte&uacute;do que n&atilde;o atenda aos nossos padr&otilde;es. Publicamos coisas boas &mdash; essa &eacute; a regra.</p>
+            </div>
+            <div class="term-item">
+                <h4>Pagamento</h4>
+                <p>100% antecipado, antes da publica&ccedil;&atilde;o. Aceitamos PayPal, transfer&ecirc;ncia banc&aacute;ria internacional, Pix (Brasil), USDT e USDC.</p>
+            </div>
+            <div class="term-item">
+                <h4>Perman&ecirc;ncia</h4>
+                <p>Conte&uacute;do publicado permanece no site por no m&iacute;nimo 12 meses. Renova&ccedil;&atilde;o com condi&ccedil;&otilde;es preferenciais.</p>
+            </div>
+            <div class="term-item">
+                <h4>Exclusividade</h4>
+                <p>No pacote Premium, apenas 1 anunciante por segmento. Porque ningu&eacute;m quer dividir o palco com o concorrente.</p>
+            </div>
+        </div>
+
+        <div class="alert-box">
+            <p><strong>Conte&uacute;do n&atilde;o aceite:</strong> Esquemas financeiros fraudulentos, promessas de retorno garantido, apostas, cripto sem fundamento, conte&uacute;do enganoso ou qualquer coisa que a gente n&atilde;o diria ao nosso pr&oacute;prio dinheiro.</p>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════ -->
+    <!-- PORQUÊ NÓS                                   -->
+    <!-- ════════════════════════════════════════════ -->
+    <section>
+        <p class="section-label">VI &mdash; Porqu&ecirc; n&oacute;s</p>
+        <h2>Tr&ecirc;s raz&otilde;es para n&atilde;o gastar o seu or&ccedil;amento noutro lugar.</h2>
+
+        <p><strong>1. Credibilidade que n&atilde;o se compra.</strong> 18 anos no ar, nascidos numa crise financeira, com opini&otilde;es que t&ecirc;m pele em jogo. Quando dizemos que algo vale a pena, o leitor sabe que &eacute; porque apostamos o nosso antes de sugerir o dele.</p>
+
+        <p><strong>2. Audi&ecirc;ncia qualificada, n&atilde;o inflada.</strong> N&atilde;o vendemos n&uacute;meros bonitos. Vendemos leitores que sabem o que &eacute; um P/L, que abrem corretora de manh&atilde; e leem o Dinheirologia antes do caf&eacute;. S&atilde;o poucos? Talvez. Mas cada um vale dez.</p>
+
+        <p><strong>3. Conte&uacute;do que vive.</strong> Nossos artigos n&atilde;o morrem no feed. S&atilde;o refer&ecirc;ncia, s&atilde;o buscados, s&atilde;o relidos. Seu investimento aqui tem vida &uacute;til longa &mdash; n&atilde;o &eacute; um story que evapora em 24 horas.</p>
+
+        <div class="highlight-box">
+            <p>"Se voc&ecirc; quer volume, anuncia no Instagram. Se quer convic&ccedil;&atilde;o, anuncia no Dinheirologia."</p>
+            <p class="attribution">&mdash; Ricardina Cifr&atilde;o, Diretora Comercial</p>
+        </div>
+    </section>
+</div>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- CONTATO                                      -->
+<!-- ════════════════════════════════════════════ -->
+<div class="contact-section">
+    <p class="section-label">VII &mdash; Fale Connosco</p>
+    <h2>Vamos conversar sobre o seu investimento.</h2>
+
+    <p style="max-width: 500px; margin: 0 auto 30px;">N&atilde;o mordemos. A menos que voc&ecirc; pe&ccedil;a para esconder que pagou.</p>
+
+    <p class="contact-name">Ricardina Cifr&atilde;o</p>
+    <p class="contact-role">Diretora de Parcerias Comerciais</p>
+
+    <div class="contact-methods">
+        <div class="contact-method">
+            <span class="contact-method-label">Email</span>
+            <span class="contact-method-value">anuncie@dinheirologia.com</span>
+        </div>
+        <div class="contact-method">
+            <span class="contact-method-label">Pagamentos</span>
+            <span class="contact-method-value">PayPal &middot; Transfer&ecirc;ncia &middot; Pix &middot; USDT &middot; USDC</span>
+        </div>
+    </div>
+</div>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- FOOTER                                       -->
+<!-- ════════════════════════════════════════════ -->
+<div class="doc-footer">
+    <p>"Um homem precisa ser gentil, controlado, mas precisa representar perigo tamb&eacute;m."</p>
+    <p class="copyright">&copy; 2026 Dinheirologia. Todos os direitos reservados. &middot; Est. 2008</p>
+</div>
+
+</body>
+</html>
