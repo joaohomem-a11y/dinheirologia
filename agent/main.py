@@ -265,7 +265,7 @@ def run(
     store = ProcessedURLStore(settings.state_file)
     rewriter = ArticleRewriter(claude_client)
     translator = ArticleTranslator(claude_client)
-    image_sourcer = ImageSourcer(settings.unsplash_access_key)
+    image_sourcer = ImageSourcer(settings.unsplash_access_key, settings.content_output_dir)
     publisher = ArticlePublisher(settings.content_output_dir)
     manual_processor = ManualInputProcessor(settings.manual_input_file)
 

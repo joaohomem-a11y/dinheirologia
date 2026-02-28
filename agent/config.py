@@ -209,11 +209,31 @@ VALID_CATEGORIES: Final[list[str]] = [
 # ---------------------------------------------------------------------------
 
 UNSPLASH_SEARCH_TERMS: Final[dict[str, list[str]]] = {
-    "mercados": ["stock market", "trading floor", "finance", "wall street"],
-    "trading": ["trading", "charts", "candlestick", "stock charts"],
-    "investimentos": ["investment", "money", "wealth", "growth"],
-    "negocios": ["business", "entrepreneurship", "office", "deal"],
-    "opiniao": ["thinking", "analysis", "strategy", "chess"],
+    "mercados": [
+        "stock market", "trading floor", "finance", "wall street",
+        "stock exchange", "financial district", "market data", "bull bear market",
+        "global economy", "financial analysis", "market crash", "nasdaq",
+    ],
+    "trading": [
+        "trading", "charts", "candlestick", "stock charts",
+        "forex trading", "crypto trading", "day trader", "technical analysis",
+        "stock ticker", "market screen", "trading desk", "financial graphs",
+    ],
+    "investimentos": [
+        "investment", "money", "wealth", "growth",
+        "portfolio", "savings", "gold bars", "real estate investment",
+        "compound interest", "dividend", "bonds", "mutual funds",
+    ],
+    "negocios": [
+        "business", "entrepreneurship", "office", "deal",
+        "startup", "corporate", "handshake business", "boardroom",
+        "business strategy", "commerce", "negotiation", "leadership",
+    ],
+    "opiniao": [
+        "thinking", "analysis", "strategy", "chess",
+        "philosophy", "debate", "editorial", "newspaper",
+        "perspective", "opinion writing", "critical thinking", "wisdom",
+    ],
 }
 
 # ---------------------------------------------------------------------------
